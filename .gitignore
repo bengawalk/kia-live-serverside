@@ -5,5 +5,8 @@ log/
 nohup.out
 /out/
 __pycache__/
-db/live_data.db
-
+db/
+generated_in/
+*.log
+.DS_Store
+/models/

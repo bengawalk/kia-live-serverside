@@ -1,0 +1,2244 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "KIA-9 UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-9 DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-4 UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-4 DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-4A UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-4A DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-6 UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-6 DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-6W UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-6A UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-6A DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-15 UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-15 DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-15A DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-10 UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-10 DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-8C UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-8C DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-5 UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-5 DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-7A UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-7A DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-8 UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-8 DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-8A UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-8A DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-8E UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-8E DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-9H UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-9H DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-8EW DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-14 UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-14 DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-7 UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-7 DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-8D UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-8D DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-8H UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-8H DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-5D UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-5D DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-14A UP": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    },
+    "KIA-14A DOWN": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_id": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "start": {
+            "type": "number"
+          },
+          "stops": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "stop_id": {
+                  "type": "number"
+                },
+                "stop_loc": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "stop_time": {
+                  "type": "number"
+                },
+                "confidence": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "stop_id",
+                "stop_loc",
+                "stop_time"
+              ]
+            }
+          }
+        },
+        "required": [
+          "route_id",
+          "duration",
+          "start",
+          "stops"
+        ]
+      }
+    }
+  },
+  "required": [
+    "KIA-9 UP",
+    "KIA-9 DOWN",
+    "KIA-4 UP",
+    "KIA-4 DOWN",
+    "KIA-4A UP",
+    "KIA-4A DOWN",
+    "KIA-6 UP",
+    "KIA-6 DOWN",
+    "KIA-6W UP",
+    "KIA-6A UP",
+    "KIA-6A DOWN",
+    "KIA-15 UP",
+    "KIA-15 DOWN",
+    "KIA-15A DOWN",
+    "KIA-10 UP",
+    "KIA-10 DOWN",
+    "KIA-8C UP",
+    "KIA-8C DOWN",
+    "KIA-5 UP",
+    "KIA-5 DOWN",
+    "KIA-7A UP",
+    "KIA-7A DOWN",
+    "KIA-8 UP",
+    "KIA-8 DOWN",
+    "KIA-8A UP",
+    "KIA-8A DOWN",
+    "KIA-8E UP",
+    "KIA-8E DOWN",
+    "KIA-9H UP",
+    "KIA-9H DOWN",
+    "KIA-8EW DOWN",
+    "KIA-14 UP",
+    "KIA-14 DOWN",
+    "KIA-7 UP",
+    "KIA-7 DOWN",
+    "KIA-8D UP",
+    "KIA-8D DOWN",
+    "KIA-8H UP",
+    "KIA-8H DOWN",
+    "KIA-5D UP",
+    "KIA-5D DOWN",
+    "KIA-14A UP",
+    "KIA-14A DOWN"
+  ]
+}

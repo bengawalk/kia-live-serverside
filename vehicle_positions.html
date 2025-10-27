@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Positions Visualizer</title>
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+    <script src="https://unpkg.com/google-polyline@1.0.3/lib/encode.js"></script>
+    <script src="https://unpkg.com/google-polyline@1.0.3/lib/decode.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #controls {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .control-group label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .control-group input,
+        .control-group select,
+        .control-group button {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .control-group input[type="file"] {
+            background: white;
+            cursor: pointer;
+        }
+
+        .control-group select {
+            min-width: 150px;
+            cursor: pointer;
+        }
+
+        .control-group button {
+            background: #3498db;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .control-group button:hover {
+            background: #2980b9;
+        }
+
+        .control-group button:disabled {
+            background: #95a5a6;
+            cursor: not-allowed;
+        }
+
+        .control-group button.drawing {
+            background: #e74c3c;
+        }
+
+        .control-group button.drawing:hover {
+            background: #c0392b;
+        }
+
+        #stats {
+            background: #34495e;
+            padding: 10px 15px;
+            color: white;
+            font-size: 13px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            gap: 5px;
+        }
+
+        .stat-label {
+            font-weight: 600;
+        }
+
+        #map {
+            flex: 1;
+            position: relative;
+            cursor: default;
+        }
+
+        #map.drawing-mode {
+            cursor: crosshair;
+        }
+
+        #legend {
+            position: absolute;
+            bottom: 30px;
+            right: 10px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            z-index: 1;
+            min-width: 200px;
+        }
+
+        #legend h3 {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid rgba(0,0,0,0.2);
+        }
+
+        .legend-gradient {
+            height: 20px;
+            width: 100%;
+            background: linear-gradient(to right, #e74c3c, #f39c12, #f1c40f, #2ecc71);
+            border-radius: 4px;
+            margin-bottom: 5px;
+        }
+
+        .legend-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #7f8c8d;
+        }
+
+        .maplibregl-popup-content {
+            padding: 15px;
+            min-width: 250px;
+        }
+
+        .popup-title {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .popup-field {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px solid #ecf0f1;
+            font-size: 13px;
+        }
+
+        .popup-field:last-child {
+            border-bottom: none;
+        }
+
+        .popup-label {
+            font-weight: 600;
+            color: #7f8c8d;
+        }
+
+        .popup-value {
+            color: #2c3e50;
+        }
+
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #loading.show {
+            display: flex;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 5px solid #ecf0f1;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <div class="control-group">
+            <label>Database File</label>
+            <input type="file" id="dbFile" accept=".db">
+        </div>
+        <div class="control-group">
+            <label>Routelines JSON</label>
+            <input type="file" id="routelinesFile" accept=".json">
+        </div>
+        <div class="control-group">
+            <label>Route Polyline</label>
+            <select id="routelineFilter">
+                <option value="">No Overlay</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label>Route ID</label>
+            <select id="routeFilter">
+                <option value="">All Routes</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label>Trip ID</label>
+            <select id="tripFilter">
+                <option value="">All Trips</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label>Vehicle ID</label>
+            <select id="vehicleFilter">
+                <option value="">All Vehicles</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label>Max Age (hours)</label>
+            <input type="number" id="maxAge" value="6" min="1" max="24" step="1">
+        </div>
+        <div class="control-group">
+            <label>&nbsp;</label>
+            <button id="refreshBtn" disabled>Refresh Map</button>
+        </div>
+        <div class="control-group">
+            <label>&nbsp;</label>
+            <button id="drawBtn">Toggle Draw</button>
+        </div>
+        <div class="control-group">
+            <label>&nbsp;</label>
+            <button id="drawFromPointsBtn" disabled>Draw From Points</button>
+        </div>
+    </div>
+
+    <div id="stats">
+        <div class="stat-item">
+            <span class="stat-label">Total Positions:</span>
+            <span id="totalPositions">0</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Vehicles:</span>
+            <span id="totalVehicles">0</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Routes:</span>
+            <span id="totalRoutes">0</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Time Range:</span>
+            <span id="timeRange">-</span>
+        </div>
+    </div>
+
+    <div id="map">
+        <div id="legend">
+            <h3>Time Gradient</h3>
+            <div class="legend-gradient"></div>
+            <div class="legend-labels">
+                <span>Oldest</span>
+                <span>Newest</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <script>
+        let db = null;
+        let map = null;
+        let allPositions = [];
+        let routelinesData = null;
+        let drawingMode = false;
+        let drawnPoints = [];
+        let draggingPoint = null;
+        let hoverPreview = null;
+
+        // Initialize map centered on Bangalore
+        function initMap() {
+            map = new maplibregl.Map({
+                container: 'map',
+                style: {
+                    version: 8,
+                    sources: {
+                        'osm-raster': {
+                            type: 'raster',
+                            tiles: [
+                                'https://a.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                                'https://b.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                                'https://c.tile.openstreetmap.org/{z}/{x}/{y}.png'
+                            ],
+                            tileSize: 256,
+                            attribution: '© OpenStreetMap contributors'
+                        }
+                    },
+                    layers: [
+                        {
+                            id: 'osm-raster-layer',
+                            type: 'raster',
+                            source: 'osm-raster',
+                            minzoom: 0,
+                            maxzoom: 22
+                        }
+                    ]
+                },
+                center: [77.5946, 12.9716], // Bangalore
+                zoom: 11
+            });
+
+            map.addControl(new maplibregl.NavigationControl());
+            map.addControl(new maplibregl.ScaleControl());
+
+            // Map mouse handlers for drawing
+            map.on('click', handleMapClick);
+            map.on('mousemove', handleMapMouseMove);
+            map.on('mousedown', handleMapMouseDown);
+            map.on('mouseup', handleMapMouseUp);
+        }
+
+        // Handle map click for drawing
+        function handleMapClick(e) {
+            if (!drawingMode || draggingPoint !== null) return;
+
+            const clickedPoint = [e.lngLat.lng, e.lngLat.lat];
+            const pixel = map.project(e.lngLat);
+            const isShiftPressed = e.originalEvent.shiftKey;
+
+            // Check if clicking on existing point
+            let clickedPointIndex = -1;
+            for (let i = 0; i < drawnPoints.length; i++) {
+                const pointPixel = map.project(drawnPoints[i]);
+                const distance = Math.sqrt(
+                    Math.pow(pixel.x - pointPixel.x, 2) +
+                    Math.pow(pixel.y - pointPixel.y, 2)
+                );
+
+                if (distance < 20) {
+                    clickedPointIndex = i;
+                    break;
+                }
+            }
+
+            // If clicking on existing point without shift, remove it
+            if (clickedPointIndex !== -1 && !isShiftPressed) {
+                drawnPoints.splice(clickedPointIndex, 1);
+                updateDrawnLine();
+                updateHoverPreview();
+                return;
+            }
+
+            // Check if clicking on line segment (insert point)
+            if (drawnPoints.length >= 2) {
+                const insertIndex = findLineSegmentNear(pixel);
+                if (insertIndex !== -1) {
+                    drawnPoints.splice(insertIndex + 1, 0, clickedPoint);
+                    updateDrawnLine();
+                    updateHoverPreview();
+                    return;
+                }
+            }
+
+            // Add new point (shift = prepend, normal = append)
+            if (isShiftPressed) {
+                drawnPoints.unshift(clickedPoint);
+            } else {
+                drawnPoints.push(clickedPoint);
+            }
+
+            updateDrawnLine();
+            updateHoverPreview();
+        }
+
+        // Handle mouse down for dragging
+        function handleMapMouseDown(e) {
+            if (!drawingMode || !e.originalEvent.shiftKey) return;
+
+            const pixel = map.project(e.lngLat);
+
+            // Check if clicking on existing point
+            for (let i = 0; i < drawnPoints.length; i++) {
+                const pointPixel = map.project(drawnPoints[i]);
+                const distance = Math.sqrt(
+                    Math.pow(pixel.x - pointPixel.x, 2) +
+                    Math.pow(pixel.y - pointPixel.y, 2)
+                );
+
+                if (distance < 20) {
+                    draggingPoint = i;
+                    map.getCanvas().style.cursor = 'move';
+                    e.preventDefault();
+                    return;
+                }
+            }
+        }
+
+        // Handle mouse move for dragging and hover preview
+        function handleMapMouseMove(e) {
+            if (!drawingMode) return;
+
+            // Handle dragging
+            if (draggingPoint !== null) {
+                drawnPoints[draggingPoint] = [e.lngLat.lng, e.lngLat.lat];
+                updateDrawnLine();
+                return;
+            }
+
+            // Handle hover preview for line insertion
+            updateHoverPreview(e);
+        }
+
+        // Handle mouse up to stop dragging
+        function handleMapMouseUp(e) {
+            if (draggingPoint !== null) {
+                draggingPoint = null;
+                map.getCanvas().style.cursor = 'crosshair';
+            }
+        }
+
+        // Update hover preview for line insertion
+        function updateHoverPreview(e) {
+            if (!drawingMode || draggingPoint !== null) {
+                removeHoverPreview();
+                return;
+            }
+
+            if (!e || drawnPoints.length < 2) {
+                removeHoverPreview();
+                return;
+            }
+
+            const pixel = map.project(e.lngLat);
+            const insertIndex = findLineSegmentNear(pixel);
+
+            if (insertIndex !== -1) {
+                const previewPoint = [e.lngLat.lng, e.lngLat.lat];
+                showHoverPreview(previewPoint);
+            } else {
+                removeHoverPreview();
+            }
+        }
+
+        // Find if cursor is near a line segment
+        function findLineSegmentNear(pixel, threshold = 15) {
+            for (let i = 0; i < drawnPoints.length - 1; i++) {
+                const p1Pixel = map.project(drawnPoints[i]);
+                const p2Pixel = map.project(drawnPoints[i + 1]);
+
+                const distance = distanceToLineSegment(pixel, p1Pixel, p2Pixel);
+                if (distance < threshold) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        // Calculate distance from point to line segment
+        function distanceToLineSegment(p, v, w) {
+            const l2 = Math.pow(w.x - v.x, 2) + Math.pow(w.y - v.y, 2);
+            if (l2 === 0) return Math.sqrt(Math.pow(p.x - v.x, 2) + Math.pow(p.y - v.y, 2));
+
+            let t = ((p.x - v.x) * (w.x - v.x) + (p.y - v.y) * (w.y - v.y)) / l2;
+            t = Math.max(0, Math.min(1, t));
+
+            const projX = v.x + t * (w.x - v.x);
+            const projY = v.y + t * (w.y - v.y);
+
+            return Math.sqrt(Math.pow(p.x - projX, 2) + Math.pow(p.y - projY, 2));
+        }
+
+        // Show hover preview point
+        function showHoverPreview(point) {
+            if (map.getSource('hover-preview')) {
+                map.getSource('hover-preview').setData({
+                    type: 'Feature',
+                    geometry: {
+                        type: 'Point',
+                        coordinates: point
+                    }
+                });
+            } else {
+                map.addSource('hover-preview', {
+                    type: 'geojson',
+                    data: {
+                        type: 'Feature',
+                        geometry: {
+                            type: 'Point',
+                            coordinates: point
+                        }
+                    }
+                });
+
+                map.addLayer({
+                    id: 'hover-preview-layer',
+                    type: 'circle',
+                    source: 'hover-preview',
+                    paint: {
+                        'circle-radius': 5,
+                        'circle-color': '#27ae60',
+                        'circle-stroke-width': 2,
+                        'circle-stroke-color': '#ffffff',
+                        'circle-opacity': 0.7
+                    }
+                });
+            }
+        }
+
+        // Remove hover preview point
+        function removeHoverPreview() {
+            if (map.getSource('hover-preview')) {
+                map.removeLayer('hover-preview-layer');
+                map.removeSource('hover-preview');
+            }
+        }
+
+        // Update the drawn line on map
+        function updateDrawnLine() {
+            if (map.getSource('drawn-line')) {
+                if (drawnPoints.length === 0) {
+                    map.removeLayer('drawn-line-layer');
+                    map.removeLayer('drawn-points-layer');
+                    map.removeSource('drawn-line');
+                } else {
+                    map.getSource('drawn-line').setData({
+                        type: 'FeatureCollection',
+                        features: [
+                            {
+                                type: 'Feature',
+                                geometry: {
+                                    type: 'LineString',
+                                    coordinates: drawnPoints
+                                }
+                            },
+                            ...drawnPoints.map(point => ({
+                                type: 'Feature',
+                                geometry: {
+                                    type: 'Point',
+                                    coordinates: point
+                                }
+                            }))
+                        ]
+                    });
+                }
+            } else if (drawnPoints.length > 0) {
+                map.addSource('drawn-line', {
+                    type: 'geojson',
+                    data: {
+                        type: 'FeatureCollection',
+                        features: [
+                            {
+                                type: 'Feature',
+                                geometry: {
+                                    type: 'LineString',
+                                    coordinates: drawnPoints
+                                }
+                            },
+                            ...drawnPoints.map(point => ({
+                                type: 'Feature',
+                                geometry: {
+                                    type: 'Point',
+                                    coordinates: point
+                                }
+                            }))
+                        ]
+                    }
+                });
+
+                map.addLayer({
+                    id: 'drawn-line-layer',
+                    type: 'line',
+                    source: 'drawn-line',
+                    filter: ['==', '$type', 'LineString'],
+                    paint: {
+                        'line-color': '#9b59b6',
+                        'line-width': 4,
+                        'line-opacity': 0.8
+                    }
+                });
+
+                map.addLayer({
+                    id: 'drawn-points-layer',
+                    type: 'circle',
+                    source: 'drawn-line',
+                    filter: ['==', '$type', 'Point'],
+                    paint: {
+                        'circle-radius': 6,
+                        'circle-color': '#9b59b6',
+                        'circle-stroke-width': 2,
+                        'circle-stroke-color': '#ffffff'
+                    }
+                });
+            }
+        }
+
+        // Toggle drawing mode
+        document.getElementById('drawBtn').addEventListener('click', () => {
+            drawingMode = !drawingMode;
+            const btn = document.getElementById('drawBtn');
+            const mapEl = document.getElementById('map');
+
+            if (drawingMode) {
+                btn.classList.add('drawing');
+                btn.textContent = 'End Drawing';
+                mapEl.classList.add('drawing-mode');
+            } else {
+                btn.classList.remove('drawing');
+                btn.textContent = 'Toggle Draw';
+                mapEl.classList.remove('drawing-mode');
+
+                // Export polyline to clipboard
+                if (drawnPoints.length > 1) {
+                    // Polyline library expects [lat, lng] but drawnPoints are [lng, lat]
+                    const encoded = encodeURIComponent(encode(drawnPoints.map(p => [p[1], p[0]])));
+                    navigator.clipboard.writeText(encoded).then(() => {
+                        alert('Polyline copied to clipboard!\n\nPoints: ' + drawnPoints.length + '\nEncoded: ' + encoded.substring(0, 50) + '...');
+                    }).catch(err => {
+                        alert('Failed to copy to clipboard. Polyline:\n' + encoded);
+                    });
+                }
+
+                // Clear drawing and hover preview
+                drawnPoints = [];
+                updateDrawnLine();
+                removeHoverPreview();
+            }
+        });
+
+        // Draw from points button
+        document.getElementById('drawFromPointsBtn').addEventListener('click', () => {
+            if (allPositions.length === 0) {
+                alert('No vehicle positions loaded. Please load positions first.');
+                return;
+            }
+
+            // Enable drawing mode
+            if (!drawingMode) {
+                document.getElementById('drawBtn').click();
+            }
+
+            // Create line from vehicle positions (sorted by timestamp)
+            drawnPoints = allPositions
+                .sort((a, b) => a.timestamp - b.timestamp)
+                .map(pos => [pos.lon, pos.lat]);
+
+            updateDrawnLine();
+            alert(`Created polyline from ${drawnPoints.length} vehicle positions (sorted by timestamp)`);
+        });
+
+        // Load routelines JSON
+        document.getElementById('routelinesFile').addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            try {
+                const text = await file.text();
+                routelinesData = JSON.parse(text);
+
+                // Populate routeline filter
+                const select = document.getElementById('routelineFilter');
+                select.innerHTML = '<option value="">No Overlay</option>';
+
+                Object.keys(routelinesData).sort().forEach(routeName => {
+                    const option = document.createElement('option');
+                    option.value = routeName;
+                    option.textContent = routeName;
+                    select.appendChild(option);
+                });
+
+                alert('Routelines loaded successfully! ' + Object.keys(routelinesData).length + ' routes found.');
+            } catch (error) {
+                console.error('Error loading routelines:', error);
+                alert('Error loading routelines: ' + error.message);
+            }
+        });
+
+        // Handle routeline overlay selection
+        document.getElementById('routelineFilter').addEventListener('change', (e) => {
+            const routeName = e.target.value;
+
+            // Remove existing overlay
+            if (map.getSource('route-overlay')) {
+                map.removeLayer('route-overlay-layer');
+                map.removeSource('route-overlay');
+            }
+
+            if (routeName && routelinesData && routelinesData[routeName]) {
+                try {
+                    // Decode polyline using google-polyline library
+                    const encodedPolyline = decodeURIComponent(routelinesData[routeName]);
+
+                    // polyline.decode returns [[lat, lng], ...]
+                    const decoded = decode(encodedPolyline);
+
+                    // Convert to GeoJSON format [lng, lat]
+                    const coordinates = decoded.map(point => [point[0], point[1]]);
+
+                    console.log('Route:', routeName);
+                    console.log('Decoded first point [lat, lng]:', decoded[0]);
+                    console.log('Converted first point [lng, lat]:', coordinates[0]);
+
+                    // Add route overlay
+                    map.addSource('route-overlay', {
+                        type: 'geojson',
+                        data: {
+                            type: 'Feature',
+                            geometry: {
+                                type: 'LineString',
+                                coordinates: coordinates
+                            }
+                        }
+                    });
+
+                    map.addLayer({
+                        id: 'route-overlay-layer',
+                        type: 'line',
+                        source: 'route-overlay',
+                        paint: {
+                            'line-color': '#3498db',
+                            'line-width': 3,
+                            'line-opacity': 0.7
+                        }
+                    });
+                } catch (error) {
+                    console.error('Error rendering route overlay:', error);
+                    alert('Error rendering route overlay: ' + error.message);
+                }
+            }
+        });
+
+        // Get color based on timestamp (oldest = red, newest = green)
+        function getColorForTimestamp(timestamp, minTime, maxTime) {
+            if (maxTime === minTime) return '#2ecc71';
+
+            const range = maxTime - minTime;
+            const position = (timestamp - minTime) / range;
+
+            // Color gradient: red -> orange -> yellow -> green
+            if (position < 0.33) {
+                // Red to Orange
+                const t = position / 0.33;
+                return interpolateColor('#e74c3c', '#f39c12', t);
+            } else if (position < 0.66) {
+                // Orange to Yellow
+                const t = (position - 0.33) / 0.33;
+                return interpolateColor('#f39c12', '#f1c40f', t);
+            } else {
+                // Yellow to Green
+                const t = (position - 0.66) / 0.34;
+                return interpolateColor('#f1c40f', '#2ecc71', t);
+            }
+        }
+
+        function interpolateColor(color1, color2, factor) {
+            const c1 = hexToRgb(color1);
+            const c2 = hexToRgb(color2);
+            const r = Math.round(c1.r + (c2.r - c1.r) * factor);
+            const g = Math.round(c1.g + (c2.g - c1.g) * factor);
+            const b = Math.round(c1.b + (c2.b - c1.b) * factor);
+            return rgbToHex(r, g, b);
+        }
+
+        function hexToRgb(hex) {
+            const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+            return result ? {
+                r: parseInt(result[1], 16),
+                g: parseInt(result[2], 16),
+                b: parseInt(result[3], 16)
+            } : null;
+        }
+
+        function rgbToHex(r, g, b) {
+            return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+        }
+
+        // Load database file
+        document.getElementById('dbFile').addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            showLoading(true);
+
+            try {
+                const arrayBuffer = await file.arrayBuffer();
+                const SQL = await initSqlJs({
+                    locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/${file}`
+                });
+
+                db = new SQL.Database(new Uint8Array(arrayBuffer));
+
+                // Populate filters
+                populateFilters();
+
+                // Enable refresh button
+                document.getElementById('refreshBtn').disabled = false;
+
+                // Load initial data
+                loadPositions();
+            } catch (error) {
+                console.error('Error loading database:', error);
+                alert('Error loading database: ' + error.message);
+            } finally {
+                showLoading(false);
+            }
+        });
+
+        function populateFilters() {
+            const maxAge = parseInt(document.getElementById('maxAge').value);
+            const cutoffTime = Math.floor(Date.now() / 1000) - (maxAge * 3600);
+            const routeFilter = document.getElementById('routeFilter').value;
+            const tripFilter = document.getElementById('tripFilter').value;
+            const vehicleFilter = document.getElementById('vehicleFilter').value;
+
+            // Get unique routes filtered by trip, vehicle and time frame
+            let routeQuery = `
+                SELECT DISTINCT route_id
+                FROM vehicle_positions
+                WHERE route_id IS NOT NULL
+                AND timestamp >= ${cutoffTime}
+            `;
+
+            if (tripFilter) {
+                routeQuery += ` AND trip_id = '${tripFilter}'`;
+            }
+
+            if (vehicleFilter) {
+                routeQuery += ` AND vehicle_id = '${vehicleFilter}'`;
+            }
+
+            routeQuery += ' ORDER BY route_id';
+
+            const routeResult = db.exec(routeQuery);
+            const routeSelect = document.getElementById('routeFilter');
+            const previousRoute = routeSelect.value;
+            routeSelect.innerHTML = '<option value="">All Routes</option>';
+
+            if (routeResult.length > 0) {
+                routeResult[0].values.forEach(([routeId]) => {
+                    const option = document.createElement('option');
+                    option.value = routeId;
+                    option.textContent = routeId;
+                    routeSelect.appendChild(option);
+                });
+            }
+
+            // Restore previous selection if still available
+            if (previousRoute) {
+                const optionExists = Array.from(routeSelect.options).some(opt => opt.value === previousRoute);
+                if (optionExists) {
+                    routeSelect.value = previousRoute;
+                }
+            }
+
+            // Get unique trips filtered by route, vehicle and time frame with counts
+            let tripQuery = `
+                SELECT trip_id, COUNT(*) as count
+                FROM vehicle_positions
+                WHERE trip_id IS NOT NULL
+                AND timestamp >= ${cutoffTime}
+            `;
+
+            if (routeFilter) {
+                tripQuery += ` AND route_id = '${routeFilter}'`;
+            }
+
+            if (vehicleFilter) {
+                tripQuery += ` AND vehicle_id = '${vehicleFilter}'`;
+            }
+
+            tripQuery += ' GROUP BY trip_id ORDER BY trip_id';
+
+            const tripResult = db.exec(tripQuery);
+            const tripSelect = document.getElementById('tripFilter');
+            const previousTrip = tripSelect.value;
+            tripSelect.innerHTML = '<option value="">All Trips</option>';
+
+            if (tripResult.length > 0) {
+                tripResult[0].values.forEach(([tripId, count]) => {
+                    const option = document.createElement('option');
+                    option.value = tripId;
+                    option.textContent = `${tripId} (${count} positions)`;
+                    tripSelect.appendChild(option);
+                });
+            }
+
+            // Restore previous selection if still available
+            if (previousTrip) {
+                const optionExists = Array.from(tripSelect.options).some(opt => opt.value === previousTrip);
+                if (optionExists) {
+                    tripSelect.value = previousTrip;
+                }
+            }
+
+            // Get unique vehicles filtered by route, trip and time frame with counts
+            let vehicleQuery = `
+                SELECT vehicle_id, COUNT(*) as count
+                FROM vehicle_positions
+                WHERE vehicle_id IS NOT NULL
+                AND timestamp >= ${cutoffTime}
+            `;
+
+            if (routeFilter) {
+                vehicleQuery += ` AND route_id = '${routeFilter}'`;
+            }
+
+            if (tripFilter) {
+                vehicleQuery += ` AND trip_id = '${tripFilter}'`;
+            }
+
+            vehicleQuery += ' GROUP BY vehicle_id ORDER BY vehicle_id';
+
+            const vehicleResult = db.exec(vehicleQuery);
+            const vehicleSelect = document.getElementById('vehicleFilter');
+            const previousVehicle = vehicleSelect.value;
+            vehicleSelect.innerHTML = '<option value="">All Vehicles</option>';
+
+            if (vehicleResult.length > 0) {
+                vehicleResult[0].values.forEach(([vehicleId, count]) => {
+                    const option = document.createElement('option');
+                    option.value = vehicleId;
+                    option.textContent = `${vehicleId} (${count} positions)`;
+                    vehicleSelect.appendChild(option);
+                });
+            }
+
+            // Restore previous selection if still available
+            if (previousVehicle) {
+                const optionExists = Array.from(vehicleSelect.options).some(opt => opt.value === previousVehicle);
+                if (optionExists) {
+                    vehicleSelect.value = previousVehicle;
+                }
+            }
+        }
+
+        function loadPositions() {
+            if (!db) return;
+
+            showLoading(true);
+
+            try {
+                const routeFilter = document.getElementById('routeFilter').value;
+                const tripFilter = document.getElementById('tripFilter').value;
+                const vehicleFilter = document.getElementById('vehicleFilter').value;
+                const maxAge = parseInt(document.getElementById('maxAge').value);
+
+                // Calculate cutoff time
+                const cutoffTime = Math.floor(Date.now() / 1000) - (maxAge * 3600);
+
+                // Build query
+                let query = `
+                    SELECT vehicle_id, trip_id, route_id, lat, lon, bearing, timestamp, status
+                    FROM vehicle_positions
+                    WHERE timestamp >= ${cutoffTime}
+                `;
+
+                if (routeFilter) {
+                    query += ` AND route_id = '${routeFilter}'`;
+                }
+
+                if (tripFilter) {
+                    query += ` AND trip_id = '${tripFilter}'`;
+                }
+
+                if (vehicleFilter) {
+                    query += ` AND vehicle_id = '${vehicleFilter}'`;
+                }
+
+                query += ' ORDER BY timestamp ASC';
+
+                const result = db.exec(query);
+
+                if (result.length === 0 || result[0].values.length === 0) {
+                    alert('No positions found for the selected filters');
+                    updateStats([], null, null);
+                    clearMap();
+                    return;
+                }
+
+                const positions = result[0].values.map(row => ({
+                    vehicle_id: row[0],
+                    trip_id: row[1],
+                    route_id: row[2],
+                    lat: row[3],
+                    lon: row[4],
+                    bearing: row[5],
+                    timestamp: row[6],
+                    status: row[7]
+                }));
+
+                allPositions = positions;
+
+                // Enable draw from points button
+                document.getElementById('drawFromPointsBtn').disabled = false;
+
+                // Get time range
+                const timestamps = positions.map(p => p.timestamp);
+                const minTime = Math.min(...timestamps);
+                const maxTime = Math.max(...timestamps);
+
+                updateStats(positions, minTime, maxTime);
+                renderPositions(positions, minTime, maxTime);
+            } catch (error) {
+                console.error('Error loading positions:', error);
+                alert('Error loading positions: ' + error.message);
+            } finally {
+                showLoading(false);
+            }
+        }
+
+        function updateStats(positions, minTime, maxTime) {
+            document.getElementById('totalPositions').textContent = positions.length;
+
+            const uniqueVehicles = new Set(positions.map(p => p.vehicle_id));
+            document.getElementById('totalVehicles').textContent = uniqueVehicles.size;
+
+            const uniqueRoutes = new Set(positions.map(p => p.route_id));
+            document.getElementById('totalRoutes').textContent = uniqueRoutes.size;
+
+            if (minTime && maxTime) {
+                const minDate = new Date(minTime * 1000);
+                const maxDate = new Date(maxTime * 1000);
+                document.getElementById('timeRange').textContent =
+                    `${minDate.toLocaleTimeString()} - ${maxDate.toLocaleTimeString()}`;
+            } else {
+                document.getElementById('timeRange').textContent = '-';
+            }
+        }
+
+        function clearMap() {
+            if (map.getSource('positions')) {
+                map.removeLayer('positions-layer');
+                map.removeSource('positions');
+            }
+        }
+
+        function renderPositions(positions, minTime, maxTime) {
+            // Remove existing layer
+            clearMap();
+
+            // Create GeoJSON
+            const features = positions.map(pos => ({
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [pos.lon, pos.lat]
+                },
+                properties: {
+                    vehicle_id: pos.vehicle_id,
+                    trip_id: pos.trip_id || 'N/A',
+                    route_id: pos.route_id || 'N/A',
+                    bearing: pos.bearing,
+                    timestamp: pos.timestamp,
+                    time_str: new Date(pos.timestamp * 1000).toLocaleString(),
+                    status: pos.status,
+                    color: getColorForTimestamp(pos.timestamp, minTime, maxTime)
+                }
+            }));
+
+            const geojson = {
+                type: 'FeatureCollection',
+                features: features
+            };
+
+            // Add source
+            map.addSource('positions', {
+                type: 'geojson',
+                data: geojson
+            });
+
+            // Add layer
+            map.addLayer({
+                id: 'positions-layer',
+                type: 'circle',
+                source: 'positions',
+                paint: {
+                    'circle-radius': 6,
+                    'circle-color': ['get', 'color'],
+                    'circle-stroke-width': 2,
+                    'circle-stroke-color': '#ffffff',
+                    'circle-opacity': 0.8
+                }
+            });
+
+            // Add click handler for popups
+            map.on('click', 'positions-layer', (e) => {
+                if (drawingMode) return; // Don't show popups in drawing mode
+
+                const coordinates = e.features[0].geometry.coordinates.slice();
+                const props = e.features[0].properties;
+
+                const html = `
+                    <div class="popup-title">Vehicle ${props.vehicle_id}</div>
+                    <div class="popup-field">
+                        <span class="popup-label">Route:</span>
+                        <span class="popup-value">${props.route_id}</span>
+                    </div>
+                    <div class="popup-field">
+                        <span class="popup-label">Trip:</span>
+                        <span class="popup-value">${props.trip_id}</span>
+                    </div>
+                    <div class="popup-field">
+                        <span class="popup-label">Time:</span>
+                        <span class="popup-value">${props.time_str}</span>
+                    </div>
+                    <div class="popup-field">
+                        <span class="popup-label">Bearing:</span>
+                        <span class="popup-value">${props.bearing}°</span>
+                    </div>
+                    <div class="popup-field">
+                        <span class="popup-label">Status:</span>
+                        <span class="popup-value">${props.status}</span>
+                    </div>
+                `;
+
+                new maplibregl.Popup()
+                    .setLngLat(coordinates)
+                    .setHTML(html)
+                    .addTo(map);
+            });
+
+            // Change cursor on hover
+            map.on('mouseenter', 'positions-layer', () => {
+                if (!drawingMode) {
+                    map.getCanvas().style.cursor = 'pointer';
+                }
+            });
+
+            map.on('mouseleave', 'positions-layer', () => {
+                if (!drawingMode) {
+                    map.getCanvas().style.cursor = '';
+                }
+            });
+
+            // Fit map to positions
+            if (features.length > 0) {
+                const bounds = new maplibregl.LngLatBounds();
+                features.forEach(feature => {
+                    bounds.extend(feature.geometry.coordinates);
+                });
+                map.fitBounds(bounds, { padding: 50 });
+            }
+        }
+
+        function showLoading(show) {
+            const loading = document.getElementById('loading');
+            if (show) {
+                loading.classList.add('show');
+            } else {
+                loading.classList.remove('show');
+            }
+        }
+
+        // Event listeners
+        document.getElementById('refreshBtn').addEventListener('click', loadPositions);
+
+        // When route changes, update trip and vehicle filters and load positions
+        document.getElementById('routeFilter').addEventListener('change', () => {
+            populateFilters();
+            loadPositions();
+        });
+
+        // When trip changes, update route and vehicle filters and load positions
+        document.getElementById('tripFilter').addEventListener('change', () => {
+            populateFilters();
+            loadPositions();
+        });
+
+        // When vehicle changes, update route and trip filters and load positions
+        document.getElementById('vehicleFilter').addEventListener('change', () => {
+            populateFilters();
+            loadPositions();
+        });
+
+        // When max age changes, update all filters and load positions
+        document.getElementById('maxAge').addEventListener('change', () => {
+            populateFilters();
+            loadPositions();
+        });
+
+        // Initialize map on load
+        initMap();
+    </script>
+</body>
+</html>

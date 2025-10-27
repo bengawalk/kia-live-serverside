@@ -17,6 +17,9 @@ RUN apt-get update && apt-get install -y curl build-essential && \
 # Set working directory
 WORKDIR /app
 
+# Container timezone defaults to IST
+RUN echo "Asia/Kolkata" > /etc/timezone
+
 # Copy only Poetry files first to install dependencies
 COPY pyproject.toml poetry.lock* ./
 
@@ -31,6 +34,8 @@ COPY . .
 EXPOSE 59966
 
 VOLUME /app/db
+VOLUME /app/in
+VOLUME /app/out
 
 # Set default command
 CMD ["poetry", "run", "python3", "-m", "src.main"]
