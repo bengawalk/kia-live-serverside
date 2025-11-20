@@ -107,9 +107,10 @@ class BMTCAPISource:
         for attempt in range(1, max_attempts + 1):
             try:
                 timeout = aiohttp.ClientTimeout(total=30)
-                
+                print('sending request ', route_id)
                 async with self._session.post(url, json=payload, headers=self.headers, timeout=timeout) as response:
                     if response.status != 200:
+                        print('RESPONSE IS NOT 200', route_id)
                         if 500 <= response.status < 600 and attempt < max_attempts:
                             # Retry on server errors
                             wait_time = base_backoff * (2 ** (attempt - 1)) + random.uniform(0, 0.2)

@@ -407,18 +407,192 @@ def generate_times_json():
 
 # Remove routes that do not have timings information or are missing partial data
 def clean_files():
-    pass
+    if '-s' not in sys.argv and '-t' not in sys.argv and '-tdb' not in sys.argv:
+        print("Skipping clean, as no data files were generated.")
+        return
+
+    print("Cleaning files to remove routes with incomplete data...")
+
+    # Load all generated files
+    files_to_check = []
+    timings_tsv_exists = False
+
+    if os.path.exists(os.path.join(GENERATED_IN_DIR, 'client_stops.json')):
+        files_to_check.append('client_stops.json')
+    if os.path.exists(os.path.join(GENERATED_IN_DIR, 'route_children_ids.json')):
+        files_to_check.append('route_children_ids.json')
+    if os.path.exists(os.path.join(GENERATED_IN_DIR, 'route_parent_ids.json')):
+        files_to_check.append('route_parent_ids.json')
+    if os.path.exists(os.path.join(GENERATED_IN_DIR, 'routelines.json')):
+        files_to_check.append('routelines.json')
+    if os.path.exists(os.path.join(GENERATED_IN_DIR, 'times.json')):
+        files_to_check.append('times.json')
+    if os.path.exists(os.path.join(GENERATED_IN_DIR, 'timings.tsv')):
+        timings_tsv_exists = True
+
+    if not files_to_check and not timings_tsv_exists:
+        print("No files to clean.")
+        return
+
+    # Load data from files
+    data = {}
+    for filename in files_to_check:
+        with open(os.path.join(GENERATED_IN_DIR, filename), 'r', encoding='utf-8') as f:
+            data[filename] = json.load(f)
+
+    # Load timings.tsv if it exists and times.json doesn't exist (meaning -t was used but not -tdb)
+    timings_from_tsv = {}
+    if timings_tsv_exists and 'times.json' not in data:
+        with open(os.path.join(GENERATED_IN_DIR, 'timings.tsv'), 'r') as f:
+            f.readline()  # Skip header
+            for line in f.readlines():
+                parts = line.strip().split('\t')
+                if len(parts) >= 1:
+                    route_no = parts[0]
+                    timings_from_tsv[route_no] = True
+
+    # Determine which routes have complete data
+    # A route is valid if it has:
+    # 1. A child ID
+    # 2. A parent ID
+    # 3. Client stops with valid total distance
+    # 4. Timing information (if times.json exists)
+
+    valid_routes = set()
+    if 'route_children_ids.json' in data:
+        valid_routes = set(data['route_children_ids.json'].keys())
+
+    # Filter by routes that have parent IDs
+    if 'route_parent_ids.json' in data:
+        valid_routes &= set(data['route_parent_ids.json'].keys())
+
+    # Filter by routes that have stops with valid distances
+    if 'client_stops.json' in data:
+        routes_with_valid_stops = {
+            route for route, stops_data in data['client_stops.json'].items()
+            if stops_data.get('totalDistance', 0) > 0 and len(stops_data.get('stops', [])) > 0
+        }
+        valid_routes &= routes_with_valid_stops
+
+    # Filter by routes that have timing information
+    # Use times.json if it exists (when -tdb was used), otherwise use timings.tsv (when -t was used)
+    if 'times.json' in data:
+        routes_with_times = {
+            route for route, times_list in data['times.json'].items()
+            if len(times_list) > 0
+        }
+        valid_routes &= routes_with_times
+    elif timings_from_tsv:
+        # Use timings from TSV file when times.json doesn't exist
+        routes_with_timings = set(timings_from_tsv.keys())
+        valid_routes &= routes_with_timings
+
+    # Remove invalid routes from all files
+    removed_count = 0
+    for filename, file_data in data.items():
+        if filename == 'route_children_ids.json':
+            original_count = len(file_data)
+            data[filename] = {k: v for k, v in file_data.items() if k in valid_routes}
+            removed_count += original_count - len(data[filename])
+        elif filename == 'route_parent_ids.json':
+            original_count = len(file_data)
+            data[filename] = {k: v for k, v in file_data.items() if k in valid_routes}
+            removed_count += original_count - len(data[filename])
+        elif filename == 'client_stops.json':
+            original_count = len(file_data)
+            data[filename] = {k: v for k, v in file_data.items() if k in valid_routes}
+            removed_count += original_count - len(data[filename])
+        elif filename == 'routelines.json':
+            original_count = len(file_data)
+            data[filename] = {k: v for k, v in file_data.items() if k in valid_routes}
+            removed_count += original_count - len(data[filename])
+        elif filename == 'times.json':
+            original_count = len(file_data)
+            data[filename] = {k: v for k, v in file_data.items() if k in valid_routes}
+            removed_count += original_count - len(data[filename])
+
+    # Write cleaned data back to files
+    for filename, file_data in data.items():
+        with open(os.path.join(GENERATED_IN_DIR, filename), 'w', encoding='utf-8') as f:
+            json.dump(file_data, f, indent=4, ensure_ascii=False)
+
+    print(f"Cleaned files: removed {removed_count} incomplete route entries across all files.")
+    print(f"Valid routes remaining: {len(valid_routes)}")
 
 def copy_files_to_in():
     if '-c' not in sys.argv:
         print("Not copying / overwriting files to in directory, as -c flag is not provided.")
+        return
 
-    # client_stops.json -> client_stops.json && helpers/construct_stops/client_stops.json
-    # route_children_ids.json -> routes_children_ids.json
-    # route_parent_ids.json -> routes_parent_ids.json
-    # routelines.json -> routelines.json
-    # times.json -> times.json
-    # timings.tsv -> helpers/construct_timings/timings.tsv
+    print("Copying generated files to in/ directory...")
+
+    import shutil
+
+    # Ensure destination directories exist
+    os.makedirs('in/helpers/construct_stops', exist_ok=True)
+    os.makedirs('in/helpers/construct_timings', exist_ok=True)
+
+    files_copied = 0
+
+    # client_stops.json -> in/client_stops.json && in/helpers/construct_stops/client_stops.json
+    if os.path.exists(os.path.join(GENERATED_IN_DIR, 'client_stops.json')):
+        shutil.copy2(
+            os.path.join(GENERATED_IN_DIR, 'client_stops.json'),
+            'in/client_stops.json'
+        )
+        shutil.copy2(
+            os.path.join(GENERATED_IN_DIR, 'client_stops.json'),
+            'in/helpers/construct_stops/client_stops.json'
+        )
+        files_copied += 1
+        print("  ✓ Copied client_stops.json to in/ and in/helpers/construct_stops/")
+
+    # route_children_ids.json -> in/routes_children_ids.json
+    if os.path.exists(os.path.join(GENERATED_IN_DIR, 'route_children_ids.json')):
+        shutil.copy2(
+            os.path.join(GENERATED_IN_DIR, 'route_children_ids.json'),
+            'in/routes_children_ids.json'
+        )
+        files_copied += 1
+        print("  ✓ Copied route_children_ids.json to in/routes_children_ids.json")
+
+    # route_parent_ids.json -> in/routes_parent_ids.json
+    if os.path.exists(os.path.join(GENERATED_IN_DIR, 'route_parent_ids.json')):
+        shutil.copy2(
+            os.path.join(GENERATED_IN_DIR, 'route_parent_ids.json'),
+            'in/routes_parent_ids.json'
+        )
+        files_copied += 1
+        print("  ✓ Copied route_parent_ids.json to in/routes_parent_ids.json")
+
+    # routelines.json -> in/routelines.json
+    if os.path.exists(os.path.join(GENERATED_IN_DIR, 'routelines.json')):
+        shutil.copy2(
+            os.path.join(GENERATED_IN_DIR, 'routelines.json'),
+            'in/routelines.json'
+        )
+        files_copied += 1
+        print("  ✓ Copied routelines.json to in/routelines.json")
+
+    # times.json -> in/times.json
+    if os.path.exists(os.path.join(GENERATED_IN_DIR, 'times.json')):
+        shutil.copy2(
+            os.path.join(GENERATED_IN_DIR, 'times.json'),
+            'in/times.json'
+        )
+        files_copied += 1
+        print("  ✓ Copied times.json to in/times.json")
+
+    # timings.tsv -> in/helpers/construct_timings/timings.tsv
+    if os.path.exists(os.path.join(GENERATED_IN_DIR, 'timings.tsv')):
+        shutil.copy2(
+            os.path.join(GENERATED_IN_DIR, 'timings.tsv'),
+            'in/helpers/construct_timings/timings.tsv'
+        )
+        files_copied += 1
+        print("  ✓ Copied timings.tsv to in/helpers/construct_timings/timings.tsv")
+
+    print(f"\nSuccessfully copied {files_copied} file(s) to in/ directory.")
 
 
 
