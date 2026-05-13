@@ -202,7 +202,8 @@ export SKLEARN_N_JOBS=$MAX_CPU_CORES
 ################################################################################
 # STEP 1: Download database backups from R2 bucket
 ################################################################################
-
+poetry install
+poetry run pip install boto3
 if [ "$SKIP_DOWNLOAD" = false ]; then
     print_header "Step 1: Download Database Backups from R2"
 
