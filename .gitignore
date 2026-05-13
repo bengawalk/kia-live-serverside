@@ -10,3 +10,5 @@ generated_in/
 *.log
 .DS_Store
 /models/
+/pre-run.sh
+/git.sh
