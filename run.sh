@@ -46,18 +46,29 @@ MAX_CPU_CORES=""  # Auto-detect and use 70%
 # Detect available system resources
 detect_system_resources() {
     # Detect total RAM in MB
-    if command -v sysctl &> /dev/null; then
+#    if command -v sysctl &> /dev/null; then
         # macOS
-        TOTAL_RAM_MB=$(sysctl -n hw.memsize | awk '{print int($1/1024/1024)}')
-    elif [ -f /proc/meminfo ]; then
+#        TOTAL_RAM_MB=$(sysctl -n hw.memsize | awk '{print int($1/1024/1024)}')
+#    elif [ -f /proc/meminfo ]; then
         # Linux
-        TOTAL_RAM_MB=$(grep MemTotal /proc/meminfo | awk '{print int($2/1024)}')
-    else
-        TOTAL_RAM_MB=8192  # Default to 8GB if can't detect
-    fi
+#        TOTAL_RAM_MB=$(grep MemTotal /proc/meminfo | awk '{print int($2/1024)}')
+#    else
+#        TOTAL_RAM_MB=8192  # Default to 8GB if can't detect
+#    fi
+
+  # Detect total RAM in MB
+  if [ -f /proc/meminfo ]; then
+      # Linux (Alpine, etc.)
+      TOTAL_RAM_MB=$(awk '/MemTotal/ {print int($2/1024)}' /proc/meminfo)
+  elif command -v sysctl >/dev/null 2>&1 && sysctl hw.memsize >/dev/null 2>&1; then
+      # macOS / BSD
+      TOTAL_RAM_MB=$(sysctl -n hw.memsize | awk '{print int($1/1024/1024)}')
+  else
+      TOTAL_RAM_MB=8192
+  fi
 
     # Detect total CPU cores
-    if command -v sysctl &> /dev/null; then
+    if command -v sysctl &> /dev/null 2>&1 && sysctl hw.ncpu >/dev/null 2>&1; then
         # macOS
         TOTAL_CPU_CORES=$(sysctl -n hw.ncpu)
     elif [ -f /proc/cpuinfo ]; then
@@ -66,6 +77,9 @@ detect_system_resources() {
     else
         TOTAL_CPU_CORES=4  # Default to 4 cores if can't detect
     fi
+
+
+
 
     # Calculate limits
     MAX_RAM_MB=$((TOTAL_RAM_MB * MAX_RAM_PERCENT / 100))
