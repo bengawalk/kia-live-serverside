@@ -82,65 +82,48 @@ class TripStop:
         if stop_time_value:
             try:
                 # Handle next-day notation (>= 2400)
+                add_day = False
                 if stop_time_value >= 2400:
-                    # Subtract 2400 to get actual time
                     stop_time_value = stop_time_value - 2400
                     add_day = True
-                else:
-                    add_day = False
 
-                # Parse time value
-                if stop_time_value < 100:
-                    # Values 0-99: Could be HH format OR MM format (minutes after midnight)
-                    # Use context from previous stop to determine
-
-                    if stop_time_value < 60 and prev_scheduled_time:
-                        # Check if previous stop was late evening (after 22:00) OR already past midnight (hour 0-1)
-                        prev_hour = prev_scheduled_time.hour
-                        if prev_hour >= 22 or prev_hour <= 1:
-                            # Interpret as MM format (minutes after midnight)
-                            hours = 0
-                            minutes = int(stop_time_value)
-                            add_day = True  # Next day
-                        else:
-                            # Interpret as HH format
-                            hours = int(stop_time_value)
-                            minutes = 0
-                            # Handle hours >= 24 (next day wrap)
-                            while hours >= 24:
-                                hours -= 24
-                                add_day = True
-                    else:
-                        # No context or value >= 60: interpret as HH format
-                        hours = int(stop_time_value)
-                        minutes = 0
-                        # Handle hours >= 24 (next day wrap)
-                        while hours >= 24:
-                            hours -= 24
-                            add_day = True
-                else:
-                    # HHMM format
+                # Parse hours and minutes based on value range.
+                # Values that came from >= 2400 notation (e.g. 2405 → 5) are always HHMM
+                # (5 → 00:05, 15 → 00:15, 130 → 01:30).  Unmodified values < 100 use HH
+                # format (5 → 05:00, 15 → 15:00); unmodified values >= 100 use HHMM.
+                # Exception: if the previous stop was near midnight (hour >= 22) and the
+                # unmodified value is < 60, treat as minutes-after-midnight (HHMM: 00:MM).
+                prev_near_midnight = (
+                    prev_scheduled_time is not None
+                    and prev_scheduled_time.hour >= 22
+                    and not add_day
+                    and stop_time_value < 60
+                )
+                if add_day or stop_time_value >= 100 or prev_near_midnight:
+                    # HHMM format: 1530 → 15:30, 530 → 5:30, 5 → 0:05 (after 2400 strip)
                     hours = int(stop_time_value) // 100
                     minutes = int(stop_time_value) % 100
+                else:
+                    # HH format: 15 → 15:00, 5 → 5:00
+                    hours = int(stop_time_value)
+                    minutes = 0
 
-                    # Handle hours >= 24 (next day wrap)
-                    while hours >= 24:
-                        hours -= 24
-                        add_day = True
+                # Normalize hours >= 24 (e.g., after subtracting 2400: 2530→130→1h30m next day)
+                while hours >= 24:
+                    hours -= 24
+                    add_day = True
 
-                # Validate hours and minutes
                 if 0 <= hours <= 23 and 0 <= minutes <= 59:
-                    # Create datetime for today
-                    now = datetime.now(local_tz)
-                    scheduled_time = now.replace(hour=hours, minute=minutes, second=0, microsecond=0)
+                    # Anchor to prev_scheduled_time when available so all stops on same trip
+                    # share the same calendar day reference rather than using datetime.now()
+                    ref = prev_scheduled_time if prev_scheduled_time else datetime.now(local_tz)
+                    scheduled_time = ref.replace(hour=hours, minute=minutes, second=0, microsecond=0)
 
-                    # Add day if needed from 24+ hour notation or MM format
                     if add_day:
                         scheduled_time += timedelta(days=1)
-                    # Or handle midnight crossings based on current time
-                    elif scheduled_time < now - timedelta(hours=6):
+                    elif scheduled_time < ref - timedelta(hours=6):
                         scheduled_time += timedelta(days=1)
-                    elif scheduled_time > now + timedelta(hours=18):
+                    elif scheduled_time > ref + timedelta(hours=18):
                         scheduled_time -= timedelta(days=1)
 
             except (ValueError, TypeError):
@@ -263,8 +246,8 @@ class Trip:
                     station_info=stop.station_info,
                     scheduled_arrival=stop.scheduled_arrival,
                     scheduled_departure=stop.scheduled_departure,
-                    actual_arrival=self._parse_time(vehicle.actual_arrival_time) if vehicle.actual_arrival_time else stop.actual_arrival,
-                    actual_departure=self._parse_time(vehicle.actual_departure_time) if vehicle.actual_departure_time else stop.actual_departure,
+                    actual_arrival=self._parse_time(vehicle.actual_arrival_time, stop.scheduled_arrival) if vehicle.actual_arrival_time else stop.actual_arrival,
+                    actual_departure=self._parse_time(vehicle.actual_departure_time, stop.scheduled_arrival) if vehicle.actual_departure_time else stop.actual_departure,
                     predicted_arrival=stop.predicted_arrival,
                     predicted_departure=stop.predicted_departure,
                     is_passed=bool(vehicle.actual_departure_time),
@@ -289,22 +272,21 @@ class Trip:
             shape_id=self.shape_id
         )
     
-    def _parse_time(self, time_str: str) -> Optional[datetime]:
-        """Parse HH:MM time string to datetime"""
+    def _parse_time(self, time_str: str, reference: Optional[datetime] = None) -> Optional[datetime]:
+        """Parse HH:MM time string to datetime, anchored to reference when provided."""
         if not time_str or ":" not in time_str:
             return None
-            
+
         try:
             hh, mm = map(int, time_str.split(":"))
-            now = datetime.now(local_tz)
-            parsed_time = now.replace(hour=hh, minute=mm, second=0, microsecond=0)
-            
-            # Handle midnight crossings
-            if parsed_time < now - timedelta(hours=6):
+            ref = reference if reference else datetime.now(local_tz)
+            parsed_time = ref.replace(hour=hh, minute=mm, second=0, microsecond=0)
+
+            if parsed_time < ref - timedelta(hours=6):
                 parsed_time += timedelta(days=1)
-            elif parsed_time > now + timedelta(hours=18):
+            elif parsed_time > ref + timedelta(hours=18):
                 parsed_time -= timedelta(days=1)
-                
+
             return parsed_time
         except (ValueError, TypeError):
             return None
