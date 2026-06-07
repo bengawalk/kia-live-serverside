@@ -168,14 +168,18 @@ class PredictionService:
         return today
 
     def _apply_predictions_to_trip(self, trip: Trip, predictions: Dict[str, datetime]) -> Trip:
-        """Apply predictions to trip stops"""
+        """Apply predictions to trip stops, enforcing monotonically increasing times."""
         updated_stops = []
-        
+        prev_predicted: Optional[datetime] = None
+
         for stop in trip.stops:
             if stop.stop_id in predictions:
                 predicted_time = predictions[stop.stop_id]
-                
-                # Create updated stop with predictions
+
+                # Clamp so predicted times never regress from the previous stop
+                if prev_predicted and predicted_time < prev_predicted:
+                    predicted_time = prev_predicted
+
                 updated_stop = TripStop(
                     stop_id=stop.stop_id,
                     sequence=stop.sequence,
@@ -191,6 +195,7 @@ class PredictionService:
                     confidence=stop.confidence
                 )
                 updated_stops.append(updated_stop)
+                prev_predicted = predicted_time
             else:
                 updated_stops.append(stop)
         

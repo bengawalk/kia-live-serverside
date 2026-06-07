@@ -34,12 +34,9 @@ class DatabaseService:
 
         # Background write queues for fire-and-forget writes
         self._write_queue = asyncio.Queue(maxsize=10000)  # Vehicle positions
-        self._stop_write_queue = asyncio.Queue(maxsize=5000)  # Completed stops (increased from 1000)
         self._write_worker_task: Optional[asyncio.Task] = None
-        self._stop_write_worker_task: Optional[asyncio.Task] = None
         self._is_running = False
         self._dropped_writes = 0
-        self._dropped_stop_writes = 0
 
     async def initialize(self):
         """Initialize database schema and connection pool"""
@@ -58,20 +55,20 @@ class DatabaseService:
             await conn.execute("PRAGMA busy_timeout=500")   # .5 second timeout - fail fast to prevent cascading delays
             await conn.execute("PRAGMA temp_store=MEMORY")   # Keep temp tables in memory
 
-            await conn.execute('''
-                CREATE TABLE IF NOT EXISTS completed_stop_times (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    stop_id TEXT,
-                    trip_id TEXT,
-                    route_id TEXT,
-                    date TEXT,
-                    actual_arrival TEXT,
-                    actual_departure TEXT,
-                    scheduled_arrival TEXT,
-                    scheduled_departure TEXT,
-                    UNIQUE(stop_id, trip_id, date)
-                )
-            ''')
+            # await conn.execute('''
+            #     CREATE TABLE IF NOT EXISTS completed_stop_times (
+            #         id INTEGER PRIMARY KEY AUTOINCREMENT,
+            #         stop_id TEXT,
+            #         trip_id TEXT,
+            #         route_id TEXT,
+            #         date TEXT,
+            #         actual_arrival TEXT,
+            #         actual_departure TEXT,
+            #         scheduled_arrival TEXT,
+            #         scheduled_departure TEXT,
+            #         UNIQUE(stop_id, trip_id, date)
+            #     )
+            # ''')
 
             await conn.execute('''
                 CREATE TABLE IF NOT EXISTS vehicle_positions (
@@ -185,7 +182,7 @@ class DatabaseService:
             for conn in self._connection_pool:
                 await conn.close()
             self._connection_pool.clear()
-            logger.info(f"Database connection pool closed (dropped {self._dropped_writes} writes due to queue full)")
+            logger.info(f"Database connection pool closed (dropped {self._dropped_writes} position writes due to queue full)")
 
     async def _background_writer(self):
         """
@@ -235,19 +232,6 @@ class DatabaseService:
                         await self._process_write_batch(write_conn, batch)
                         batch_count += 1
 
-                    # CRITICAL: Always process stop writes, even if no vehicle positions
-                    # This prevents stop queue from filling up when vehicle queue is empty
-                    stop_writes = []
-                    while not self._stop_write_queue.empty() and len(stop_writes) < 200:  # Increased from 50 to 200
-                        try:
-                            stop_writes.append(self._stop_write_queue.get_nowait())
-                        except asyncio.QueueEmpty:
-                            break
-
-                    if stop_writes:
-                        await self._process_stop_writes(write_conn, stop_writes)
-                        batch_count += 1
-
                     # CRITICAL: Periodic WAL checkpoint to prevent WAL file from growing indefinitely
                     # Without this, all data stays in the WAL file and never moves to main database
                     if batch_count >= checkpoint_interval:
@@ -293,48 +277,23 @@ class DatabaseService:
                 item.get("status"),
             ) for item in batch]
 
-            # Single executemany + commit
+            # Single executemany + commit — deduplicate on (vehicle_id, lat, lon)
             await conn.executemany('''
-                INSERT OR IGNORE INTO vehicle_positions (
+                INSERT INTO vehicle_positions (
                     vehicle_id, trip_id, route_id, lat, lon, bearing, timestamp, speed, status
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-            ''', values)
+                )
+                SELECT ?, ?, ?, ?, ?, ?, ?, ?, ?
+                WHERE NOT EXISTS (
+                    SELECT 1 FROM vehicle_positions WHERE vehicle_id = ? AND lat = ? AND lon = ?
+                )
+            ''', [(v[0], v[1], v[2], v[3], v[4], v[5], v[6], v[7], v[8],
+                   v[0], v[3], v[4]) for v in values])
 
             await conn.commit()
             logger.debug(f"Background writer: inserted {len(batch)} positions")
 
         except Exception as e:
             logger.error(f"Error processing write batch: {e}")
-
-    async def _process_stop_writes(self, conn: aiosqlite.Connection, stops: List[Dict[str, Any]]):
-        """Process a batch of completed stop writes"""
-        try:
-            # Prepare batch data
-            values = [(
-                stop.get("stop_id"),
-                stop.get("trip_id"),
-                stop.get("route_id"),
-                stop.get("date"),
-                stop.get("actual_arrival"),
-                stop.get("actual_departure"),
-                stop.get("scheduled_arrival"),
-                stop.get("scheduled_departure"),
-            ) for stop in stops]
-
-            # Single executemany + commit
-            await conn.executemany('''
-                INSERT OR IGNORE INTO completed_stop_times (
-                    stop_id, trip_id, route_id, date,
-                    actual_arrival, actual_departure,
-                    scheduled_arrival, scheduled_departure
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-            ''', values)
-
-            await conn.commit()
-            logger.debug(f"Background writer: inserted {len(stops)} completed stops")
-
-        except Exception as e:
-            logger.error(f"Error processing stop writes: {e}")
 
     async def checkpoint_wal(self):
         """Checkpoint WAL file to main database (periodic maintenance)"""
@@ -346,19 +305,6 @@ class DatabaseService:
             logger.error(f"Error during WAL checkpoint: {e}")
         finally:
             await self._return_connection(conn)
-
-    async def log_completed_trip_stop(self, stop_data: Dict[str, Any]):
-        """
-        Queue completed stop data for background writing (fire-and-forget).
-
-        This method returns immediately without blocking.
-        """
-        try:
-            self._stop_write_queue.put_nowait(stop_data)
-            logger.debug(f"Queued stop {stop_data.get('stop_id')} for background write")
-        except asyncio.QueueFull:
-            self._dropped_stop_writes += 1
-            logger.warning(f"Stop write queue full, dropped stop {stop_data.get('stop_id')} (total dropped: {self._dropped_stop_writes})")
 
     async def log_vehicle_position(self, position_data: Dict[str, Any]):
         """Log vehicle position for ongoing trips"""

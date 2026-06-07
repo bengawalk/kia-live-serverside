@@ -80,6 +80,7 @@ class LiveDataRepository:
         
         # Batch processing for database operations
         self._pending_vehicle_positions: List[Dict[str, Any]] = []
+        self._pending_vehicle_positions_set: Set[Tuple[str, float, float]] = set()
         self._batch_size = 100
         self._batch_timeout = 30  # seconds
         self._last_batch_time = 0
@@ -168,8 +169,11 @@ class LiveDataRepository:
                     "status": "ACTIVE" if vehicle.is_trip_active() else "INACTIVE"
                 }
 
-                # Add to batch for efficient processing
-                self._pending_vehicle_positions.append(position_data)
+                # Add to batch if not already seen (deduplicate on vehicle_id, lat, lon)
+                pos_key = (vehicle.id, vehicle.position.latitude, vehicle.position.longitude)
+                if pos_key not in self._pending_vehicle_positions_set:
+                    self._pending_vehicle_positions.append(position_data)
+                    self._pending_vehicle_positions_set.add(pos_key)
 
                 # Process batch if it's full or enough time has passed
                 current_time = time.time()
@@ -416,27 +420,6 @@ class LiveDataRepository:
         
         # Update trip stop status
         updated_trip = trip.update_stop_status(vehicle.current_station_id, vehicle)
-        
-        # Check if this update completed any stops and log to database
-        if self.database_service and vehicle.actual_arrival_time and vehicle.actual_departure_time:
-            try:
-                # Find the corresponding stop that was just completed
-                for stop in updated_trip.stops:
-                    if stop.stop_id == vehicle.current_station_id and stop.is_completed():
-                        stop_data = {
-                            "stop_id": stop.stop_id,
-                            "trip_id": updated_trip.id,
-                            "route_id": updated_trip.route_id,
-                            "date": updated_trip.start_time.strftime("%Y-%m-%d"),
-                            "actual_arrival": vehicle.actual_arrival_time,
-                            "actual_departure": vehicle.actual_departure_time,
-                            "scheduled_arrival": stop.scheduled_arrival.strftime("%H:%M") if stop.scheduled_arrival else None,
-                            "scheduled_departure": stop.scheduled_departure.strftime("%H:%M") if stop.scheduled_departure else None
-                        }
-                        await self.database_service.log_completed_trip_stop(stop_data)
-                        break
-            except Exception as e:
-                logger.error(f"Failed to log completed trip stop to database: {e}")
         
         # Store updated trip
         await self.store_trip(updated_trip)
@@ -881,6 +864,7 @@ class LiveDataRepository:
         try:
             positions_to_flush = self._pending_vehicle_positions.copy()
             self._pending_vehicle_positions.clear()
+            self._pending_vehicle_positions_set.clear()
             self._last_batch_time = time.time()
             
             # Use batch insert for efficiency

@@ -151,36 +151,52 @@ class RealtimeService:
             trip_update = entity.trip_update
             trip_update.trip.trip_id = trip.id
             trip_update.trip.route_id = trip.route_id
+            trip_update.trip.schedule_relationship = 0  # TripDescriptor.ScheduleRelationship.SCHEDULED
+            trip_update.timestamp = int(vehicle.position.timestamp.timestamp())
 
             trip_update.vehicle.id = vehicle_id
             trip_update.vehicle.label = vehicle.number or ""
             # vehicle_pos.vehicle.license = vehicle.number or ""
             
-            # Add stop time updates
+            # Add stop time updates with cross-stop monotonicity enforcement.
+            # get_effective_*() mixes actual (past) and predicted (future) times across
+            # stops, which can create regressions.  We clamp here as the final gate.
+            prev_latest: Optional[datetime] = None
             for stop in trip.stops:
-                # if stop.is_skipped:
-                #     continue
-                    
                 stu = trip_update.stop_time_update.add()
+                stu.schedule_relationship = 0  # StopTimeUpdate.ScheduleRelationship.SCHEDULED
                 stu.stop_id = stop.stop_id
-                
+
                 # Use effective times (actual > predicted > scheduled)
                 arrival_time = stop.get_effective_arrival()
                 departure_time = stop.get_effective_departure()
-                
+
                 # If no effective time, generate prediction based on current time and trip progress
                 if not arrival_time and not departure_time:
                     predicted_time = await self._generate_fallback_prediction(trip, stop, vehicle)
                     if predicted_time:
                         arrival_time = predicted_time
                         departure_time = predicted_time
-                
+
+                # Clamp arrival to be >= the latest time emitted for the previous stop
+                if arrival_time and prev_latest and arrival_time < prev_latest:
+                    arrival_time = prev_latest
+
+                # Clamp departure to be >= arrival at the same stop
+                if departure_time and arrival_time and departure_time < arrival_time:
+                    departure_time = arrival_time
+
+                # Track the latest timestamp emitted so far
+                candidates = [t for t in (arrival_time, departure_time) if t is not None]
+                if candidates:
+                    prev_latest = max(candidates)
+
                 if arrival_time:
                     stu.arrival.time = int(arrival_time.timestamp())
                     if stop.scheduled_arrival:
                         delay_seconds = int((arrival_time - stop.scheduled_arrival).total_seconds())
                         stu.arrival.delay = delay_seconds
-                
+
                 if departure_time:
                     stu.departure.time = int(departure_time.timestamp())
                     if stop.scheduled_departure:

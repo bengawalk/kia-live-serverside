@@ -89,7 +89,7 @@ class LiveDataService:
             if parent_file.exists():
                 with open(parent_file, 'r', encoding='utf-8') as f:
                     parent_data = json.load(f)
-                    self.parent_route_ids = [str(v) for v in parent_data.values()]
+                    self.parent_route_ids = list(dict.fromkeys(str(v) for v in parent_data.values()))
             
             # Load children mapping (for GTFS trip mapping)
             children_file = self.config.in_dir / "routes_children_ids.json"
