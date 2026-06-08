@@ -1,7 +1,9 @@
 import datetime
+import logging
 import os
 import json
 import sys
+import time
 
 import requests
 import polyline
@@ -9,6 +11,18 @@ import urllib.parse
 import geopy.distance
 
 from src.model.universal_prediction import UniversalPredictionEngine
+
+# Debug logging
+DEBUG = '--debug' in sys.argv
+logging.basicConfig(
+    level=logging.DEBUG if DEBUG else logging.WARNING,
+    format='%(asctime)s [%(levelname)s] %(message)s'
+)
+log = logging.getLogger(__name__)
+
+# Retry config
+API_MAX_RETRIES = 3
+API_RETRY_DELAY = 5  # seconds
 
 # Directory setup
 GENERATED_IN_DIR = 'generated_in'
@@ -29,17 +43,26 @@ HEADERS = {
     'Content-Type': 'application/json'
 }
 
-# Function to query the API and return JSON data
+# Function to query the API and return JSON data, with retry and debug logging
 def query_api(url, data=None):
     headers = HEADERS if data is not None else {'Content-Length': '0', **HEADERS}
-    response = requests.post(url, headers=headers, json=data)
-    if response.status_code == 200:
-        return response.json()
-    else:
-        print(data)
-        print(url)
-        print(headers)
-        response.raise_for_status()
+    for attempt in range(1, API_MAX_RETRIES + 1):
+        log.debug("Request attempt %d/%d: POST %s payload=%s", attempt, API_MAX_RETRIES, url, data)
+        try:
+            t0 = time.monotonic()
+            response = requests.post(url, headers=headers, json=data, timeout=30)
+            elapsed = time.monotonic() - t0
+            log.debug("Response: status=%d elapsed=%.2fs body=%.200s", response.status_code, elapsed, response.text)
+            if response.status_code == 200:
+                return response.json()
+            response.raise_for_status()
+        except Exception as exc:
+            if attempt < API_MAX_RETRIES:
+                print(f"[WARN] Request failed (attempt {attempt}/{API_MAX_RETRIES}): {exc}. Retrying in {API_RETRY_DELAY}s...")
+                time.sleep(API_RETRY_DELAY)
+            else:
+                print(f"[ERROR] Request failed after {API_MAX_RETRIES} attempts: url={url} payload={data}")
+                raise
 def save_child_routes():
     # Query the GetAllRouteList endpoint and filter for routes with routeno starting with "KIA-"
     all_routes_data = query_api(GET_ALL_ROUTES_URL)
