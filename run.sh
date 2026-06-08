@@ -174,6 +174,23 @@ print_success() {
     echo -e "${GREEN}[SUCCESS] $1${NC}"
 }
 
+# Retry a command up to MAX_RETRIES times with RETRY_DELAY seconds between attempts
+MAX_RETRIES=3
+RETRY_DELAY=5
+
+retry() {
+    local attempt=1
+    until "$@"; do
+        if [ "$attempt" -ge "$MAX_RETRIES" ]; then
+            print_error "Command failed after $MAX_RETRIES attempts: $*"
+            return 1
+        fi
+        print_info "Attempt $attempt/$MAX_RETRIES failed. Retrying in ${RETRY_DELAY}s..."
+        sleep "$RETRY_DELAY"
+        attempt=$((attempt + 1))
+    done
+}
+
 # Check if we're in the correct directory
 if [ ! -f "pyproject.toml" ]; then
     print_error "pyproject.toml not found. Please run this script from the project root."
@@ -240,7 +257,7 @@ if [ "$SKIP_DOWNLOAD" = false ]; then
         fi
 
         # Run download script
-        poetry run python download_from_r2.py
+        retry poetry run python download_from_r2.py
         print_success "Database backups downloaded successfully"
     else
         print_info "No download script found (download_from_r2.py)"
@@ -277,7 +294,7 @@ if [ "$SKIP_EXTRACT" = false ]; then
     print_info "Found $DB_COUNT database file(s) in db/ directory"
 
     print_step "Running extract_vehicle_positions.py..."
-    poetry run python extract_vehicle_positions.py
+    retry poetry run python extract_vehicle_positions.py
 
     # Check if CSV was created
     if [ ! -f "db/vehicle_positions.csv" ]; then
@@ -327,7 +344,7 @@ if [ "$SKIP_TRAIN" = false ]; then
     mkdir -p models
 
     # Train the model
-    poetry run python -m src.model.cli train-universal \
+    retry poetry run python -m src.model.cli train-universal \
         --vehicle-positions db/vehicle_positions.csv \
         --stops-data in/client_stops.json \
         --model-dir models
@@ -360,7 +377,7 @@ if [ "$SKIP_GENERATE" = false ]; then
     print_info "This will fetch data from BMTC API and may take several minutes..."
 
     # Determine flags
-    GENERATE_FLAGS="-s -r -t -tdb"
+    GENERATE_FLAGS="-s -r -t -tdb --debug"
 
     if [ "$NO_COPY" = false ]; then
         GENERATE_FLAGS="$GENERATE_FLAGS -c"
@@ -372,7 +389,7 @@ if [ "$SKIP_GENERATE" = false ]; then
     print_info "Running with flags: $GENERATE_FLAGS"
 
     # Run the generation script
-    poetry run python generate_in_files.py $GENERATE_FLAGS
+    retry poetry run python generate_in_files.py $GENERATE_FLAGS
 
     # Check if files were generated
     if [ ! -d "generated_in" ] || [ -z "$(ls -A generated_in 2>/dev/null)" ]; then
