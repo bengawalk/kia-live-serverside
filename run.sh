@@ -423,11 +423,10 @@ fi
 
 print_info "Next steps:"
 echo "  1. Review generated files in generated_in/"
-echo "  2. Start the server: poetry run python -m src.main"
-echo "  3. Access endpoints at http://localhost:59966"
-echo "     - GET /gtfs.zip - Static GTFS feed"
-echo "     - GET /gtfs-rt.proto - Real-time GTFS feed"
-echo "     - GET /ws/gtfs-rt - WebSocket real-time stream"
+echo "  2. Start the service: poetry run python -m src.main"
+echo "  3. Consume the feeds from the R2 bucket:"
+echo "     - gtfs.zip - Static GTFS feed"
+echo "     - rt.pb    - Real-time GTFS-RT feed"
 
 echo ""
 print_success "All done!"

@@ -326,10 +326,9 @@ Once the pipeline completes successfully:
    poetry run python -m src.main
    ```
 
-3. **Access endpoints:**
-   - Static GTFS: `http://localhost:59966/gtfs.zip`
-   - Real-time GTFS-RT: `http://localhost:59966/gtfs-rt.proto`
-   - WebSocket stream: `ws://localhost:59966/ws/gtfs-rt`
+3. **Consume the feeds** from the R2 bucket:
+   - Static GTFS: `gtfs.zip`
+   - Real-time GTFS-RT: `rt.pb`
 
 4. **Monitor logs** for any issues
 
