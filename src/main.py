@@ -4,6 +4,7 @@ Main entry point for the GTFS Live Data System (New Architecture)
 Bridges together all components of the new src/ system.
 """
 
+from dotenv import load_dotenv
 import asyncio
 import logging
 import signal
@@ -27,6 +28,7 @@ from src.services.trip_scheduler import TripSchedulerService
 from src.services.database_service import DatabaseService
 from src.services.prediction_service import PredictionService
 from src.services.r2_uploader import R2Uploader
+from src.services.durable_object_updater import DurableObjectUpdater
 
 # Data layer
 from src.data.repositories.live_data_repo import LiveDataRepository
@@ -56,8 +58,10 @@ class GTFSLiveDataSystem:
         self.trip_scheduler: Optional[TripSchedulerService] = None
         self.realtime_service: Optional[RealtimeService] = None
         self.r2_uploader: Optional[R2Uploader] = None
+        self.durable_object_updater: Optional[DurableObjectUpdater] = None
         self.shutdown_event = asyncio.Event()
         self.predict_times = predict_times
+        load_dotenv()
         
     async def _bootstrap_static_gtfs(self):
         """Load in/ files, build GTFS, and write to out/ for endpoints."""
@@ -95,7 +99,12 @@ class GTFSLiveDataSystem:
             with open(out_dir / "feed_info.txt", "w", encoding='utf-8') as f:
                 f.write(str(version))
 
-            logger.info("Static GTFS built, written to out/gtfs.zip and published to R2")
+            # Publish the static GTFS zip to R2 for consumers
+            await self.r2_uploader.upload_bytes(
+                version, "gtfs-version", content_type="text/plain"
+            )
+
+            logger.info("Static GTFS built, written zip and version to out/ and published to R2")
         except Exception as e:
             traceback.print_exc()
             logger.error(f"Static GTFS bootstrap failed: {e}")
@@ -116,11 +125,13 @@ class GTFSLiveDataSystem:
                 timestamp = feed.header.timestamp
                 signature = self.realtime_service.content_signature(feed)
                 if timestamp != last_timestamp and signature != last_signature:
+                    feed_bytes = feed.SerializeToString()
                     await self.r2_uploader.upload_bytes(
-                        feed.SerializeToString(),
+                        feed_bytes,
                         "rt.pb",
                         content_type="application/x-protobuf",
                     )
+                    await self.durable_object_updater.publish(feed_bytes)
                     last_timestamp = timestamp
                     last_signature = signature
                 await asyncio.sleep(interval)
@@ -161,6 +172,7 @@ class GTFSLiveDataSystem:
         self.gtfs_service = GTFSService(self.config)
         self.realtime_service = RealtimeService(self.config, self.live_repo)
         self.r2_uploader = R2Uploader()
+        self.durable_object_updater = DurableObjectUpdater()
 
         # Initialize and start the new live data service
         self.live_data_service = LiveDataService(self.config, self.resource_manager, self.live_repo)

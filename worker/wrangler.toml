@@ -1,0 +1,18 @@
+name = "kia-live-rt-broadcaster"
+main = "src/index.ts"
+compatibility_date = "2026-07-12"
+
+[[durable_objects.bindings]]
+name = "RT_FEED"
+class_name = "RtFeedBroadcaster"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["RtFeedBroadcaster"]
+
+[[routes]]
+pattern = "kia-rt.blrtransit.com" # environment variable in ../.env should reflect this
+custom_domain = true
+
+# Set the shared secret used to authenticate the Python publisher:
+#   wrangler secret put DO_UPDATE_SECRET
