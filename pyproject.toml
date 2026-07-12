@@ -9,7 +9,6 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-#boto3 = "^1.35.74"
 python-dotenv = "^1.0.1"
 requests = "^2.32.3"
 flask = "^3.1.0"
@@ -28,7 +27,6 @@ aiosqlite = "^0.21.0"
 scikit-learn = ">=1.0,<1.6"
 numpy = ">=1.20,<2.0"
 boto3 = "^1.40.55"
-load-dotenv = "^0.1.0"
 
 
 [build-system]
