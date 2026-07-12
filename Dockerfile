@@ -30,9 +30,6 @@ RUN poetry config virtualenvs.create false \
 # Copy the rest of the application
 COPY . .
 
-# Expose the required port
-EXPOSE 59966
-
 VOLUME /app/db
 VOLUME /app/in
 VOLUME /app/out

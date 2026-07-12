@@ -210,6 +210,18 @@ class RealtimeService:
             logger.error(f"Error generating GTFS-RT feed: {e}")
             return None
     
+    @staticmethod
+    def content_signature(feed: gtfs_realtime_pb2.FeedMessage) -> bytes:
+        """Signature of the feed contents excluding the header timestamp.
+
+        Used to detect when the actual entity data changes rather than just
+        the header clock advancing.
+        """
+        sig = gtfs_realtime_pb2.FeedMessage()
+        sig.CopyFrom(feed)
+        sig.header.ClearField('timestamp')
+        return sig.SerializeToString()
+
     async def get_current_feed(self) -> Optional[bytes]:
         """Get the current GTFS-RT feed data (serialized protobuf bytes)"""
         feed = await self.generate_feed()

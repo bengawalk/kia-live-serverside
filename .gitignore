@@ -10,3 +10,5 @@ generated_in/
 *.log
 .DS_Store
 /models/
+/worker/node_modules/
+/worker/.wrangler/
