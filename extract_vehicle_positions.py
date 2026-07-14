@@ -123,15 +123,22 @@ class VehiclePositionExtractor:
             logger.error(f"Error analyzing schema for {db_path.name}: {e}")
             return None
 
-    def process_and_write_db(self, db_path: Path, schema: List[Dict], is_first: bool = False):
+    def process_and_write_db(self, db_path: Path, schema: List[Dict], chunksize: int = 50_000):
         """
         Extract data from a single database, process it, and append to CSV.
-        This is memory-efficient as it processes one database at a time.
+        Reads and writes in bounded-size chunks so memory use doesn't scale
+        with table size, and only marks the output file as initialized once
+        a chunk has actually been written (so a failure on this db can't
+        desync the CSV header from a later db's data).
         """
+        conn = None
+        initial_count = 0
+        final_count = 0
+        seen_keys: Set[tuple] = set()
+
         try:
             logger.info(f"Processing {db_path.name}...")
 
-            # Connect to database
             conn = sqlite3.connect(db_path)
 
             # Get column names and table name from schema
@@ -141,80 +148,79 @@ class VehiclePositionExtractor:
             # Query all data from the identified table
             query = f"SELECT {', '.join(columns)} FROM {table_name}"
 
-            # Read data into pandas DataFrame
-            df = pd.read_sql_query(query, conn)
-            conn.close()
-
-            initial_count = len(df)
-            logger.info(f"Extracted {initial_count:,} records from {db_path.name}")
-
-            if df.empty:
-                logger.warning(f"No data in {db_path.name}, skipping")
-                return
-
-            # Add source database info
-            df['_source_db'] = db_path.name
-
-            # Normalize column names (handle lat/latitude, lon/longitude variations)
-            column_mapping = {}
-            if 'lat' in df.columns and 'latitude' not in df.columns:
-                column_mapping['lat'] = 'latitude'
-            if 'lon' in df.columns and 'longitude' not in df.columns:
-                column_mapping['lon'] = 'longitude'
-
-            if column_mapping:
-                df = df.rename(columns=column_mapping)
-                logger.info(f"Renamed columns: {column_mapping}")
-
-            # Remove duplicates within this database
             dedup_columns = ['vehicle_id', 'timestamp', 'latitude', 'longitude', 'route_id']
-            available_dedup_columns = [col for col in dedup_columns if col in df.columns]
-
-            if available_dedup_columns:
-                df = df.drop_duplicates(subset=available_dedup_columns, keep='first')
-                final_count = len(df)
-                duplicates_removed = initial_count - final_count
-                self.total_duplicates_removed += duplicates_removed
-                logger.info(f"Removed {duplicates_removed:,} duplicates from {db_path.name}")
-            else:
-                final_count = len(df)
-                logger.warning("Could not perform deduplication - key columns not found")
-
-            # Remove trip_id column if it exists
-            if 'trip_id' in df.columns:
-                df = df.drop(columns=['trip_id'])
-                logger.info("Removed trip_id column")
-
-            # Reorder columns for consistency
             common_columns = [
                 'id', 'vehicle_id', 'route_id',
                 'latitude', 'longitude', 'bearing', 'speed',
                 'timestamp', 'status', 'last_updated', 'created_at'
             ]
 
-            existing_common = [col for col in common_columns if col in df.columns]
-            remaining_columns = [col for col in df.columns if col not in existing_common]
-            final_column_order = existing_common + sorted(remaining_columns)
-            df = df.reindex(columns=final_column_order)
+            for chunk in pd.read_sql_query(query, conn, chunksize=chunksize):
+                initial_count += len(chunk)
 
-            # Write to CSV (append mode after first write)
-            write_header = is_first
-            mode = 'w' if is_first else 'a'
+                if chunk.empty:
+                    continue
 
-            df.to_csv(self.output_file, mode=mode, header=write_header, index=False)
+                chunk['_source_db'] = db_path.name
 
-            self.total_records_written += len(df)
+                # Normalize column names (handle lat/latitude, lon/longitude variations)
+                column_mapping = {}
+                if 'lat' in chunk.columns and 'latitude' not in chunk.columns:
+                    column_mapping['lat'] = 'latitude'
+                if 'lon' in chunk.columns and 'longitude' not in chunk.columns:
+                    column_mapping['lon'] = 'longitude'
+                if column_mapping:
+                    chunk = chunk.rename(columns=column_mapping)
+
+                # Remove duplicates, both within and across chunks of this db
+                available_dedup_columns = [col for col in dedup_columns if col in chunk.columns]
+                if available_dedup_columns:
+                    before = len(chunk)
+                    chunk = chunk.drop_duplicates(subset=available_dedup_columns, keep='first')
+                    keys = list(chunk[available_dedup_columns].itertuples(index=False, name=None))
+                    keep_mask = [k not in seen_keys for k in keys]
+                    chunk = chunk[keep_mask]
+                    seen_keys.update(k for k, keep in zip(keys, keep_mask) if keep)
+                    self.total_duplicates_removed += before - len(chunk)
+                else:
+                    logger.warning("Could not perform deduplication - key columns not found")
+
+                if chunk.empty:
+                    continue
+
+                # Remove trip_id column if it exists
+                if 'trip_id' in chunk.columns:
+                    chunk = chunk.drop(columns=['trip_id'])
+
+                # Reorder columns for consistency
+                existing_common = [col for col in common_columns if col in chunk.columns]
+                remaining_columns = [col for col in chunk.columns if col not in existing_common]
+                final_column_order = existing_common + sorted(remaining_columns)
+                chunk = chunk.reindex(columns=final_column_order)
+
+                # Write to CSV (append mode after the first chunk ever written)
+                write_header = not self.file_initialized
+                mode = 'w' if write_header else 'a'
+
+                chunk.to_csv(self.output_file, mode=mode, header=write_header, index=False)
+                self.file_initialized = True
+
+                final_count += len(chunk)
+                self.total_records_written += len(chunk)
+
+            if initial_count == 0:
+                logger.warning(f"No data in {db_path.name}, skipping")
+            else:
+                logger.info(f"Extracted {initial_count:,} records from {db_path.name}")
+
             self.db_stats.append({
                 'database': db_path.name,
                 'raw_records': initial_count,
-                'duplicates_removed': duplicates_removed if available_dedup_columns else 0,
+                'duplicates_removed': initial_count - final_count,
                 'records_written': final_count
             })
 
-            logger.info(f"Appended {final_count:,} records from {db_path.name} to {self.output_file}")
-
-            # Clear DataFrame from memory
-            del df
+            logger.info(f"Wrote {final_count:,} records from {db_path.name} to {self.output_file}")
 
         except sqlite3.Error as e:
             logger.error(f"Database error processing {db_path.name}: {e}")
@@ -222,6 +228,9 @@ class VehiclePositionExtractor:
             logger.error(f"Error processing {db_path.name}: {e}")
             import traceback
             traceback.print_exc()
+        finally:
+            if conn is not None:
+                conn.close()
 
     def print_summary(self):
         """Print summary statistics about the extraction."""
@@ -278,11 +287,9 @@ class VehiclePositionExtractor:
 
         # Second pass: Process each database incrementally
         logger.info("Processing databases and writing to CSV incrementally...")
-        is_first = True
         for db_path_str, schema in schemas.items():
             db_path = Path(db_path_str)
-            self.process_and_write_db(db_path, schema, is_first=is_first)
-            is_first = False
+            self.process_and_write_db(db_path, schema)
 
         if self.total_records_written == 0:
             logger.error("No data extracted from any database")
