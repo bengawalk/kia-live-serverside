@@ -710,7 +710,7 @@
                 "stop_id": 23485
             },
             {
-                "distance": 1.444073845454832,
+                "distance": 2.024695808922938,
                 "name": "KIA Terminal 2",
                 "name_kn": "KIA Terminal 2",
                 "loc": [
@@ -721,7 +721,7 @@
                 "stop_id": 38417
             },
             {
-                "distance": 8.11599643123268,
+                "distance": 9.290401081568273,
                 "name": "Trumpet (KIA)",
                 "name_kn": "Trumpet (KIA)",
                 "loc": [
@@ -732,7 +732,7 @@
                 "stop_id": 35807
             },
             {
-                "distance": 8.615832506395048,
+                "distance": 9.933663812528165,
                 "name": "Navayuga Toll (KIA)",
                 "name_kn": "Navayuga Toll (KIA)",
                 "loc": [
@@ -743,7 +743,7 @@
                 "stop_id": 35745
             },
             {
-                "distance": 9.060193027414464,
+                "distance": 10.492564218116266,
                 "name": "Sadahalli Gate",
                 "name_kn": "Sadahalli Gate",
                 "loc": [
@@ -754,7 +754,7 @@
                 "stop_id": 28088
             },
             {
-                "distance": 16.95551148297197,
+                "distance": 29.89589905362776,
                 "name": "Hebbala",
                 "name_kn": "Hebbala",
                 "loc": [
@@ -765,7 +765,7 @@
                 "stop_id": 25816
             },
             {
-                "distance": 17.9673607611815,
+                "distance": 32.964578639026584,
                 "name": "Mekhri Circle",
                 "name_kn": "Mekhri Circle",
                 "loc": [
@@ -776,7 +776,7 @@
                 "stop_id": 33920
             },
             {
-                "distance": 18.832365339341486,
+                "distance": 34.261649391617844,
                 "name": "Fun World",
                 "name_kn": "",
                 "loc": [
@@ -787,7 +787,7 @@
                 "stop_id": 40516
             },
             {
-                "distance": 18.853625642484264,
+                "distance": 34.30383055430374,
                 "name": "Munireddy Palya J C Nagara",
                 "name_kn": "Munireddy Palya J C Nagara",
                 "loc": [
@@ -798,7 +798,7 @@
                 "stop_id": 23791
             },
             {
-                "distance": 19.950663813659833,
+                "distance": 36.09652996845425,
                 "name": "Millers Road",
                 "name_kn": "Millers Road",
                 "loc": [
@@ -809,7 +809,7 @@
                 "stop_id": 37177
             },
             {
-                "distance": 20.745950940788983,
+                "distance": 36.96124380351509,
                 "name": "Coles Park",
                 "name_kn": "Coles Park",
                 "loc": [
@@ -820,7 +820,7 @@
                 "stop_id": 24717
             },
             {
-                "distance": 22.23274379429355,
+                "distance": 38.711762054979715,
                 "name": "MEG Centre",
                 "name_kn": "",
                 "loc": [
@@ -831,7 +831,7 @@
                 "stop_id": 33914
             },
             {
-                "distance": 23.213647717367227,
+                "distance": 40.48337088778729,
                 "name": "Halasuru",
                 "name_kn": "Halasuru",
                 "loc": [
@@ -842,7 +842,7 @@
                 "stop_id": 22005
             },
             {
-                "distance": 24.544785347145776,
+                "distance": 41.85425867507885,
                 "name": "Indiranagara Police Station/KFC",
                 "name_kn": "Indiranagara Police Station/KFC",
                 "loc": [
@@ -853,7 +853,7 @@
                 "stop_id": 22390
             },
             {
-                "distance": 25.273279386075046,
+                "distance": 43.056421811626855,
                 "name": "Thippasandra",
                 "name_kn": "Thippasandra",
                 "loc": [
@@ -864,7 +864,7 @@
                 "stop_id": 22548
             },
             {
-                "distance": 26.590179136170683,
+                "distance": 44.986210004506525,
                 "name": "Jeevanbheema Nagara",
                 "name_kn": "Jeevanbheema Nagara",
                 "loc": [
@@ -875,7 +875,7 @@
                 "stop_id": 26321
             },
             {
-                "distance": 27.693148465292747,
+                "distance": 46.8,
                 "name": "HAL Main Gate",
                 "name_kn": "",
                 "loc": [
@@ -886,7 +886,7 @@
                 "stop_id": 25675
             }
         ],
-        "totalDistance": 27.693148465292747
+        "totalDistance": 46.8
     },
     "KIA-4A UP": {
         "stops": [
@@ -1215,7 +1215,7 @@
                 "stop_id": 23485
             },
             {
-                "distance": 1.956821917808219,
+                "distance": 1.515240273735821,
                 "name": "KIA Terminal 2",
                 "name_kn": "KIA Terminal 2",
                 "loc": [
@@ -1226,7 +1226,7 @@
                 "stop_id": 38417
             },
             {
-                "distance": 8.97895890410959,
+                "distance": 8.18716285951367,
                 "name": "Trumpet (KIA)",
                 "name_kn": "Trumpet (KIA)",
                 "loc": [
@@ -1237,7 +1237,7 @@
                 "stop_id": 35807
             },
             {
-                "distance": 9.600657534246576,
+                "distance": 8.686998934676037,
                 "name": "Navayuga Toll (KIA)",
                 "name_kn": "Navayuga Toll (KIA)",
                 "loc": [
@@ -1248,7 +1248,7 @@
                 "stop_id": 35745
             },
             {
-                "distance": 10.140821917808218,
+                "distance": 9.131359455695453,
                 "name": "Sadahalli Gate",
                 "name_kn": "Sadahalli Gate",
                 "loc": [
@@ -1259,7 +1259,7 @@
                 "stop_id": 28088
             },
             {
-                "distance": 28.893698630136985,
+                "distance": 17.02667791125296,
                 "name": "Hebbala",
                 "name_kn": "Hebbala",
                 "loc": [
@@ -1270,7 +1270,7 @@
                 "stop_id": 25816
             },
             {
-                "distance": 31.859506849315068,
+                "distance": 18.03852718946249,
                 "name": "Mekhri Circle",
                 "name_kn": "Mekhri Circle",
                 "loc": [
@@ -1281,7 +1281,7 @@
                 "stop_id": 33920
             },
             {
-                "distance": 33.11309589041095,
+                "distance": 18.903531767622475,
                 "name": "Fun World",
                 "name_kn": "",
                 "loc": [
@@ -1292,7 +1292,7 @@
                 "stop_id": 40516
             },
             {
-                "distance": 33.15386301369863,
+                "distance": 18.924792070765253,
                 "name": "Munireddy Palya J C Nagara",
                 "name_kn": "Munireddy Palya J C Nagara",
                 "loc": [
@@ -1303,7 +1303,7 @@
                 "stop_id": 23791
             },
             {
-                "distance": 34.88646575342465,
+                "distance": 20.021830241940823,
                 "name": "Millers Road",
                 "name_kn": "Millers Road",
                 "loc": [
@@ -1314,7 +1314,7 @@
                 "stop_id": 37177
             },
             {
-                "distance": 35.722191780821916,
+                "distance": 20.817117369069972,
                 "name": "Coles Park",
                 "name_kn": "Coles Park",
                 "loc": [
@@ -1325,7 +1325,7 @@
                 "stop_id": 24717
             },
             {
-                "distance": 37.41402739726027,
+                "distance": 22.30391022257454,
                 "name": "MEG Centre",
                 "name_kn": "",
                 "loc": [
@@ -1336,7 +1336,7 @@
                 "stop_id": 33914
             },
             {
-                "distance": 39.13643835616438,
+                "distance": 23.284814145648216,
                 "name": "Halasuru",
                 "name_kn": "Halasuru",
                 "loc": [
@@ -1347,7 +1347,7 @@
                 "stop_id": 22005
             },
             {
-                "distance": 40.4613698630137,
+                "distance": 24.615951775426765,
                 "name": "Indiranagara Police Station/KFC",
                 "name_kn": "Indiranagara Police Station/KFC",
                 "loc": [
@@ -1358,7 +1358,7 @@
                 "stop_id": 22390
             },
             {
-                "distance": 41.62323287671233,
+                "distance": 25.344445814356035,
                 "name": "Thippasandra",
                 "name_kn": "Thippasandra",
                 "loc": [
@@ -1369,7 +1369,7 @@
                 "stop_id": 22548
             },
             {
-                "distance": 43.488328767123285,
+                "distance": 26.661345564451672,
                 "name": "Jeevanbheema Nagara",
                 "name_kn": "Jeevanbheema Nagara",
                 "loc": [
@@ -1380,7 +1380,7 @@
                 "stop_id": 26321
             },
             {
-                "distance": 44.15079452054794,
+                "distance": 27.183517235426745,
                 "name": "Jeevanbheema Nagara Cross",
                 "name_kn": "Jeevanbheema Nagara Cross",
                 "loc": [
@@ -1391,7 +1391,7 @@
                 "stop_id": 33126
             },
             {
-                "distance": 45.50630136986301,
+                "distance": 27.98660819758598,
                 "name": "HAL Main Gate",
                 "name_kn": "HAL Main Gate",
                 "loc": [
@@ -1402,7 +1402,7 @@
                 "stop_id": 22003
             },
             {
-                "distance": 45.64898630136986,
+                "distance": 28.128964843973478,
                 "name": "HAL Admin Gate",
                 "name_kn": "",
                 "loc": [
@@ -1413,7 +1413,7 @@
                 "stop_id": 39489
             },
             {
-                "distance": 47.13698630136986,
+                "distance": 29.54057727316184,
                 "name": "HAL Kalyana Mantap",
                 "name_kn": "HAL Kalyana Mantap",
                 "loc": [
@@ -1424,7 +1424,7 @@
                 "stop_id": 22001
             },
             {
-                "distance": 48.46191780821918,
+                "distance": 30.86666627859228,
                 "name": "Marathahalli",
                 "name_kn": "Marathahalli",
                 "loc": [
@@ -1435,7 +1435,7 @@
                 "stop_id": 22260
             },
             {
-                "distance": 49.36898630136986,
+                "distance": 31.765561211051654,
                 "name": "Marathahalli Bridge",
                 "name_kn": "Marathahalli Bridge",
                 "loc": [
@@ -1446,7 +1446,7 @@
                 "stop_id": 22668
             },
             {
-                "distance": 50.85698630136986,
+                "distance": 33.20879097442446,
                 "name": "Kundalahalli Gate",
                 "name_kn": "Kundalahalli Gate",
                 "loc": [
@@ -1457,7 +1457,7 @@
                 "stop_id": 20960
             },
             {
-                "distance": 51.876164383561644,
+                "distance": 33.624617397472186,
                 "name": "AECS Layout Cross",
                 "name_kn": "AECS Layout Cross",
                 "loc": [
@@ -1468,7 +1468,7 @@
                 "stop_id": 20596
             },
             {
-                "distance": 54.006246575342466,
+                "distance": 34.87806449626485,
                 "name": "Graphite India",
                 "name_kn": "Graphite India",
                 "loc": [
@@ -1479,7 +1479,7 @@
                 "stop_id": 20802
             },
             {
-                "distance": 55.8,
+                "distance": 36.62025995041963,
                 "name": "White Field Bus Station (Vydehi Hospital)",
                 "name_kn": "White Field Bus Station (Vydehi Hospital)",
                 "loc": [
@@ -1490,7 +1490,7 @@
                 "stop_id": 23656
             }
         ],
-        "totalDistance": 55.8
+        "totalDistance": 36.62025995041963
     },
     "KIA-6 UP": {
         "stops": [
@@ -1775,7 +1775,7 @@
                 "stop_id": 23485
             },
             {
-                "distance": 1.9673035745551526,
+                "distance": 2.120933401464827,
                 "name": "KIA Terminal 2",
                 "name_kn": "KIA Terminal 2",
                 "loc": [
@@ -1786,7 +1786,7 @@
                 "stop_id": 38417
             },
             {
-                "distance": 8.644964447302572,
+                "distance": 8.763311190597854,
                 "name": "Trumpet (KIA)",
                 "name_kn": "Trumpet (KIA)",
                 "loc": [
@@ -1797,7 +1797,7 @@
                 "stop_id": 35807
             },
             {
-                "distance": 9.144800522464939,
+                "distance": 9.351388179185829,
                 "name": "Navayuga Toll (KIA)",
                 "name_kn": "Navayuga Toll (KIA)",
                 "loc": [
@@ -1808,7 +1808,7 @@
                 "stop_id": 35745
             },
             {
-                "distance": 9.589161043484355,
+                "distance": 9.862340316811446,
                 "name": "Sadahalli Gate",
                 "name_kn": "Sadahalli Gate",
                 "loc": [
@@ -1819,7 +1819,7 @@
                 "stop_id": 28088
             },
             {
-                "distance": 17.48447949904186,
+                "distance": 27.601056038153637,
                 "name": "Hebbala",
                 "name_kn": "Hebbala",
                 "loc": [
@@ -1830,7 +1830,7 @@
                 "stop_id": 25816
             },
             {
-                "distance": 18.49632877725139,
+                "distance": 30.406472491909383,
                 "name": "Mekhri Circle",
                 "name_kn": "Mekhri Circle",
                 "loc": [
@@ -1841,7 +1841,7 @@
                 "stop_id": 33920
             },
             {
-                "distance": 19.39380521586074,
+                "distance": 31.630829500936812,
                 "name": "Munireddy Palya J C Nagara",
                 "name_kn": "Munireddy Palya J C Nagara",
                 "loc": [
@@ -1852,7 +1852,7 @@
                 "stop_id": 23791
             },
             {
-                "distance": 20.174977287787623,
+                "distance": 32.633452563447456,
                 "name": "Nandidurga Road",
                 "name_kn": "",
                 "loc": [
@@ -1863,7 +1863,7 @@
                 "stop_id": 34092
             },
             {
-                "distance": 20.490854620816854,
+                "distance": 33.2697325838869,
                 "name": "Millers Road",
                 "name_kn": "Millers Road",
                 "loc": [
@@ -1874,7 +1874,7 @@
                 "stop_id": 37177
             },
             {
-                "distance": 21.286141747946004,
+                "distance": 34.06026230625106,
                 "name": "Coles Park",
                 "name_kn": "Coles Park",
                 "loc": [
@@ -1885,7 +1885,7 @@
                 "stop_id": 24717
             },
             {
-                "distance": 22.194277788808293,
+                "distance": 35.043604156021125,
                 "name": "MEG Centre (KIA)",
                 "name_kn": "",
                 "loc": [
@@ -1896,7 +1896,7 @@
                 "stop_id": 39261
             },
             {
-                "distance": 24.38307907696612,
+                "distance": 38.147879407256006,
                 "name": "Trinity Circle",
                 "name_kn": "",
                 "loc": [
@@ -1907,7 +1907,7 @@
                 "stop_id": 22756
             },
             {
-                "distance": 24.566305387636703,
+                "distance": 38.62990972577074,
                 "name": "Military Accounts Office",
                 "name_kn": "",
                 "loc": [
@@ -1918,7 +1918,7 @@
                 "stop_id": 22287
             },
             {
-                "distance": 25.19160408141807,
+                "distance": 39.401158235394306,
                 "name": "Commando Hospital",
                 "name_kn": "",
                 "loc": [
@@ -1929,7 +1929,7 @@
                 "stop_id": 21864
             },
             {
-                "distance": 26.49069386260289,
+                "distance": 40.6929994890138,
                 "name": "Domlur",
                 "name_kn": "",
                 "loc": [
@@ -1940,7 +1940,7 @@
                 "stop_id": 21914
             },
             {
-                "distance": 27.90444256106046,
+                "distance": 42.03304377448476,
                 "name": "NAL/Manipal Hospital",
                 "name_kn": "NAL/Manipal Hospital",
                 "loc": [
@@ -1951,7 +1951,7 @@
                 "stop_id": 22336
             },
             {
-                "distance": 29.84550720003896,
+                "distance": 43.86475898484074,
                 "name": "HAL Main Gate",
                 "name_kn": "HAL Main Gate",
                 "loc": [
@@ -1962,7 +1962,7 @@
                 "stop_id": 22003
             },
             {
-                "distance": 31.399476226005174,
+                "distance": 45.40725600408789,
                 "name": "HAL Kalyana Mantap",
                 "name_kn": "HAL Kalyana Mantap",
                 "loc": [
@@ -1973,7 +1973,7 @@
                 "stop_id": 22001
             },
             {
-                "distance": 32.72556523143561,
+                "distance": 46.6605348322262,
                 "name": "Marathahalli",
                 "name_kn": "Marathahalli",
                 "loc": [
@@ -1984,7 +1984,7 @@
                 "stop_id": 22260
             },
             {
-                "distance": 33.62446016389497,
+                "distance": 47.51854879918242,
                 "name": "Marathahalli Bridge",
                 "name_kn": "Marathahalli Bridge",
                 "loc": [
@@ -1995,7 +1995,7 @@
                 "stop_id": 22668
             },
             {
-                "distance": 35.13597532977479,
+                "distance": 48.94535854198603,
                 "name": "Kundalahalli Gate",
                 "name_kn": "Kundalahalli Gate",
                 "loc": [
@@ -2006,7 +2006,7 @@
                 "stop_id": 22215
             },
             {
-                "distance": 36.93415592436426,
+                "distance": 50.642105263157895,
                 "name": "Siddapura",
                 "name_kn": "Siddapura",
                 "loc": [
@@ -2017,7 +2017,7 @@
                 "stop_id": 22487
             },
             {
-                "distance": 38.55625568002835,
+                "distance": 52.30993016521887,
                 "name": "Varthur kodi",
                 "name_kn": "Varthur kodi",
                 "loc": [
@@ -2028,7 +2028,7 @@
                 "stop_id": 22577
             },
             {
-                "distance": 39.05030910459483,
+                "distance": 53.630693237949245,
                 "name": "White Field Post Office",
                 "name_kn": "White Field Post Office",
                 "loc": [
@@ -2039,7 +2039,7 @@
                 "stop_id": 22621
             },
             {
-                "distance": 39.491077723367844,
+                "distance": 55.12498722534491,
                 "name": "Hope Farm",
                 "name_kn": "Hope Farm",
                 "loc": [
@@ -2050,7 +2050,7 @@
                 "stop_id": 20836
             },
             {
-                "distance": 40.22304305956054,
+                "distance": 56.6,
                 "name": "Kadugodi Bus Station",
                 "name_kn": "Kadugodi Bus Station",
                 "loc": [
@@ -2061,7 +2061,7 @@
                 "stop_id": 20902
             }
         ],
-        "totalDistance": 40.22304305956054
+        "totalDistance": 56.6
     },
     "KIA-6W UP": {
         "stops": [
@@ -2626,7 +2626,7 @@
                 "stop_id": 23485
             },
             {
-                "distance": 1.924166502268692,
+                "distance": 1.4418186953769834,
                 "name": "KIA Terminal 2",
                 "name_kn": "KIA Terminal 2",
                 "loc": [
@@ -2637,7 +2637,7 @@
                 "stop_id": 38417
             },
             {
-                "distance": 8.829118169264154,
+                "distance": 8.113741281154832,
                 "name": "Trumpet (KIA)",
                 "name_kn": "Trumpet (KIA)",
                 "loc": [
@@ -2648,7 +2648,7 @@
                 "stop_id": 35807
             },
             {
-                "distance": 9.44044190175577,
+                "distance": 8.6135773563172,
                 "name": "Navayuga Toll (KIA)",
                 "name_kn": "Navayuga Toll (KIA)",
                 "loc": [
@@ -2659,7 +2659,7 @@
                 "stop_id": 35745
             },
             {
-                "distance": 9.971592029986189,
+                "distance": 9.057937877336615,
                 "name": "Sadahalli Gate",
                 "name_kn": "Sadahalli Gate",
                 "loc": [
@@ -2670,7 +2670,7 @@
                 "stop_id": 28088
             },
             {
-                "distance": 28.16097849674492,
+                "distance": 16.97876193613468,
                 "name": "Hebbala Bridge",
                 "name_kn": "",
                 "loc": [
@@ -2681,7 +2681,7 @@
                 "stop_id": 20823
             },
             {
-                "distance": 30.566186624580784,
+                "distance": 19.35494822272022,
                 "name": "Veerannapalya",
                 "name_kn": "Veerannapalya",
                 "loc": [
@@ -2692,7 +2692,7 @@
                 "stop_id": 22593
             },
             {
-                "distance": 31.798855790096663,
+                "distance": 20.552065660026173,
                 "name": "Nagawara Junction",
                 "name_kn": "",
                 "loc": [
@@ -2703,7 +2703,7 @@
                 "stop_id": 20884
             },
             {
-                "distance": 33.94349970408364,
+                "distance": 21.98758561244862,
                 "name": "Kalyananagara",
                 "name_kn": "",
                 "loc": [
@@ -2714,7 +2714,7 @@
                 "stop_id": 20903
             },
             {
-                "distance": 35.14610376800158,
+                "distance": 23.140107433275485,
                 "name": "Babusabpalya",
                 "name_kn": "",
                 "loc": [
@@ -2725,7 +2725,7 @@
                 "stop_id": 20618
             },
             {
-                "distance": 37.4611165910436,
+                "distance": 24.92185817971909,
                 "name": "B Channasandra Bridge(Ramamurthy Nagara Ring Road)",
                 "name_kn": "B Channasandra Bridge(Ramamurthy Nagara Ring Road)",
                 "loc": [
@@ -2736,7 +2736,7 @@
                 "stop_id": 20614
             },
             {
-                "distance": 38.28289603472086,
+                "distance": 25.120994798452678,
                 "name": "Kasthurinagara",
                 "name_kn": "Kasthurinagara",
                 "loc": [
@@ -2747,7 +2747,7 @@
                 "stop_id": 20914
             },
             {
-                "distance": 40.53777865456698,
+                "distance": 26.649808683357556,
                 "name": "KR Pura Railway Station",
                 "name_kn": "",
                 "loc": [
@@ -2758,7 +2758,7 @@
                 "stop_id": 21112
             },
             {
-                "distance": 42.24146774511738,
+                "distance": 28.2877540635848,
                 "name": "Mahadevapura",
                 "name_kn": "Mahadevapura",
                 "loc": [
@@ -2769,7 +2769,7 @@
                 "stop_id": 22237
             },
             {
-                "distance": 43.49418031169856,
+                "distance": 29.505950299693566,
                 "name": "Garudacharpalya",
                 "name_kn": "Garudacharpalya",
                 "loc": [
@@ -2780,7 +2780,7 @@
                 "stop_id": 21953
             },
             {
-                "distance": 45.06758729532452,
+                "distance": 31.084367917804375,
                 "name": "Hoodi",
                 "name_kn": "Hoodi",
                 "loc": [
@@ -2791,7 +2791,7 @@
                 "stop_id": 22035
             },
             {
-                "distance": 47.09197080291971,
+                "distance": 33.065657585807635,
                 "name": "Pattandur Agrahara Gate",
                 "name_kn": "Pattandur Agrahara Gate",
                 "loc": [
@@ -2802,7 +2802,7 @@
                 "stop_id": 21079
             },
             {
-                "distance": 49.266679818504635,
+                "distance": 35.1917553812695,
                 "name": "Hope Farm",
                 "name_kn": "Hope Farm",
                 "loc": [
@@ -2813,7 +2813,7 @@
                 "stop_id": 20836
             },
             {
-                "distance": 50.8,
+                "distance": 35.92371492342,
                 "name": "Kadugodi Bus Station",
                 "name_kn": "Kadugodi Bus Station",
                 "loc": [
@@ -2824,7 +2824,7 @@
                 "stop_id": 20902
             }
         ],
-        "totalDistance": 50.8
+        "totalDistance": 35.92371492342
     },
     "KIA-15 UP": {
         "stops": [
@@ -3691,7 +3691,7 @@
                 "stop_id": 21042
             },
             {
-                "distance": 1.920467568187027,
+                "distance": 1.9316983726793489,
                 "name": "Attiguppe",
                 "name_kn": "Attiguppe",
                 "loc": [
@@ -3702,7 +3702,7 @@
                 "stop_id": 20613
             },
             {
-                "distance": 2.526931010772404,
+                "distance": 2.5381618152647256,
                 "name": "Attiguppe Metro Station",
                 "name_kn": "",
                 "loc": [
@@ -3713,7 +3713,7 @@
                 "stop_id": 39679
             },
             {
-                "distance": 2.953701581480632,
+                "distance": 2.976163190465276,
                 "name": "Vijayanagara Bus Station",
                 "name_kn": "Vijayanagara Garage",
                 "loc": [
@@ -3724,7 +3724,7 @@
                 "stop_id": 35395
             },
             {
-                "distance": 3.8184735273894104,
+                "distance": 3.8521659408663766,
                 "name": "Vijayanagara",
                 "name_kn": "Vijayanagara",
                 "loc": [
@@ -3735,18 +3735,18 @@
                 "stop_id": 21266
             },
             {
-                "distance": 6.132019252807701,
-                "name": "Industrial Area Rajajinagara",
-                "name_kn": "Industrial Area Rajajinagara",
+                "distance": 5.716479486591794,
+                "name": "Aralimara Industrial Area Rajajinagara",
+                "name_kn": "",
                 "loc": [
-                    12.98206,
-                    77.5487
+                    12.97857,
+                    77.54871
                 ],
                 "phone": "",
-                "stop_id": 22079
+                "stop_id": 21655
             },
             {
-                "distance": 7.300022920009167,
+                "distance": 7.322484528993811,
                 "name": "ESI Hospital Rajajinagara",
                 "name_kn": "ESI Hospital Rajajinagara",
                 "loc": [
@@ -3757,7 +3757,7 @@
                 "stop_id": 21936
             },
             {
-                "distance": 9.085720834288333,
+                "distance": 9.108182443272977,
                 "name": "Rajajinagara 1st Block",
                 "name_kn": "1st Block Rajajinagara",
                 "loc": [
@@ -3768,7 +3768,7 @@
                 "stop_id": 20576
             },
             {
-                "distance": 10.444648177859271,
+                "distance": 10.455878982351592,
                 "name": "Govt Soap Factory",
                 "name_kn": "Govt Soap Factory",
                 "loc": [
@@ -3779,7 +3779,7 @@
                 "stop_id": 20797
             },
             {
-                "distance": 11.792344716937887,
+                "distance": 11.803575521430208,
                 "name": "Yeshawanthapura Bus Station",
                 "name_kn": "Yeshawanthapura Bus Station",
                 "loc": [
@@ -3790,7 +3790,7 @@
                 "stop_id": 24016
             },
             {
-                "distance": 13.43204217281687,
+                "distance": 13.44327297730919,
                 "name": "Tata Institute",
                 "name_kn": "Tata Institute",
                 "loc": [
@@ -3801,7 +3801,7 @@
                 "stop_id": 21215
             },
             {
-                "distance": 14.263121705248683,
+                "distance": 14.274352509741004,
                 "name": "CPRI",
                 "name_kn": "CPRI",
                 "loc": [
@@ -3812,7 +3812,7 @@
                 "stop_id": 24726
             },
             {
-                "distance": 15.678203071281228,
+                "distance": 15.689433875773549,
                 "name": "Mekhri Circle",
                 "name_kn": "Mekhri Circle",
                 "loc": [
@@ -3823,7 +3823,7 @@
                 "stop_id": 21019
             },
             {
-                "distance": 16.76759110703644,
+                "distance": 16.778821911528766,
                 "name": "CBI",
                 "name_kn": "CBI",
                 "loc": [
@@ -3834,7 +3834,7 @@
                 "stop_id": 20698
             },
             {
-                "distance": 18.081595232638094,
+                "distance": 18.092826037130415,
                 "name": "Hebbala Canara Bank",
                 "name_kn": "Canara Bank Hebbala",
                 "loc": [
@@ -3845,7 +3845,7 @@
                 "stop_id": 20695
             },
             {
-                "distance": 18.418519367407743,
+                "distance": 18.429750171900068,
                 "name": "Hebbala",
                 "name_kn": "Hebbala",
                 "loc": [
@@ -3856,7 +3856,7 @@
                 "stop_id": 20820
             },
             {
-                "distance": 19.8897547559019,
+                "distance": 19.900985560394222,
                 "name": "Military Dairy Farm (Esteem Mall)",
                 "name_kn": "Military Dairy Farm (Esteem Mall)",
                 "loc": [
@@ -3867,7 +3867,7 @@
                 "stop_id": 33931
             },
             {
-                "distance": 19.923447169378864,
+                "distance": 19.93467797387119,
                 "name": "Navayuga Toll  (Military Dairy Farm)",
                 "name_kn": "Navayuga Toll (Military Dairy Farm)",
                 "loc": [
@@ -3878,7 +3878,7 @@
                 "stop_id": 38168
             },
             {
-                "distance": 39.15058446023378,
+                "distance": 39.1618152647261,
                 "name": "Sadahalli Gate",
                 "name_kn": "Sadahalli Gate",
                 "loc": [
@@ -3889,7 +3889,7 @@
                 "stop_id": 34443
             },
             {
-                "distance": 40.61058904423561,
+                "distance": 40.62181984872794,
                 "name": "Trumpet (KIA)",
                 "name_kn": "Trumpet (KIA)",
                 "loc": [
@@ -3900,7 +3900,7 @@
                 "stop_id": 35806
             },
             {
-                "distance": 44.64244785697914,
+                "distance": 44.65367866147146,
                 "name": "Cargo Village",
                 "name_kn": "Cargo Village",
                 "loc": [
@@ -3911,7 +3911,7 @@
                 "stop_id": 37968
             },
             {
-                "distance": 46.25968370387348,
+                "distance": 46.270914508365806,
                 "name": "DHFL",
                 "name_kn": "DHFL",
                 "loc": [
@@ -4114,15 +4114,15 @@
                 "stop_id": 21935
             },
             {
-                "distance": 41.63596927248079,
-                "name": "Industrial Area Rajajinagara",
-                "name_kn": "Industrial Area Rajajinagara",
+                "distance": 42.042069588793495,
+                "name": "Aralimara Industrial Area Rajajinagara",
+                "name_kn": "",
                 "loc": [
-                    12.98202,
-                    77.54905
+                    12.97858,
+                    77.54902
                 ],
                 "phone": "",
-                "stop_id": 22078
+                "stop_id": 21654
             },
             {
                 "distance": 43.816086760054226,
@@ -4185,7 +4185,7 @@
                 "stop_id": 21818
             },
             {
-                "distance": 0.5717487888934957,
+                "distance": 0.746541228555617,
                 "name": "Hennagara Gate",
                 "name_kn": "",
                 "loc": [
@@ -4196,7 +4196,7 @@
                 "stop_id": 22024
             },
             {
-                "distance": 1.112266744909509,
+                "distance": 1.6087437742114001,
                 "name": "BTL College",
                 "name_kn": "BTL College",
                 "loc": [
@@ -4207,7 +4207,7 @@
                 "stop_id": 21787
             },
             {
-                "distance": 1.8175340684593961,
+                "distance": 2.744327614831212,
                 "name": "Bommasandra",
                 "name_kn": "",
                 "loc": [
@@ -4218,7 +4218,7 @@
                 "stop_id": 21776
             },
             {
-                "distance": 2.4582062696480227,
+                "distance": 3.722191477587161,
                 "name": "Hebbagodi",
                 "name_kn": "",
                 "loc": [
@@ -4229,7 +4229,7 @@
                 "stop_id": 22018
             },
             {
-                "distance": 2.6434957998514528,
+                "distance": 4.142778085224128,
                 "name": "Biocon Hebbagodi Metro Station",
                 "name_kn": "",
                 "loc": [
@@ -4240,7 +4240,7 @@
                 "stop_id": 39869
             },
             {
-                "distance": 2.838457128107083,
+                "distance": 4.710570005534034,
                 "name": "SFS High School Hebbagodi",
                 "name_kn": "",
                 "loc": [
@@ -4251,7 +4251,7 @@
                 "stop_id": 39203
             },
             {
-                "distance": 2.9530019723714704,
+                "distance": 5.015495296070835,
                 "name": "Huskur Gate",
                 "name_kn": "",
                 "loc": [
@@ -4262,7 +4262,7 @@
                 "stop_id": 22064
             },
             {
-                "distance": 3.238276869369959,
+                "distance": 5.572772551189817,
                 "name": "Veerasandra",
                 "name_kn": "",
                 "loc": [
@@ -4273,7 +4273,7 @@
                 "stop_id": 22595
             },
             {
-                "distance": 3.9330592422597292,
+                "distance": 6.7083563918096285,
                 "name": "Electronic City",
                 "name_kn": "Electronic City",
                 "loc": [
@@ -4284,7 +4284,7 @@
                 "stop_id": 21934
             },
             {
-                "distance": 4.704760882597798,
+                "distance": 7.959601549529608,
                 "name": "Konappana Agarhara (Electronic City Metro Station)",
                 "name_kn": "Konappana Agarhara",
                 "loc": [
@@ -4295,7 +4295,7 @@
                 "stop_id": 20935
             },
             {
-                "distance": 4.959942014409569,
+                "distance": 8.380188157166574,
                 "name": "PESCE College Electronic City",
                 "name_kn": "",
                 "loc": [
@@ -4306,7 +4306,7 @@
                 "stop_id": 21090
             },
             {
-                "distance": 5.40132355966074,
+                "distance": 9.084670724958496,
                 "name": "Beratena Agrahara Metro Station",
                 "name_kn": "",
                 "loc": [
@@ -4317,7 +4317,7 @@
                 "stop_id": 39867
             },
             {
-                "distance": 5.992147695377637,
+                "distance": 10.062534587714444,
                 "name": "Hosa Road Metro Station",
                 "name_kn": "Hosa Road",
                 "loc": [
@@ -4328,7 +4328,7 @@
                 "stop_id": 20841
             },
             {
-                "distance": 6.680842373786331,
+                "distance": 11.135030437188709,
                 "name": "Singasandra",
                 "name_kn": "Singasandra",
                 "loc": [
@@ -4339,7 +4339,7 @@
                 "stop_id": 21182
             },
             {
-                "distance": 6.94746019033112,
+                "distance": 11.608190370780298,
                 "name": "Singasandra Metro Station",
                 "name_kn": "",
                 "loc": [
@@ -4350,7 +4350,7 @@
                 "stop_id": 39870
             },
             {
-                "distance": 7.612461567351732,
+                "distance": 12.859435528500276,
                 "name": "Kudlu Gate",
                 "name_kn": "Kudlu Gate",
                 "loc": [
@@ -4361,7 +4361,7 @@
                 "stop_id": 20951
             },
             {
-                "distance": 8.066316406344734,
+                "distance": 13.72163807415606,
                 "name": "Garvebhavipalya",
                 "name_kn": "",
                 "loc": [
@@ -4372,7 +4372,7 @@
                 "stop_id": 20784
             },
             {
-                "distance": 8.463286368576584,
+                "distance": 14.468179302711677,
                 "name": "Hongasandra Metro Station",
                 "name_kn": "",
                 "loc": [
@@ -4383,7 +4383,7 @@
                 "stop_id": 39872
             },
             {
-                "distance": 8.694191899528311,
+                "distance": 14.899280575539569,
                 "name": "Bommanahalli",
                 "name_kn": "Bommanahalli",
                 "loc": [
@@ -4394,7 +4394,7 @@
                 "stop_id": 20675
             },
             {
-                "distance": 9.188641563570116,
+                "distance": 15.824571112340896,
                 "name": "Roopena Agrahara",
                 "name_kn": "",
                 "loc": [
@@ -4405,7 +4405,7 @@
                 "stop_id": 21143
             },
             {
-                "distance": 9.658192543061965,
+                "distance": 16.697288323187603,
                 "name": "Central Silk Board",
                 "name_kn": "Central Silk Board",
                 "loc": [
@@ -4416,7 +4416,7 @@
                 "stop_id": 37850
             },
             {
-                "distance": 10.284951295356926,
+                "distance": 17.35971223021583,
                 "name": "SI Apartment HSR Layout",
                 "name_kn": "SI Apartment HSR Layout",
                 "loc": [
@@ -4427,7 +4427,7 @@
                 "stop_id": 21177
             },
             {
-                "distance": 10.87436520732509,
+                "distance": 17.959048146098503,
                 "name": "14th Main HSR Layout",
                 "name_kn": "",
                 "loc": [
@@ -4438,7 +4438,7 @@
                 "stop_id": 20568
             },
             {
-                "distance": 11.762101553395812,
+                "distance": 19.021029330381847,
                 "name": "Depot-25 Gate",
                 "name_kn": "Depot-25 Gate",
                 "loc": [
@@ -4449,7 +4449,7 @@
                 "stop_id": 20749
             },
             {
-                "distance": 12.63446302473308,
+                "distance": 20.146098505810738,
                 "name": "Agara Junction",
                 "name_kn": "Agara Junction",
                 "loc": [
@@ -4460,7 +4460,7 @@
                 "stop_id": 20598
             },
             {
-                "distance": 13.912070704029523,
+                "distance": 21.502490315439953,
                 "name": "Ibbaluru",
                 "name_kn": "",
                 "loc": [
@@ -4471,7 +4471,7 @@
                 "stop_id": 20851
             },
             {
-                "distance": 14.391668003466076,
+                "distance": 22.028223574986164,
                 "name": "Sarjapura Ring Road Junction",
                 "name_kn": "Sarjapura Ring Road Junction",
                 "loc": [
@@ -4482,7 +4482,7 @@
                 "stop_id": 20889
             },
             {
-                "distance": 14.853619692642743,
+                "distance": 22.55395683453237,
                 "name": "Bellanduru Petrol Bunk",
                 "name_kn": "",
                 "loc": [
@@ -4493,7 +4493,7 @@
                 "stop_id": 21092
             },
             {
-                "distance": 15.272514099941809,
+                "distance": 23.02711676812396,
                 "name": "Bellanduru City light Apartment",
                 "name_kn": "",
                 "loc": [
@@ -4504,7 +4504,7 @@
                 "stop_id": 20638
             },
             {
-                "distance": 16.084106524135127,
+                "distance": 23.95240730492529,
                 "name": "Eco Space",
                 "name_kn": "",
                 "loc": [
@@ -4515,7 +4515,7 @@
                 "stop_id": 20771
             },
             {
-                "distance": 16.769831809895,
+                "distance": 24.7830658550083,
                 "name": "Devarabisanahalli Ring Road",
                 "name_kn": "",
                 "loc": [
@@ -4526,7 +4526,7 @@
                 "stop_id": 20754
             },
             {
-                "distance": 17.140438193549898,
+                "distance": 25.298284449363585,
                 "name": "New Horizon College",
                 "name_kn": "",
                 "loc": [
@@ -4537,7 +4537,7 @@
                 "stop_id": 21059
             },
             {
-                "distance": 17.885497585358404,
+                "distance": 26.454897620365248,
                 "name": "Kadubisanahalli",
                 "name_kn": "Kadubisanahalli",
                 "loc": [
@@ -4548,7 +4548,7 @@
                 "stop_id": 20895
             },
             {
-                "distance": 18.269687744585607,
+                "distance": 27.54842280022136,
                 "name": "Multiplex Marathahalli",
                 "name_kn": "",
                 "loc": [
@@ -4559,7 +4559,7 @@
                 "stop_id": 21032
             },
             {
-                "distance": 18.563069846356235,
+                "distance": 28.610403984504703,
                 "name": "Kalamandira Marathahalli Bridge",
                 "name_kn": "",
                 "loc": [
@@ -4570,7 +4570,7 @@
                 "stop_id": 22670
             },
             {
-                "distance": 18.81390596555451,
+                "distance": 29.546209186496956,
                 "name": "Karthik Nagara",
                 "name_kn": "",
                 "loc": [
@@ -4581,7 +4581,7 @@
                 "stop_id": 20913
             },
             {
-                "distance": 19.34021707561568,
+                "distance": 30.555617044825674,
                 "name": "Dodda Nekkundi Bridge/Rainbow Hospital",
                 "name_kn": "Dodda Nekkundi Bridge/Rainbow Hospital",
                 "loc": [
@@ -4592,7 +4592,7 @@
                 "stop_id": 20761
             },
             {
-                "distance": 19.824998213917276,
+                "distance": 31.480907581627008,
                 "name": "EMC2",
                 "name_kn": "",
                 "loc": [
@@ -4603,7 +4603,7 @@
                 "stop_id": 20775
             },
             {
-                "distance": 20.278493681249024,
+                "distance": 32.33259546209187,
                 "name": "Mahadevapura Ring Road",
                 "name_kn": "Mahadevapura Ring Road",
                 "loc": [
@@ -4614,7 +4614,7 @@
                 "stop_id": 20978
             },
             {
-                "distance": 20.87253308255446,
+                "distance": 33.35251798561151,
                 "name": "B Narayanapura Ring Road",
                 "name_kn": "",
                 "loc": [
@@ -4625,7 +4625,7 @@
                 "stop_id": 20616
             },
             {
-                "distance": 21.71121796900016,
+                "distance": 34.4775871610404,
                 "name": "KR Pura Railway Station",
                 "name_kn": "",
                 "loc": [
@@ -4636,7 +4636,7 @@
                 "stop_id": 21113
             },
             {
-                "distance": 22.60474915123741,
+                "distance": 35.48699501936912,
                 "name": "Tin Factory",
                 "name_kn": "",
                 "loc": [
@@ -4647,7 +4647,7 @@
                 "stop_id": 21228
             },
             {
-                "distance": 23.32238650326174,
+                "distance": 36.94853348090758,
                 "name": "Kasthurinagara",
                 "name_kn": "Kasthurinagara",
                 "loc": [
@@ -4658,7 +4658,7 @@
                 "stop_id": 20915
             },
             {
-                "distance": 23.522825119970022,
+                "distance": 37.800221361372444,
                 "name": "B Channasandra Bridge(Ramamurthy Nagara Ring Road)",
                 "name_kn": "",
                 "loc": [
@@ -4669,7 +4669,7 @@
                 "stop_id": 22651
             },
             {
-                "distance": 23.834469121982476,
+                "distance": 38.58882125069176,
                 "name": "Vijaya Bank Colony Ring Road",
                 "name_kn": "",
                 "loc": [
@@ -4680,7 +4680,7 @@
                 "stop_id": 21264
             },
             {
-                "distance": 25.31054491575272,
+                "distance": 40.229109020475924,
                 "name": "Babusabpalya",
                 "name_kn": "Babusabpalya",
                 "loc": [
@@ -4691,7 +4691,7 @@
                 "stop_id": 20617
             },
             {
-                "distance": 26.491878724124682,
+                "distance": 41.5224128389596,
                 "name": "Kalyananagara",
                 "name_kn": "",
                 "loc": [
@@ -4702,7 +4702,7 @@
                 "stop_id": 20904
             },
             {
-                "distance": 27.07802808909892,
+                "distance": 42.25843940232429,
                 "name": "Hennur Junction",
                 "name_kn": "",
                 "loc": [
@@ -4713,7 +4713,7 @@
                 "stop_id": 21528
             },
             {
-                "distance": 27.405074416450912,
+                "distance": 42.97343663530713,
                 "name": "HBR Layout",
                 "name_kn": "",
                 "loc": [
@@ -4724,7 +4724,7 @@
                 "stop_id": 20816
             },
             {
-                "distance": 27.920560469931242,
+                "distance": 43.80409518539014,
                 "name": "Nagawara Junction",
                 "name_kn": "Nagawara Junction",
                 "loc": [
@@ -4735,7 +4735,7 @@
                 "stop_id": 20885
             },
             {
-                "distance": 28.375586733957192,
+                "distance": 44.298284449363585,
                 "name": "Manyatha Tech Park",
                 "name_kn": "Manyatha Tech Park",
                 "loc": [
@@ -4746,7 +4746,7 @@
                 "stop_id": 20999
             },
             {
-                "distance": 29.1054271257126,
+                "distance": 45.10791366906474,
                 "name": "Veerannapalya",
                 "name_kn": "Veerannapalya",
                 "loc": [
@@ -4757,7 +4757,7 @@
                 "stop_id": 21252
             },
             {
-                "distance": 30.475123830712434,
+                "distance": 46.52739346983951,
                 "name": "Kempapura",
                 "name_kn": "",
                 "loc": [
@@ -4768,7 +4768,7 @@
                 "stop_id": 20920
             },
             {
-                "distance": 31.73675433313781,
+                "distance": 47.925843940232426,
                 "name": "Hebbala Bridge",
                 "name_kn": "Hebbala Bridge",
                 "loc": [
@@ -4779,7 +4779,7 @@
                 "stop_id": 25819
             },
             {
-                "distance": 32.055723254719844,
+                "distance": 48.745987825124516,
                 "name": "Military Dairy Farm (Esteem Mall)",
                 "name_kn": "Military Dairy Farm (Esteem Mall)",
                 "loc": [
@@ -4790,7 +4790,7 @@
                 "stop_id": 33931
             },
             {
-                "distance": 32.0646124599722,
+                "distance": 48.77753182069729,
                 "name": "Navayuga Toll  (Military Dairy Farm)",
                 "name_kn": "Navayuga Toll (Military Dairy Farm)",
                 "loc": [
@@ -4801,7 +4801,7 @@
                 "stop_id": 38168
             },
             {
-                "distance": 39.464874929139995,
+                "distance": 66.77863862755949,
                 "name": "Sadahalli Gate",
                 "name_kn": "Sadahalli Gate",
                 "loc": [
@@ -4812,7 +4812,7 @@
                 "stop_id": 34443
             },
             {
-                "distance": 40.548722610164454,
+                "distance": 68.14554510237964,
                 "name": "Trumpet (KIA)",
                 "name_kn": "Trumpet (KIA)",
                 "loc": [
@@ -4823,7 +4823,7 @@
                 "stop_id": 35806
             },
             {
-                "distance": 43.64147636549788,
+                "distance": 71.92030990592143,
                 "name": "Cargo Village",
                 "name_kn": "Cargo Village",
                 "loc": [
@@ -4834,7 +4834,7 @@
                 "stop_id": 37968
             },
             {
-                "distance": 45.12259866943777,
+                "distance": 73.43442169341449,
                 "name": "DHFL",
                 "name_kn": "DHFL",
                 "loc": [
@@ -4845,7 +4845,7 @@
                 "stop_id": 37969
             },
             {
-                "distance": 46.91526727847824,
+                "distance": 76,
                 "name": "Kempegowda International Airport",
                 "name_kn": "ವಿಮಾನ ನಿಲ್ದಾಣ ಬಸ್ ನಿಲ್ದಾಣ",
                 "loc": [
@@ -4856,7 +4856,7 @@
                 "stop_id": 35805
             }
         ],
-        "totalDistance": 46.91526727847824
+        "totalDistance": 76
     },
     "KIA-8C DOWN": {
         "stops": [
@@ -7871,7 +7871,7 @@
                 "stop_id": 23485
             },
             {
-                "distance": 1.8327023498694517,
+                "distance": 1.4388710862531322,
                 "name": "KIA Terminal 2",
                 "name_kn": "KIA Terminal 2",
                 "loc": [
@@ -7882,7 +7882,7 @@
                 "stop_id": 38417
             },
             {
-                "distance": 8.443864229765012,
+                "distance": 8.110793672030981,
                 "name": "Trumpet (KIA)",
                 "name_kn": "Trumpet (KIA)",
                 "loc": [
@@ -7893,7 +7893,7 @@
                 "stop_id": 35807
             },
             {
-                "distance": 9.029177545691905,
+                "distance": 8.610629747193348,
                 "name": "Navayuga Toll (KIA)",
                 "name_kn": "Navayuga Toll (KIA)",
                 "loc": [
@@ -7904,7 +7904,7 @@
                 "stop_id": 35745
             },
             {
-                "distance": 9.537728459530026,
+                "distance": 9.054990268212764,
                 "name": "Sadahalli Gate",
                 "name_kn": "Sadahalli Gate",
                 "loc": [
@@ -7915,7 +7915,7 @@
                 "stop_id": 28088
             },
             {
-                "distance": 26.953198433420365,
+                "distance": 16.97581432701083,
                 "name": "Hebbala Bridge",
                 "name_kn": "",
                 "loc": [
@@ -7926,7 +7926,7 @@
                 "stop_id": 20823
             },
             {
-                "distance": 29.25607049608355,
+                "distance": 19.35200061359637,
                 "name": "Veerannapalya",
                 "name_kn": "Veerannapalya",
                 "loc": [
@@ -7937,7 +7937,7 @@
                 "stop_id": 22593
             },
             {
-                "distance": 30.436292428198428,
+                "distance": 20.549118050902322,
                 "name": "Nagawara Junction",
                 "name_kn": "",
                 "loc": [
@@ -7948,7 +7948,7 @@
                 "stop_id": 20884
             },
             {
-                "distance": 32.48968668407311,
+                "distance": 21.98463800332477,
                 "name": "Kalyananagara",
                 "name_kn": "",
                 "loc": [
@@ -7959,7 +7959,7 @@
                 "stop_id": 20903
             },
             {
-                "distance": 33.6411227154047,
+                "distance": 23.137159824151635,
                 "name": "Babusabpalya",
                 "name_kn": "",
                 "loc": [
@@ -7970,7 +7970,7 @@
                 "stop_id": 20618
             },
             {
-                "distance": 35.85763707571801,
+                "distance": 24.91891057059524,
                 "name": "B Channasandra Bridge(Ramamurthy Nagara Ring Road)",
                 "name_kn": "B Channasandra Bridge(Ramamurthy Nagara Ring Road)",
                 "loc": [
@@ -7981,7 +7981,7 @@
                 "stop_id": 20614
             },
             {
-                "distance": 36.644451697127934,
+                "distance": 25.118047189328827,
                 "name": "Kasthurinagara",
                 "name_kn": "Kasthurinagara",
                 "loc": [
@@ -7992,7 +7992,7 @@
                 "stop_id": 20914
             },
             {
-                "distance": 38.026174934725844,
+                "distance": 25.90864835667704,
                 "name": "Tin Factory",
                 "name_kn": "",
                 "loc": [
@@ -8003,7 +8003,7 @@
                 "stop_id": 21229
             },
             {
-                "distance": 38.80339425587467,
+                "distance": 26.646861074233705,
                 "name": "KR Pura Railway Station",
                 "name_kn": "",
                 "loc": [
@@ -8014,7 +8014,7 @@
                 "stop_id": 21112
             },
             {
-                "distance": 40.895169712793724,
+                "distance": 28.196609308054015,
                 "name": "Mahadevapura Ring Road",
                 "name_kn": "Mahadevapura Ring Road",
                 "loc": [
@@ -8025,7 +8025,7 @@
                 "stop_id": 20977
             },
             {
-                "distance": 41.60522193211488,
+                "distance": 28.603785819872915,
                 "name": "EMC2",
                 "name_kn": "EMC2",
                 "loc": [
@@ -8036,7 +8036,7 @@
                 "stop_id": 20774
             },
             {
-                "distance": 45.43374673629243,
+                "distance": 30.80328318375403,
                 "name": "Dodda Nekkundi Bridge/Rainbow Hospital",
                 "name_kn": "",
                 "loc": [
@@ -8047,7 +8047,7 @@
                 "stop_id": 20762
             },
             {
-                "distance": 47.18009138381201,
+                "distance": 31.56334912251081,
                 "name": "Kalamandira Marathahalli Bridge",
                 "name_kn": "",
                 "loc": [
@@ -8058,7 +8058,7 @@
                 "stop_id": 23194
             },
             {
-                "distance": 48.01488250652741,
+                "distance": 31.81507065808035,
                 "name": "Multiplex Marathahalli",
                 "name_kn": "",
                 "loc": [
@@ -8069,7 +8069,7 @@
                 "stop_id": 21031
             },
             {
-                "distance": 49.09915143603133,
+                "distance": 32.21255763108521,
                 "name": "Kadubisanahalli",
                 "name_kn": "",
                 "loc": [
@@ -8080,7 +8080,7 @@
                 "stop_id": 20894
             },
             {
-                "distance": 50.087467362924286,
+                "distance": 32.89469702172627,
                 "name": "New Horizon College",
                 "name_kn": "",
                 "loc": [
@@ -8091,7 +8091,7 @@
                 "stop_id": 21058
             },
             {
-                "distance": 50.711161879895556,
+                "distance": 33.38870266331064,
                 "name": "Devarabisanahalli Ring Road",
                 "name_kn": "",
                 "loc": [
@@ -8102,7 +8102,7 @@
                 "stop_id": 20753
             },
             {
-                "distance": 51.488381201044376,
+                "distance": 34.10603676230643,
                 "name": "Eco Space",
                 "name_kn": "",
                 "loc": [
@@ -8113,7 +8113,7 @@
                 "stop_id": 20770
             },
             {
-                "distance": 52.38074412532637,
+                "distance": 34.9666915046896,
                 "name": "Bellanduru City Light Appartment",
                 "name_kn": "Bellanduru City Light Appartment",
                 "loc": [
@@ -8124,7 +8124,7 @@
                 "stop_id": 20639
             },
             {
-                "distance": 52.898890339425584,
+                "distance": 35.47178545324462,
                 "name": "Sarjapura Ring Road Junction",
                 "name_kn": "Sarjapura Ring Road Junction",
                 "loc": [
@@ -8135,7 +8135,7 @@
                 "stop_id": 20888
             },
             {
-                "distance": 54.80835509138381,
+                "distance": 37.42648786972601,
                 "name": "Agara Junction",
                 "name_kn": "Agara Junction",
                 "loc": [
@@ -8146,7 +8146,7 @@
                 "stop_id": 20597
             },
             {
-                "distance": 55.82545691906005,
+                "distance": 38.30775044044454,
                 "name": "Depot-25 Gate (Central Silk Board)",
                 "name_kn": "Depot-25 Gate (Central Silk Board)",
                 "loc": [
@@ -8157,7 +8157,7 @@
                 "stop_id": 20748
             },
             {
-                "distance": 57.389490861618796,
+                "distance": 39.81883539139538,
                 "name": "SI Apartment HSR Layout",
                 "name_kn": "SI Apartment HSR Layout",
                 "loc": [
@@ -8168,7 +8168,7 @@
                 "stop_id": 21176
             },
             {
-                "distance": 58.2434725848564,
+                "distance": 40.707436118062624,
                 "name": "Central Silk Board Metro Station",
                 "name_kn": "Central Silk Board",
                 "loc": [
@@ -8179,7 +8179,7 @@
                 "stop_id": 20704
             },
             {
-                "distance": 58.8,
+                "distance": 41.284709338820896,
                 "name": "Kuvempunagara Bus Station(BTM Layout)",
                 "name_kn": "Kuvempunagara Bus Station(BTM Layout)",
                 "loc": [
@@ -8190,7 +8190,7 @@
                 "stop_id": 20686
             }
         ],
-        "totalDistance": 58.8
+        "totalDistance": 41.284709338820896
     },
     "KIA-8E UP": {
         "stops": [
@@ -9629,7 +9629,7 @@
                 "stop_id": 23485
             },
             {
-                "distance": 1.441126236330981,
+                "distance": 1.8835757360766228,
                 "name": "KIA Terminal 2",
                 "name_kn": "KIA Terminal 2",
                 "loc": [
@@ -9640,7 +9640,7 @@
                 "stop_id": 38417
             },
             {
-                "distance": 8.113361981351666,
+                "distance": 8.678254700248315,
                 "name": "Trumpet (KIA)",
                 "name_kn": "Trumpet (KIA)",
                 "loc": [
@@ -9651,7 +9651,7 @@
                 "stop_id": 35807
             },
             {
-                "distance": 8.613198056514033,
+                "distance": 9.279815537424618,
                 "name": "Navayuga Toll (KIA)",
                 "name_kn": "Navayuga Toll (KIA)",
                 "loc": [
@@ -9662,7 +9662,7 @@
                 "stop_id": 35745
             },
             {
-                "distance": 9.057558577533449,
+                "distance": 9.80248315005321,
                 "name": "Sadahalli Gate",
                 "name_kn": "Sadahalli Gate",
                 "loc": [
@@ -9673,7 +9673,7 @@
                 "stop_id": 28088
             },
             {
-                "distance": 10.526307554543644,
+                "distance": 12.189003192621497,
                 "name": "Chikkajala",
                 "name_kn": "",
                 "loc": [
@@ -9684,7 +9684,7 @@
                 "stop_id": 32304
             },
             {
-                "distance": 11.71635042974787,
+                "distance": 14.279673643135864,
                 "name": "Bettahalasuru Cross",
                 "name_kn": "",
                 "loc": [
@@ -9695,7 +9695,7 @@
                 "stop_id": 29914
             },
             {
-                "distance": 12.443346155351513,
+                "distance": 15.778644909542392,
                 "name": "Hunasamaranahalli",
                 "name_kn": "",
                 "loc": [
@@ -9706,7 +9706,7 @@
                 "stop_id": 33002
             },
             {
-                "distance": 12.951766933287445,
+                "distance": 17.32692444129124,
                 "name": "Indian Air Force",
                 "name_kn": "",
                 "loc": [
@@ -9717,7 +9717,7 @@
                 "stop_id": 26090
             },
             {
-                "distance": 14.192725708699879,
+                "distance": 19.77261440227031,
                 "name": "Venkatala",
                 "name_kn": "",
                 "loc": [
@@ -9728,7 +9728,7 @@
                 "stop_id": 34897
             },
             {
-                "distance": 14.685028174808192,
+                "distance": 20.670024831500534,
                 "name": "Kogilu Cross",
                 "name_kn": "",
                 "loc": [
@@ -9739,7 +9739,7 @@
                 "stop_id": 22184
             },
             {
-                "distance": 14.94866540352734,
+                "distance": 21.409648811635332,
                 "name": "Raitarasanthe Yelahanka",
                 "name_kn": "",
                 "loc": [
@@ -9750,7 +9750,7 @@
                 "stop_id": 34330
             },
             {
-                "distance": 17.008636801096365,
+                "distance": 27.8,
                 "name": "Hebbala Bridge",
                 "name_kn": "",
                 "loc": [
@@ -9761,7 +9761,7 @@
                 "stop_id": 20823
             }
         ],
-        "totalDistance": 17.008636801096365
+        "totalDistance": 27.8
     },
     "KIA-8EW UP": {
         "stops": [
@@ -10233,7 +10233,7 @@
                 "stop_id": 23485
             },
             {
-                "distance": 1.8073691556175853,
+                "distance": 0,
                 "name": "KIA Terminal 2",
                 "name_kn": "KIA Terminal 2",
                 "loc": [
@@ -10244,7 +10244,7 @@
                 "stop_id": 38417
             },
             {
-                "distance": 8.327145847871597,
+                "distance": 16.472298866352503,
                 "name": "Trumpet (KIA)",
                 "name_kn": "Trumpet (KIA)",
                 "loc": [
@@ -10255,7 +10255,7 @@
                 "stop_id": 35807
             },
             {
-                "distance": 8.904368457780878,
+                "distance": 16.97213494151487,
                 "name": "Navayuga Toll (KIA)",
                 "name_kn": "Navayuga Toll (KIA)",
                 "loc": [
@@ -10266,7 +10266,7 @@
                 "stop_id": 35745
             },
             {
-                "distance": 9.405889741800417,
+                "distance": 17.416495462534286,
                 "name": "Sadahalli Gate",
                 "name_kn": "Sadahalli Gate",
                 "loc": [
@@ -10277,7 +10277,7 @@
                 "stop_id": 28088
             },
             {
-                "distance": 26.58062805303559,
+                "distance": 25.33731952133234,
                 "name": "Hebbala Bridge",
                 "name_kn": "",
                 "loc": [
@@ -10288,7 +10288,7 @@
                 "stop_id": 20823
             },
             {
-                "distance": 28.851667829727837,
+                "distance": 27.71350580791788,
                 "name": "Veerannapalya",
                 "name_kn": "Veerannapalya",
                 "loc": [
@@ -10299,7 +10299,7 @@
                 "stop_id": 22593
             },
             {
-                "distance": 29.618143754361476,
+                "distance": 28.51063153545782,
                 "name": "Manyatha Tech Park",
                 "name_kn": "",
                 "loc": [
@@ -10310,7 +10310,7 @@
                 "stop_id": 20998
             },
             {
-                "distance": 30.043963712491273,
+                "distance": 28.915404968875027,
                 "name": "Nagawara Junction",
                 "name_kn": "",
                 "loc": [
@@ -10321,7 +10321,7 @@
                 "stop_id": 20884
             },
             {
-                "distance": 32.06897418004187,
+                "distance": 30.350924921297473,
                 "name": "Kalyananagara",
                 "name_kn": "",
                 "loc": [
@@ -10332,7 +10332,7 @@
                 "stop_id": 20903
             },
             {
-                "distance": 33.204494068387994,
+                "distance": 31.50344674212434,
                 "name": "Babusabpalya",
                 "name_kn": "",
                 "loc": [
@@ -10343,7 +10343,7 @@
                 "stop_id": 20618
             },
             {
-                "distance": 35.39036985345428,
+                "distance": 33.28519748856794,
                 "name": "B Channasandra Bridge(Ramamurthy Nagara Ring Road)",
                 "name_kn": "B Channasandra Bridge(Ramamurthy Nagara Ring Road)",
                 "loc": [
@@ -10354,7 +10354,7 @@
                 "stop_id": 20614
             },
             {
-                "distance": 36.16630844382414,
+                "distance": 33.484334107301514,
                 "name": "Kasthurinagara",
                 "name_kn": "Kasthurinagara",
                 "loc": [
@@ -10365,7 +10365,7 @@
                 "stop_id": 20914
             },
             {
-                "distance": 37.52893230983949,
+                "distance": 34.27493527464972,
                 "name": "Tin Factory",
                 "name_kn": "",
                 "loc": [
@@ -10376,7 +10376,7 @@
                 "stop_id": 21229
             },
             {
-                "distance": 38.29540823447312,
+                "distance": 35.01314799220637,
                 "name": "KR Pura Railway Station",
                 "name_kn": "",
                 "loc": [
@@ -10387,7 +10387,7 @@
                 "stop_id": 21112
             },
             {
-                "distance": 40.35826936496859,
+                "distance": 36.56289622602665,
                 "name": "Mahadevapura Ring Road",
                 "name_kn": "Mahadevapura Ring Road",
                 "loc": [
@@ -10398,7 +10398,7 @@
                 "stop_id": 20977
             },
             {
-                "distance": 41.05850662944871,
+                "distance": 36.97007273784556,
                 "name": "EMC2",
                 "name_kn": "EMC2",
                 "loc": [
@@ -10409,7 +10409,7 @@
                 "stop_id": 20774
             },
             {
-                "distance": 44.83411025819958,
+                "distance": 39.1695701017267,
                 "name": "Dodda Nekkundi Bridge/Rainbow Hospital",
                 "name_kn": "",
                 "loc": [
@@ -10420,7 +10420,7 @@
                 "stop_id": 20762
             },
             {
-                "distance": 46.556315422191204,
+                "distance": 39.9296360404835,
                 "name": "Kalamandira Marathahalli Bridge",
                 "name_kn": "",
                 "loc": [
@@ -10431,7 +10431,7 @@
                 "stop_id": 23194
             },
             {
-                "distance": 47.379567341242144,
+                "distance": 40.18135757605303,
                 "name": "Multiplex Marathahalli",
                 "name_kn": "",
                 "loc": [
@@ -10442,7 +10442,7 @@
                 "stop_id": 21031
             },
             {
-                "distance": 48.448848569434745,
+                "distance": 40.57884454905789,
                 "name": "Kadubisanahalli",
                 "name_kn": "",
                 "loc": [
@@ -10453,7 +10453,7 @@
                 "stop_id": 20894
             },
             {
-                "distance": 49.42350314026517,
+                "distance": 41.26098393969895,
                 "name": "New Horizon College",
                 "name_kn": "",
                 "loc": [
@@ -10464,7 +10464,7 @@
                 "stop_id": 21058
             },
             {
-                "distance": 50.03857641311932,
+                "distance": 41.75498958128332,
                 "name": "Devarabisanahalli Ring Road",
                 "name_kn": "",
                 "loc": [
@@ -10475,7 +10475,7 @@
                 "stop_id": 20753
             },
             {
-                "distance": 50.805052337752954,
+                "distance": 42.47232368027911,
                 "name": "Eco Space",
                 "name_kn": "",
                 "loc": [
@@ -10486,7 +10486,7 @@
                 "stop_id": 20770
             },
             {
-                "distance": 51.68508025122121,
+                "distance": 43.33297842266228,
                 "name": "Bellanduru City Light Appartment",
                 "name_kn": "Bellanduru City Light Appartment",
                 "loc": [
@@ -10497,7 +10497,7 @@
                 "stop_id": 20639
             },
             {
-                "distance": 52.19606420097696,
+                "distance": 43.8380723712173,
                 "name": "Sarjapura Ring Road Junction",
                 "name_kn": "Sarjapura Ring Road Junction",
                 "loc": [
@@ -10508,7 +10508,7 @@
                 "stop_id": 20888
             },
             {
-                "distance": 54.079134682484295,
+                "distance": 45.79277478769869,
                 "name": "Agara Junction",
                 "name_kn": "Agara Junction",
                 "loc": [
@@ -10519,7 +10519,7 @@
                 "stop_id": 20597
             },
             {
-                "distance": 55.08217725052337,
+                "distance": 46.67403735841722,
                 "name": "Depot-25 Gate (Central Silk Board)",
                 "name_kn": "Depot-25 Gate (Central Silk Board)",
                 "loc": [
@@ -10530,7 +10530,7 @@
                 "stop_id": 20748
             },
             {
-                "distance": 56.624591765526866,
+                "distance": 48.18512230936806,
                 "name": "SI Apartment HSR Layout",
                 "name_kn": "SI Apartment HSR Layout",
                 "loc": [
@@ -10541,7 +10541,7 @@
                 "stop_id": 21176
             },
             {
-                "distance": 57.39106769016049,
+                "distance": 48.884445326881576,
                 "name": "Central Silk Board",
                 "name_kn": "Central Silk Board",
                 "loc": [
@@ -10552,7 +10552,7 @@
                 "stop_id": 35768
             },
             {
-                "distance": 58.649602233077445,
+                "distance": 49.61873605602567,
                 "name": "Bommanahalli",
                 "name_kn": "Bommanahalli",
                 "loc": [
@@ -10563,7 +10563,7 @@
                 "stop_id": 20674
             },
             {
-                "distance": 60.57998604326587,
+                "distance": 50.76079377147688,
                 "name": "Kudlu Gate",
                 "name_kn": "Kudlu Gate",
                 "loc": [
@@ -10574,7 +10574,7 @@
                 "stop_id": 20950
             },
             {
-                "distance": 61.93314724354501,
+                "distance": 51.558018142347414,
                 "name": "Singasandra",
                 "name_kn": "Singasandra",
                 "loc": [
@@ -10585,7 +10585,7 @@
                 "stop_id": 21181
             },
             {
-                "distance": 63.02135380321004,
+                "distance": 52.301931013521376,
                 "name": "Hosa Road Metro Station",
                 "name_kn": "Hosa Road",
                 "loc": [
@@ -10596,7 +10596,7 @@
                 "stop_id": 20840
             },
             {
-                "distance": 65.00851360781576,
+                "distance": 53.67076177632253,
                 "name": "Konappana Agarhara",
                 "name_kn": "Konappana Agarhara",
                 "loc": [
@@ -10607,7 +10607,7 @@
                 "stop_id": 20934
             },
             {
-                "distance": 66.06833217027214,
+                "distance": 54.47014493753183,
                 "name": "Infosys Parking Lot",
                 "name_kn": "Infosys Parking Lot",
                 "loc": [
@@ -10618,7 +10618,7 @@
                 "stop_id": 20858
             },
             {
-                "distance": 67.8,
+                "distance": 55.308611837164065,
                 "name": "Electronic City Wipro Main Gate",
                 "name_kn": "Electronic City Wipro Main Gate",
                 "loc": [
@@ -10629,7 +10629,7 @@
                 "stop_id": 20772
             }
         ],
-        "totalDistance": 67.8
+        "totalDistance": 55.308611837164065
     },
     "KIA-14 UP": {
         "stops": [
@@ -11892,7 +11892,7 @@
                 "stop_id": 26024
             },
             {
-                "distance": 0.2848160557656266,
+                "distance": 0.6957069712485231,
                 "name": "Parangipalya Cross",
                 "name_kn": "Parangipalya Cross",
                 "loc": [
@@ -11903,7 +11903,7 @@
                 "stop_id": 27615
             },
             {
-                "distance": 0.37623153739259885,
+                "distance": 1.1305238282788501,
                 "name": "NIFT College",
                 "name_kn": "NIFT College",
                 "loc": [
@@ -11914,7 +11914,7 @@
                 "stop_id": 24298
             },
             {
-                "distance": 1.916214768558206,
+                "distance": 2.815439149271367,
                 "name": "BDA Complex HSR Layout",
                 "name_kn": "BDA Complex HSR Layout",
                 "loc": [
@@ -11925,7 +11925,7 @@
                 "stop_id": 23716
             },
             {
-                "distance": 2.0859322187508296,
+                "distance": 3.641591177628988,
                 "name": "HSR Layout 14th Main",
                 "name_kn": "14th Main HSR Layout",
                 "loc": [
@@ -11936,7 +11936,7 @@
                 "stop_id": 35422
             },
             {
-                "distance": 2.4707319674145793,
+                "distance": 4.391650256006302,
                 "name": "Jakkasandra",
                 "name_kn": "Jakkasandra",
                 "loc": [
@@ -11947,7 +11947,7 @@
                 "stop_id": 23920
             },
             {
-                "distance": 2.878796744342362,
+                "distance": 4.848207955888145,
                 "name": "Koramangala 1st Block",
                 "name_kn": "",
                 "loc": [
@@ -11958,7 +11958,7 @@
                 "stop_id": 22892
             },
             {
-                "distance": 3.2515492976147344,
+                "distance": 5.250413548641198,
                 "name": "St francis College",
                 "name_kn": "St francis College",
                 "loc": [
@@ -11969,7 +11969,7 @@
                 "stop_id": 23921
             },
             {
-                "distance": 5.274494637052989,
+                "distance": 7.674517526585269,
                 "name": "Hosur Road junction",
                 "name_kn": "Hosur Road junction",
                 "loc": [
@@ -11980,7 +11980,7 @@
                 "stop_id": 20881
             },
             {
-                "distance": 6.021734721304581,
+                "distance": 8.63111461205199,
                 "name": "Muneshwara Devasthana",
                 "name_kn": "",
                 "loc": [
@@ -11991,7 +11991,7 @@
                 "stop_id": 21034
             },
             {
-                "distance": 6.6302164705803355,
+                "distance": 9.283339897597479,
                 "name": "Bengaluru Dairy Circle",
                 "name_kn": "",
                 "loc": [
@@ -12002,7 +12002,7 @@
                 "stop_id": 20642
             },
             {
-                "distance": 6.945396582392814,
+                "distance": 9.685545490350531,
                 "name": "Nimhans Hospital",
                 "name_kn": "",
                 "loc": [
@@ -12013,7 +12013,7 @@
                 "stop_id": 21065
             },
             {
-                "distance": 7.13012115214886,
+                "distance": 10.326900354470263,
                 "name": "Lakkasandra",
                 "name_kn": "",
                 "loc": [
@@ -12024,7 +12024,7 @@
                 "stop_id": 20966
             },
             {
-                "distance": 7.3646694028636706,
+                "distance": 10.739976368649076,
                 "name": "Wilson Garden 10th Cross",
                 "name_kn": "",
                 "loc": [
@@ -12035,7 +12035,7 @@
                 "stop_id": 20563
             },
             {
-                "distance": 7.6974309678237125,
+                "distance": 11.348719968491531,
                 "name": "Wilson Garden Police Station",
                 "name_kn": "Wilson Garden Police Station",
                 "loc": [
@@ -12046,7 +12046,7 @@
                 "stop_id": 21281
             },
             {
-                "distance": 8.128589970345919,
+                "distance": 12.055297361165813,
                 "name": "Shanthinagara Bus Station",
                 "name_kn": "Shanthinagara Bus Station",
                 "loc": [
@@ -12057,7 +12057,7 @@
                 "stop_id": 21167
             },
             {
-                "distance": 8.31414935902444,
+                "distance": 12.5009846396219,
                 "name": "KH Road",
                 "name_kn": "",
                 "loc": [
@@ -12068,7 +12068,7 @@
                 "stop_id": 20928
             },
             {
-                "distance": 9.080607406709557,
+                "distance": 13.881528160693188,
                 "name": "Richmond Circle",
                 "name_kn": "",
                 "loc": [
@@ -12079,7 +12079,7 @@
                 "stop_id": 21125
             },
             {
-                "distance": 9.724815035551314,
+                "distance": 14.762032296179598,
                 "name": "St Joseph Boys High School Musuem Road",
                 "name_kn": "",
                 "loc": [
@@ -12090,7 +12090,7 @@
                 "stop_id": 23433
             },
             {
-                "distance": 10.106913874208528,
+                "distance": 15.370775896022057,
                 "name": "State Bank India Garage",
                 "name_kn": "",
                 "loc": [
@@ -12101,7 +12101,7 @@
                 "stop_id": 21608
             },
             {
-                "distance": 10.450167785053868,
+                "distance": 15.936037810161482,
                 "name": "Chinnaswamy Stadium",
                 "name_kn": "",
                 "loc": [
@@ -12112,7 +12112,7 @@
                 "stop_id": 22694
             },
             {
-                "distance": 11.159580627259293,
+                "distance": 17.055691217014573,
                 "name": "Indian Express",
                 "name_kn": "",
                 "loc": [
@@ -12123,7 +12123,7 @@
                 "stop_id": 26121
             },
             {
-                "distance": 11.551561090110127,
+                "distance": 17.697046081134307,
                 "name": "Cunningham Road",
                 "name_kn": "Cunningham Road",
                 "loc": [
@@ -12134,7 +12134,7 @@
                 "stop_id": 21869
             },
             {
-                "distance": 13.019600216556745,
+                "distance": 20.795116187475383,
                 "name": "RM Guttahalli",
                 "name_kn": "RM Guttahalli",
                 "loc": [
@@ -12145,7 +12145,7 @@
                 "stop_id": 21130
             },
             {
-                "distance": 13.29498117569178,
+                "distance": 22.11043717999212,
                 "name": "Palace Ground",
                 "name_kn": "Palace Ground",
                 "loc": [
@@ -12156,7 +12156,7 @@
                 "stop_id": 21076
             },
             {
-                "distance": 13.462353589878145,
+                "distance": 22.9474596297755,
                 "name": "Mekhri Circle",
                 "name_kn": "Mekhri Circle",
                 "loc": [
@@ -12167,7 +12167,7 @@
                 "stop_id": 21019
             },
             {
-                "distance": 13.740338635850213,
+                "distance": 24.001890508074045,
                 "name": "CBI",
                 "name_kn": "CBI",
                 "loc": [
@@ -12178,7 +12178,7 @@
                 "stop_id": 20698
             },
             {
-                "distance": 14.072194313783772,
+                "distance": 24.838912957857428,
                 "name": "Veterinary Hospital",
                 "name_kn": "",
                 "loc": [
@@ -12189,7 +12189,7 @@
                 "stop_id": 21254
             },
             {
-                "distance": 14.226736491715073,
+                "distance": 25.27372981488775,
                 "name": "Hebbala Canara Bank",
                 "name_kn": "Canara Bank Hebbala",
                 "loc": [
@@ -12200,7 +12200,7 @@
                 "stop_id": 20695
             },
             {
-                "distance": 14.30797331437307,
+                "distance": 25.599842457660497,
                 "name": "Hebbala",
                 "name_kn": "Hebbala",
                 "loc": [
@@ -12211,7 +12211,7 @@
                 "stop_id": 20820
             },
             {
-                "distance": 14.783778139087708,
+                "distance": 27.023867664434817,
                 "name": "Military Dairy Farm (Esteem Mall)",
                 "name_kn": "Military Dairy Farm (Esteem Mall)",
                 "loc": [
@@ -12222,7 +12222,7 @@
                 "stop_id": 33931
             },
             {
-                "distance": 14.792667344340067,
+                "distance": 27.056478928712092,
                 "name": "Navayuga Toll  (Military Dairy Farm)",
                 "name_kn": "Navayuga Toll (Military Dairy Farm)",
                 "loc": [
@@ -12233,7 +12233,7 @@
                 "stop_id": 38168
             },
             {
-                "distance": 22.192929813507828,
+                "distance": 45.66664040961008,
                 "name": "Sadahalli Gate",
                 "name_kn": "Sadahalli Gate",
                 "loc": [
@@ -12244,7 +12244,7 @@
                 "stop_id": 34443
             },
             {
-                "distance": 23.2767774945323,
+                "distance": 47.07979519495865,
                 "name": "Trumpet (KIA)",
                 "name_kn": "Trumpet (KIA)",
                 "loc": [
@@ -12255,7 +12255,7 @@
                 "stop_id": 35806
             },
             {
-                "distance": 26.369546386521655,
+                "distance": 50.98227648680583,
                 "name": "Cargo Village",
                 "name_kn": "Cargo Village",
                 "loc": [
@@ -12266,7 +12266,7 @@
                 "stop_id": 37968
             },
             {
-                "distance": 27.850668690461564,
+                "distance": 52.54761717211501,
                 "name": "DHFL",
                 "name_kn": "DHFL",
                 "loc": [
@@ -12277,7 +12277,7 @@
                 "stop_id": 37969
             },
             {
-                "distance": 29.64333729950202,
+                "distance": 55.2,
                 "name": "Kempegowda International Airport",
                 "name_kn": "ವಿಮಾನ ನಿಲ್ದಾಣ ಬಸ್ ನಿಲ್ದಾಣ",
                 "loc": [
@@ -12288,7 +12288,7 @@
                 "stop_id": 35805
             }
         ],
-        "totalDistance": 29.64333729950202
+        "totalDistance": 55.2
     },
     "KIA-8D UP": {
         "stops": [
@@ -12304,7 +12304,7 @@
                 "stop_id": 22462
             },
             {
-                "distance": 0.2644926592142154,
+                "distance": 0.2787716955941255,
                 "name": "Sarjapura Circle",
                 "name_kn": "",
                 "loc": [
@@ -12315,7 +12315,7 @@
                 "stop_id": 22392
             },
             {
-                "distance": 1.5218942239240731,
+                "distance": 1.5693813974187807,
                 "name": "Sompura Gate",
                 "name_kn": "",
                 "loc": [
@@ -12326,7 +12326,7 @@
                 "stop_id": 22500
             },
             {
-                "distance": 2.0828302695656076,
+                "distance": 2.416021361815754,
                 "name": "Crystal Apartment Sarjapura Road",
                 "name_kn": "",
                 "loc": [
@@ -12337,7 +12337,7 @@
                 "stop_id": 21867
             },
             {
-                "distance": 2.2235273125775286,
+                "distance": 2.9322652425456157,
                 "name": "Yamare",
                 "name_kn": "",
                 "loc": [
@@ -12348,7 +12348,7 @@
                 "stop_id": 22630
             },
             {
-                "distance": 2.816382079278109,
+                "distance": 4.016377392078327,
                 "name": "Chambenahalli",
                 "name_kn": "",
                 "loc": [
@@ -12359,7 +12359,7 @@
                 "stop_id": 21814
             },
             {
-                "distance": 3.7071422105494207,
+                "distance": 5.20373831775701,
                 "name": "Dommasandra",
                 "name_kn": "",
                 "loc": [
@@ -12370,7 +12370,7 @@
                 "stop_id": 23909
             },
             {
-                "distance": 3.885682995058136,
+                "distance": 5.647708055184689,
                 "name": "Dommasandra Circle",
                 "name_kn": "",
                 "loc": [
@@ -12381,7 +12381,7 @@
                 "stop_id": 35237
             },
             {
-                "distance": 4.994014094792818,
+                "distance": 6.855718736092567,
                 "name": "Subramanya swamy Temple",
                 "name_kn": "",
                 "loc": [
@@ -12392,7 +12392,7 @@
                 "stop_id": 39633
             },
             {
-                "distance": 5.462481814804929,
+                "distance": 7.340987983978638,
                 "name": "Muttanalluru Cross",
                 "name_kn": "",
                 "loc": [
@@ -12403,7 +12403,7 @@
                 "stop_id": 35243
             },
             {
-                "distance": 6.567077177954632,
+                "distance": 8.610947930574099,
                 "name": "Sulikunte",
                 "name_kn": "",
                 "loc": [
@@ -12414,7 +12414,7 @@
                 "stop_id": 35238
             },
             {
-                "distance": 7.482142320385611,
+                "distance": 9.65376056964842,
                 "name": "Kodathi Gate",
                 "name_kn": "",
                 "loc": [
@@ -12425,7 +12425,7 @@
                 "stop_id": 35239
             },
             {
-                "distance": 8.218141083958296,
+                "distance": 10.438451268357811,
                 "name": "Wipro Campus Sarjapura Road",
                 "name_kn": "Sarjapura Wipro Campus",
                 "loc": [
@@ -12436,7 +12436,7 @@
                 "stop_id": 28169
             },
             {
-                "distance": 9.305747151603603,
+                "distance": 11.656786826880284,
                 "name": "Carmelram Gate",
                 "name_kn": "",
                 "loc": [
@@ -12447,7 +12447,7 @@
                 "stop_id": 23914
             },
             {
-                "distance": 10.244264020843598,
+                "distance": 12.699599465954607,
                 "name": "Doddakannalli",
                 "name_kn": "",
                 "loc": [
@@ -12458,7 +12458,7 @@
                 "stop_id": 35240
             },
             {
-                "distance": 10.88578815934244,
+                "distance": 13.370716510903426,
                 "name": "Radhareddy Layout",
                 "name_kn": "",
                 "loc": [
@@ -12469,7 +12469,7 @@
                 "stop_id": 23392
             },
             {
-                "distance": 11.478196622759512,
+                "distance": 14.010858923008454,
                 "name": "Junnasandra Gate Wipro Regional Office",
                 "name_kn": "",
                 "loc": [
@@ -12480,7 +12480,7 @@
                 "stop_id": 23916
             },
             {
-                "distance": 12.300584596395499,
+                "distance": 14.919448153093011,
                 "name": "Kaikondrahalli",
                 "name_kn": "",
                 "loc": [
@@ -12491,7 +12491,7 @@
                 "stop_id": 23917
             },
             {
-                "distance": 13.182541095742623,
+                "distance": 15.972585669781932,
                 "name": "Bellanduru Gate SJP Road",
                 "name_kn": "Bellanduru",
                 "loc": [
@@ -12502,7 +12502,7 @@
                 "stop_id": 23918
             },
             {
-                "distance": 13.74015508226842,
+                "distance": 16.60240320427236,
                 "name": "Sarjapura Ring Road Junction",
                 "name_kn": "Sarjapura Ring Road Junction",
                 "loc": [
@@ -12513,7 +12513,7 @@
                 "stop_id": 20889
             },
             {
-                "distance": 14.621001178744152,
+                "distance": 17.583266577659103,
                 "name": "Bellanduru City light Apartment",
                 "name_kn": "",
                 "loc": [
@@ -12524,7 +12524,7 @@
                 "stop_id": 20638
             },
             {
-                "distance": 15.43259360293747,
+                "distance": 18.491855807743658,
                 "name": "Eco Space",
                 "name_kn": "",
                 "loc": [
@@ -12535,7 +12535,7 @@
                 "stop_id": 20771
             },
             {
-                "distance": 16.118318888697345,
+                "distance": 19.30752113929684,
                 "name": "Devarabisanahalli Ring Road",
                 "name_kn": "",
                 "loc": [
@@ -12546,7 +12546,7 @@
                 "stop_id": 20754
             },
             {
-                "distance": 16.488925272352244,
+                "distance": 19.813440142412105,
                 "name": "New Horizon College",
                 "name_kn": "",
                 "loc": [
@@ -12557,7 +12557,7 @@
                 "stop_id": 21059
             },
             {
-                "distance": 17.23398466416075,
+                "distance": 20.9491766800178,
                 "name": "Kadubisanahalli",
                 "name_kn": "Kadubisanahalli",
                 "loc": [
@@ -12568,7 +12568,7 @@
                 "stop_id": 20895
             },
             {
-                "distance": 17.618174823387953,
+                "distance": 22.02296395193591,
                 "name": "Multiplex Marathahalli",
                 "name_kn": "",
                 "loc": [
@@ -12579,7 +12579,7 @@
                 "stop_id": 21032
             },
             {
-                "distance": 17.911556925158582,
+                "distance": 23.065776591010234,
                 "name": "Kalamandira Marathahalli Bridge",
                 "name_kn": "",
                 "loc": [
@@ -12590,7 +12590,7 @@
                 "stop_id": 22670
             },
             {
-                "distance": 18.162393044356858,
+                "distance": 23.984690698709393,
                 "name": "Karthik Nagara",
                 "name_kn": "",
                 "loc": [
@@ -12601,7 +12601,7 @@
                 "stop_id": 20913
             },
             {
-                "distance": 18.688704154418026,
+                "distance": 24.975878949710726,
                 "name": "Dodda Nekkundi Bridge/Rainbow Hospital",
                 "name_kn": "Dodda Nekkundi Bridge/Rainbow Hospital",
                 "loc": [
@@ -12612,7 +12612,7 @@
                 "stop_id": 20761
             },
             {
-                "distance": 19.173485292719622,
+                "distance": 25.88446817979528,
                 "name": "EMC2",
                 "name_kn": "",
                 "loc": [
@@ -12623,7 +12623,7 @@
                 "stop_id": 20775
             },
             {
-                "distance": 19.62698076005137,
+                "distance": 26.72078326657766,
                 "name": "Mahadevapura Ring Road",
                 "name_kn": "Mahadevapura Ring Road",
                 "loc": [
@@ -12634,7 +12634,7 @@
                 "stop_id": 20978
             },
             {
-                "distance": 20.221020161356808,
+                "distance": 27.72229639519359,
                 "name": "B Narayanapura Ring Road",
                 "name_kn": "",
                 "loc": [
@@ -12645,7 +12645,7 @@
                 "stop_id": 20616
             },
             {
-                "distance": 21.059705047802506,
+                "distance": 28.827058299955496,
                 "name": "KR Pura Railway Station",
                 "name_kn": "",
                 "loc": [
@@ -12656,7 +12656,7 @@
                 "stop_id": 21113
             },
             {
-                "distance": 21.953236230039757,
+                "distance": 29.81824655095683,
                 "name": "Tin Factory",
                 "name_kn": "",
                 "loc": [
@@ -12667,7 +12667,7 @@
                 "stop_id": 21228
             },
             {
-                "distance": 22.670873582064086,
+                "distance": 31.253404539385848,
                 "name": "Kasthurinagara",
                 "name_kn": "Kasthurinagara",
                 "loc": [
@@ -12678,7 +12678,7 @@
                 "stop_id": 20915
             },
             {
-                "distance": 22.87131219877237,
+                "distance": 32.08971962616822,
                 "name": "B Channasandra Bridge(Ramamurthy Nagara Ring Road)",
                 "name_kn": "",
                 "loc": [
@@ -12689,7 +12689,7 @@
                 "stop_id": 22651
             },
             {
-                "distance": 23.182956200784822,
+                "distance": 32.864085447263015,
                 "name": "Vijaya Bank Colony Ring Road",
                 "name_kn": "",
                 "loc": [
@@ -12700,7 +12700,7 @@
                 "stop_id": 21264
             },
             {
-                "distance": 23.89515636201605,
+                "distance": 33.63845126835781,
                 "name": "Horamavu Signal",
                 "name_kn": "",
                 "loc": [
@@ -12711,7 +12711,7 @@
                 "stop_id": 20839
             },
             {
-                "distance": 24.659032135570218,
+                "distance": 34.47476635514019,
                 "name": "Babusabpalya",
                 "name_kn": "Babusabpalya",
                 "loc": [
@@ -12722,7 +12722,7 @@
                 "stop_id": 20617
             },
             {
-                "distance": 25.39604916608527,
+                "distance": 35.28010680907877,
                 "name": "Kalyananagara 80 feet Road",
                 "name_kn": "",
                 "loc": [
@@ -12733,7 +12733,7 @@
                 "stop_id": 21450
             },
             {
-                "distance": 25.840366170421845,
+                "distance": 35.744726301735646,
                 "name": "Kalyananagara",
                 "name_kn": "",
                 "loc": [
@@ -12744,7 +12744,7 @@
                 "stop_id": 20904
             },
             {
-                "distance": 26.42651553539608,
+                "distance": 36.467467734757456,
                 "name": "Hennur Junction",
                 "name_kn": "",
                 "loc": [
@@ -12755,7 +12755,7 @@
                 "stop_id": 21528
             },
             {
-                "distance": 26.753561862748075,
+                "distance": 37.16955941255007,
                 "name": "HBR Layout",
                 "name_kn": "",
                 "loc": [
@@ -12766,7 +12766,7 @@
                 "stop_id": 20816
             },
             {
-                "distance": 27.269047916228406,
+                "distance": 37.98522474410325,
                 "name": "Nagawara Junction",
                 "name_kn": "Nagawara Junction",
                 "loc": [
@@ -12777,7 +12777,7 @@
                 "stop_id": 20885
             },
             {
-                "distance": 27.724074180254355,
+                "distance": 38.470493991989315,
                 "name": "Manyatha Tech Park",
                 "name_kn": "Manyatha Tech Park",
                 "loc": [
@@ -12788,7 +12788,7 @@
                 "stop_id": 20999
             },
             {
-                "distance": 28.45391457200976,
+                "distance": 39.265509568313306,
                 "name": "Veerannapalya",
                 "name_kn": "Veerannapalya",
                 "loc": [
@@ -12799,7 +12799,7 @@
                 "stop_id": 21252
             },
             {
-                "distance": 29.823611277009597,
+                "distance": 40.65936804628393,
                 "name": "Kempapura",
                 "name_kn": "",
                 "loc": [
@@ -12810,7 +12810,7 @@
                 "stop_id": 20920
             },
             {
-                "distance": 31.085241779434973,
+                "distance": 42.03257676902536,
                 "name": "Hebbala Bridge",
                 "name_kn": "Hebbala Bridge",
                 "loc": [
@@ -12821,7 +12821,7 @@
                 "stop_id": 25819
             },
             {
-                "distance": 31.404210701017014,
+                "distance": 42.83791722296395,
                 "name": "Military Dairy Farm (Esteem Mall)",
                 "name_kn": "Military Dairy Farm (Esteem Mall)",
                 "loc": [
@@ -12832,7 +12832,7 @@
                 "stop_id": 33931
             },
             {
-                "distance": 31.41309990626937,
+                "distance": 42.868891855807746,
                 "name": "Navayuga Toll  (Military Dairy Farm)",
                 "name_kn": "Navayuga Toll (Military Dairy Farm)",
                 "loc": [
@@ -12843,7 +12843,7 @@
                 "stop_id": 38168
             },
             {
-                "distance": 38.81336237543715,
+                "distance": 60.545082331998216,
                 "name": "Sadahalli Gate",
                 "name_kn": "Sadahalli Gate",
                 "loc": [
@@ -12854,7 +12854,7 @@
                 "stop_id": 34443
             },
             {
-                "distance": 39.89721005646161,
+                "distance": 61.887316421895854,
                 "name": "Trumpet (KIA)",
                 "name_kn": "Trumpet (KIA)",
                 "loc": [
@@ -12865,7 +12865,7 @@
                 "stop_id": 35806
             },
             {
-                "distance": 42.989978948451,
+                "distance": 65.59394748553628,
                 "name": "Cargo Village",
                 "name_kn": "Cargo Village",
                 "loc": [
@@ -12876,7 +12876,7 @@
                 "stop_id": 37968
             },
             {
-                "distance": 44.47110125239089,
+                "distance": 67.08072986203827,
                 "name": "DHFL",
                 "name_kn": "DHFL",
                 "loc": [
@@ -12887,7 +12887,7 @@
                 "stop_id": 37969
             },
             {
-                "distance": 46.263769861431356,
+                "distance": 69.6,
                 "name": "Kempegowda International Airport",
                 "name_kn": "ವಿಮಾನ ನಿಲ್ದಾಣ ಬಸ್ ನಿಲ್ದಾಣ",
                 "loc": [
@@ -12898,7 +12898,7 @@
                 "stop_id": 35805
             }
         ],
-        "totalDistance": 46.263769861431356
+        "totalDistance": 69.6
     },
     "KIA-8D DOWN": {
         "stops": [
@@ -12914,7 +12914,7 @@
                 "stop_id": 23485
             },
             {
-                "distance": 1.4388710862531322,
+                "distance": 1.7815966386554618,
                 "name": "KIA Terminal 2",
                 "name_kn": "KIA Terminal 2",
                 "loc": [
@@ -12925,7 +12925,7 @@
                 "stop_id": 38417
             },
             {
-                "distance": 8.110793672030981,
+                "distance": 8.208403361344537,
                 "name": "Trumpet (KIA)",
                 "name_kn": "Trumpet (KIA)",
                 "loc": [
@@ -12936,7 +12936,7 @@
                 "stop_id": 35807
             },
             {
-                "distance": 8.610629747193348,
+                "distance": 8.777394957983192,
                 "name": "Navayuga Toll (KIA)",
                 "name_kn": "Navayuga Toll (KIA)",
                 "loc": [
@@ -12947,7 +12947,7 @@
                 "stop_id": 35745
             },
             {
-                "distance": 9.054990268212764,
+                "distance": 9.271764705882351,
                 "name": "Sadahalli Gate",
                 "name_kn": "Sadahalli Gate",
                 "loc": [
@@ -12958,7 +12958,7 @@
                 "stop_id": 28088
             },
             {
-                "distance": 16.97581432701083,
+                "distance": 26.20159663865546,
                 "name": "Hebbala Bridge",
                 "name_kn": "",
                 "loc": [
@@ -12969,7 +12969,7 @@
                 "stop_id": 20823
             },
             {
-                "distance": 17.869837015945528,
+                "distance": 27.069075630252094,
                 "name": "Kempapura",
                 "name_kn": "",
                 "loc": [
@@ -12980,7 +12980,7 @@
                 "stop_id": 20919
             },
             {
-                "distance": 19.351921268215243,
+                "distance": 28.430924369747895,
                 "name": "Veerannapalya",
                 "name_kn": "Veerannapalya",
                 "loc": [
@@ -12991,7 +12991,7 @@
                 "stop_id": 22593
             },
             {
-                "distance": 20.14904699575518,
+                "distance": 29.186470588235288,
                 "name": "Manyatha Tech Park",
                 "name_kn": "",
                 "loc": [
@@ -13002,7 +13002,7 @@
                 "stop_id": 20998
             },
             {
-                "distance": 20.55382042917239,
+                "distance": 29.60621848739495,
                 "name": "Nagawara Junction",
                 "name_kn": "",
                 "loc": [
@@ -13013,7 +13013,7 @@
                 "stop_id": 20884
             },
             {
-                "distance": 21.03106325037458,
+                "distance": 30.28714285714285,
                 "name": "HBR Layout",
                 "name_kn": "",
                 "loc": [
@@ -13024,7 +13024,7 @@
                 "stop_id": 20815
             },
             {
-                "distance": 21.365136926497204,
+                "distance": 30.921428571428567,
                 "name": "Hennur Junction",
                 "name_kn": "",
                 "loc": [
@@ -13035,7 +13035,7 @@
                 "stop_id": 21522
             },
             {
-                "distance": 21.989343252793685,
+                "distance": 31.602352941176466,
                 "name": "Kalyananagara",
                 "name_kn": "",
                 "loc": [
@@ -13046,7 +13046,7 @@
                 "stop_id": 20903
             },
             {
-                "distance": 22.40466731206921,
+                "distance": 31.994117647058815,
                 "name": "Kalyananagara 80 feet Road",
                 "name_kn": "",
                 "loc": [
@@ -13057,7 +13057,7 @@
                 "stop_id": 20588
             },
             {
-                "distance": 23.141866126931767,
+                "distance": 32.73100840336134,
                 "name": "Babusabpalya",
                 "name_kn": "",
                 "loc": [
@@ -13068,7 +13068,7 @@
                 "stop_id": 20618
             },
             {
-                "distance": 23.941390656166256,
+                "distance": 33.523865546218474,
                 "name": "Horamavu Signal",
                 "name_kn": "",
                 "loc": [
@@ -13079,7 +13079,7 @@
                 "stop_id": 20838
             },
             {
-                "distance": 24.562203026976984,
+                "distance": 34.139495798319324,
                 "name": "Vijaya Bank Colony Ring Road",
                 "name_kn": "",
                 "loc": [
@@ -13090,7 +13090,7 @@
                 "stop_id": 21263
             },
             {
-                "distance": 24.92361706676093,
+                "distance": 34.88571428571428,
                 "name": "B Channasandra Bridge(Ramamurthy Nagara Ring Road)",
                 "name_kn": "B Channasandra Bridge(Ramamurthy Nagara Ring Road)",
                 "loc": [
@@ -13101,7 +13101,7 @@
                 "stop_id": 20614
             },
             {
-                "distance": 25.122753685494516,
+                "distance": 35.650588235294116,
                 "name": "Kasthurinagara",
                 "name_kn": "Kasthurinagara",
                 "loc": [
@@ -13112,7 +13112,7 @@
                 "stop_id": 20914
             },
             {
-                "distance": 25.91335485284273,
+                "distance": 36.99378151260503,
                 "name": "Tin Factory",
                 "name_kn": "",
                 "loc": [
@@ -13123,7 +13123,7 @@
                 "stop_id": 21229
             },
             {
-                "distance": 26.651567570399394,
+                "distance": 37.749327731092436,
                 "name": "KR Pura Railway Station",
                 "name_kn": "",
                 "loc": [
@@ -13134,7 +13134,7 @@
                 "stop_id": 21112
             },
             {
-                "distance": 27.57482964511289,
+                "distance": 38.83134453781513,
                 "name": "B Narayanapura Ring Road",
                 "name_kn": "",
                 "loc": [
@@ -13145,7 +13145,7 @@
                 "stop_id": 20615
             },
             {
-                "distance": 28.201317590115387,
+                "distance": 39.78277310924369,
                 "name": "Mahadevapura Ring Road",
                 "name_kn": "Mahadevapura Ring Road",
                 "loc": [
@@ -13156,7 +13156,7 @@
                 "stop_id": 20977
             },
             {
-                "distance": 28.608494101934287,
+                "distance": 40.473025210084025,
                 "name": "EMC2",
                 "name_kn": "EMC2",
                 "loc": [
@@ -13167,7 +13167,7 @@
                 "stop_id": 20774
             },
             {
-                "distance": 30.8079914658154,
+                "distance": 44.19478991596638,
                 "name": "Dodda Nekkundi Bridge/Rainbow Hospital",
                 "name_kn": "",
                 "loc": [
@@ -13178,7 +13178,7 @@
                 "stop_id": 20762
             },
             {
-                "distance": 31.3033527480319,
+                "distance": 45.024957983193275,
                 "name": "Karthik Nagara",
                 "name_kn": "",
                 "loc": [
@@ -13189,7 +13189,7 @@
                 "stop_id": 20912
             },
             {
-                "distance": 31.56805808542562,
+                "distance": 45.90176470588235,
                 "name": "Kalamandira Marathahalli Bridge",
                 "name_kn": "",
                 "loc": [
@@ -13200,7 +13200,7 @@
                 "stop_id": 23194
             },
             {
-                "distance": 31.81977962099516,
+                "distance": 46.71327731092436,
                 "name": "Multiplex Marathahalli",
                 "name_kn": "",
                 "loc": [
@@ -13211,7 +13211,7 @@
                 "stop_id": 21031
             },
             {
-                "distance": 32.21726659400002,
+                "distance": 47.767310924369745,
                 "name": "Kadubisanahalli",
                 "name_kn": "",
                 "loc": [
@@ -13222,7 +13222,7 @@
                 "stop_id": 20894
             },
             {
-                "distance": 32.899405984641085,
+                "distance": 48.72806722689075,
                 "name": "New Horizon College",
                 "name_kn": "",
                 "loc": [
@@ -13233,7 +13233,7 @@
                 "stop_id": 21058
             },
             {
-                "distance": 33.39341162622545,
+                "distance": 49.33436974789915,
                 "name": "Devarabisanahalli Ring Road",
                 "name_kn": "",
                 "loc": [
@@ -13244,7 +13244,7 @@
                 "stop_id": 20753
             },
             {
-                "distance": 34.11074572522124,
+                "distance": 50.08991596638655,
                 "name": "Eco Space",
                 "name_kn": "",
                 "loc": [
@@ -13255,7 +13255,7 @@
                 "stop_id": 20770
             },
             {
-                "distance": 34.97140046760441,
+                "distance": 50.95739495798318,
                 "name": "Bellanduru City Light Appartment",
                 "name_kn": "Bellanduru City Light Appartment",
                 "loc": [
@@ -13266,7 +13266,7 @@
                 "stop_id": 20639
             },
             {
-                "distance": 35.804001292201825,
+                "distance": 51.815546218487384,
                 "name": "Sarjapura Road Ibbaluru Junction",
                 "name_kn": "Sarjapura Road Ibbaluru Junction",
                 "loc": [
@@ -13277,7 +13277,7 @@
                 "stop_id": 30401
             },
             {
-                "distance": 36.25864767289499,
+                "distance": 52.27260504201679,
                 "name": "Bellanduru Gate SJP Road",
                 "name_kn": "Bellanduru Gate SJP Road",
                 "loc": [
@@ -13288,7 +13288,7 @@
                 "stop_id": 23896
             },
             {
-                "distance": 37.069427984565145,
+                "distance": 53.15873949579831,
                 "name": "Kaikondrahalli",
                 "name_kn": "",
                 "loc": [
@@ -13299,7 +13299,7 @@
                 "stop_id": 23897
             },
             {
-                "distance": 37.88394276989106,
+                "distance": 53.97957983193276,
                 "name": "Junnasandra Gate Wipro Regional Office",
                 "name_kn": "",
                 "loc": [
@@ -13310,7 +13310,7 @@
                 "stop_id": 23898
             },
             {
-                "distance": 38.47528514625269,
+                "distance": 54.55789915966386,
                 "name": "Radhareddy Layout",
                 "name_kn": "",
                 "loc": [
@@ -13321,7 +13321,7 @@
                 "stop_id": 23390
             },
             {
-                "distance": 39.12683865921001,
+                "distance": 55.1735294117647,
                 "name": "Doddakannalli",
                 "name_kn": "",
                 "loc": [
@@ -13332,7 +13332,7 @@
                 "stop_id": 35104
             },
             {
-                "distance": 40.07425624606479,
+                "distance": 56.11563025210083,
                 "name": "Carmelram Gate",
                 "name_kn": "",
                 "loc": [
@@ -13343,7 +13343,7 @@
                 "stop_id": 23900
             },
             {
-                "distance": 41.13742823089782,
+                "distance": 57.18831932773109,
                 "name": "Wipro Campus Sarjapura Road",
                 "name_kn": "",
                 "loc": [
@@ -13354,7 +13354,7 @@
                 "stop_id": 34475
             },
             {
-                "distance": 41.897983072433405,
+                "distance": 57.9252100840336,
                 "name": "Kodathi Gate",
                 "name_kn": "",
                 "loc": [
@@ -13365,7 +13365,7 @@
                 "stop_id": 35072
             },
             {
-                "distance": 42.80526279371848,
+                "distance": 58.857983193277306,
                 "name": "Sulikunte",
                 "name_kn": "",
                 "loc": [
@@ -13376,7 +13376,7 @@
                 "stop_id": 35124
             },
             {
-                "distance": 43.91321517638242,
+                "distance": 60.014621848739495,
                 "name": "Muttanalluru Cross",
                 "name_kn": "",
                 "loc": [
@@ -13387,7 +13387,7 @@
                 "stop_id": 35131
             },
             {
-                "distance": 44.37405269795152,
+                "distance": 60.44369747899158,
                 "name": "Subramanya Swamy Temple",
                 "name_kn": "",
                 "loc": [
@@ -13398,7 +13398,7 @@
                 "stop_id": 39632
             },
             {
-                "distance": 45.48153308242872,
+                "distance": 61.51638655462184,
                 "name": "Dommasandra Circle",
                 "name_kn": "",
                 "loc": [
@@ -13409,7 +13409,7 @@
                 "stop_id": 35149
             },
             {
-                "distance": 45.65104845972336,
+                "distance": 61.917478991596624,
                 "name": "Dommasandra",
                 "name_kn": "",
                 "loc": [
@@ -13420,7 +13420,7 @@
                 "stop_id": 23906
             },
             {
-                "distance": 46.548581470056014,
+                "distance": 62.99949579831932,
                 "name": "Chambenahalli",
                 "name_kn": "",
                 "loc": [
@@ -13431,7 +13431,7 @@
                 "stop_id": 21813
             },
             {
-                "distance": 47.13575927112279,
+                "distance": 63.960252100840314,
                 "name": "Yamare",
                 "name_kn": "",
                 "loc": [
@@ -13442,7 +13442,7 @@
                 "stop_id": 22629
             },
             {
-                "distance": 47.29241173623685,
+                "distance": 64.45462184873948,
                 "name": "Crystal Apartment Sarjapura Road",
                 "name_kn": "",
                 "loc": [
@@ -13453,7 +13453,7 @@
                 "stop_id": 21866
             },
             {
-                "distance": 47.85203983273328,
+                "distance": 65.21949579831931,
                 "name": "Sompura Gate",
                 "name_kn": "",
                 "loc": [
@@ -13464,7 +13464,7 @@
                 "stop_id": 22497
             },
             {
-                "distance": 49.12273340431923,
+                "distance": 66.38546218487394,
                 "name": "Sarjapura Circle",
                 "name_kn": "",
                 "loc": [
@@ -13475,7 +13475,7 @@
                 "stop_id": 22391
             },
             {
-                "distance": 49.35752664669506,
+                "distance": 66.6,
                 "name": "Sarjapura",
                 "name_kn": "",
                 "loc": [
@@ -13486,7 +13486,7 @@
                 "stop_id": 23907
             }
         ],
-        "totalDistance": 49.35752664669506
+        "totalDistance": 66.6
     },
     "KIA-8H UP": {
         "stops": [
@@ -13502,7 +13502,7 @@
                 "stop_id": 23485
             },
             {
-                "distance": 1.43391582246804,
+                "distance": 1.780320591861899,
                 "name": "KIA Terminal 2",
                 "name_kn": "KIA Terminal 2",
                 "loc": [
@@ -13513,7 +13513,7 @@
                 "stop_id": 38417
             },
             {
-                "distance": 8.111576695215458,
+                "distance": 8.305006165228113,
                 "name": "Trumpet (KIA)",
                 "name_kn": "Trumpet (KIA)",
                 "loc": [
@@ -13524,7 +13524,7 @@
                 "stop_id": 35807
             },
             {
-                "distance": 8.611412770377825,
+                "distance": 8.882663378545008,
                 "name": "Navayuga Toll (KIA)",
                 "name_kn": "Navayuga Toll (KIA)",
                 "loc": [
@@ -13535,7 +13535,7 @@
                 "stop_id": 35745
             },
             {
-                "distance": 9.05577329139724,
+                "distance": 9.384562268803947,
                 "name": "Sadahalli Gate",
                 "name_kn": "Sadahalli Gate",
                 "loc": [
@@ -13546,7 +13546,7 @@
                 "stop_id": 28088
             },
             {
-                "distance": 16.976597350195306,
+                "distance": 26.572231812577066,
                 "name": "Hebbala Bridge",
                 "name_kn": "",
                 "loc": [
@@ -13557,7 +13557,7 @@
                 "stop_id": 20823
             },
             {
-                "distance": 17.870620039130003,
+                "distance": 27.45292231812577,
                 "name": "Kempapura",
                 "name_kn": "",
                 "loc": [
@@ -13568,7 +13568,7 @@
                 "stop_id": 20919
             },
             {
-                "distance": 19.352704291399718,
+                "distance": 28.835511713933414,
                 "name": "Veerannapalya",
                 "name_kn": "Veerannapalya",
                 "loc": [
@@ -13579,7 +13579,7 @@
                 "stop_id": 22593
             },
             {
-                "distance": 20.149830018939657,
+                "distance": 29.602564734895193,
                 "name": "Manyatha Tech Park",
                 "name_kn": "",
                 "loc": [
@@ -13590,7 +13590,7 @@
                 "stop_id": 20998
             },
             {
-                "distance": 20.554603452356865,
+                "distance": 30.028705302096178,
                 "name": "Nagawara Junction",
                 "name_kn": "",
                 "loc": [
@@ -13601,7 +13601,7 @@
                 "stop_id": 20884
             },
             {
-                "distance": 21.031846273559054,
+                "distance": 30.72,
                 "name": "HBR Layout",
                 "name_kn": "",
                 "loc": [
@@ -13612,7 +13612,7 @@
                 "stop_id": 20815
             },
             {
-                "distance": 21.36591994968168,
+                "distance": 31.363945745992602,
                 "name": "Hennur Junction",
                 "name_kn": "",
                 "loc": [
@@ -13623,7 +13623,7 @@
                 "stop_id": 21522
             },
             {
-                "distance": 21.99012627597816,
+                "distance": 32.05524044389643,
                 "name": "Kalyananagara",
                 "name_kn": "",
                 "loc": [
@@ -13634,7 +13634,7 @@
                 "stop_id": 20903
             },
             {
-                "distance": 22.405450335253686,
+                "distance": 32.45297163995068,
                 "name": "Kalyananagara 80 feet Road",
                 "name_kn": "",
                 "loc": [
@@ -13645,7 +13645,7 @@
                 "stop_id": 20588
             },
             {
-                "distance": 23.14264915011624,
+                "distance": 33.20108508014797,
                 "name": "Babusabpalya",
                 "name_kn": "",
                 "loc": [
@@ -13656,7 +13656,7 @@
                 "stop_id": 20618
             },
             {
-                "distance": 23.94217367935073,
+                "distance": 34.006017262638714,
                 "name": "Horamavu Signal",
                 "name_kn": "",
                 "loc": [
@@ -13667,7 +13667,7 @@
                 "stop_id": 20838
             },
             {
-                "distance": 24.56298605016146,
+                "distance": 34.63102342786683,
                 "name": "Vijaya Bank Colony Ring Road",
                 "name_kn": "",
                 "loc": [
@@ -13678,7 +13678,7 @@
                 "stop_id": 21263
             },
             {
-                "distance": 24.924400089945404,
+                "distance": 35.388606658446356,
                 "name": "B Channasandra Bridge(Ramamurthy Nagara Ring Road)",
                 "name_kn": "B Channasandra Bridge(Ramamurthy Nagara Ring Road)",
                 "loc": [
@@ -13689,7 +13689,7 @@
                 "stop_id": 20614
             },
             {
-                "distance": 25.12353670867899,
+                "distance": 36.16512946979038,
                 "name": "Kasthurinagara",
                 "name_kn": "Kasthurinagara",
                 "loc": [
@@ -13700,7 +13700,7 @@
                 "stop_id": 20914
             },
             {
-                "distance": 25.914137876027205,
+                "distance": 37.52877928483354,
                 "name": "Tin Factory",
                 "name_kn": "",
                 "loc": [
@@ -13711,7 +13711,7 @@
                 "stop_id": 21229
             },
             {
-                "distance": 26.65235059358387,
+                "distance": 38.295832305795315,
                 "name": "KR Pura Railway Station",
                 "name_kn": "",
                 "loc": [
@@ -13722,7 +13722,7 @@
                 "stop_id": 21112
             },
             {
-                "distance": 27.575612668297364,
+                "distance": 39.39432799013564,
                 "name": "B Narayanapura Ring Road",
                 "name_kn": "",
                 "loc": [
@@ -13733,7 +13733,7 @@
                 "stop_id": 20615
             },
             {
-                "distance": 28.202100613299862,
+                "distance": 40.36024660912454,
                 "name": "Mahadevapura Ring Road",
                 "name_kn": "Mahadevapura Ring Road",
                 "loc": [
@@ -13744,7 +13744,7 @@
                 "stop_id": 20977
             },
             {
-                "distance": 28.609277125118762,
+                "distance": 41.061011097410606,
                 "name": "EMC2",
                 "name_kn": "EMC2",
                 "loc": [
@@ -13755,7 +13755,7 @@
                 "stop_id": 20774
             },
             {
-                "distance": 30.808774488999877,
+                "distance": 44.83945745992602,
                 "name": "Dodda Nekkundi Bridge/Rainbow Hospital",
                 "name_kn": "",
                 "loc": [
@@ -13766,7 +13766,7 @@
                 "stop_id": 20762
             },
             {
-                "distance": 31.304135771216377,
+                "distance": 45.68226880394575,
                 "name": "Karthik Nagara",
                 "name_kn": "",
                 "loc": [
@@ -13777,7 +13777,7 @@
                 "stop_id": 20912
             },
             {
-                "distance": 31.568841108610094,
+                "distance": 46.5724290998767,
                 "name": "Kalamandira Marathahalli Bridge",
                 "name_kn": "",
                 "loc": [
@@ -13788,7 +13788,7 @@
                 "stop_id": 23194
             },
             {
-                "distance": 31.820562644179635,
+                "distance": 47.396300863131934,
                 "name": "Multiplex Marathahalli",
                 "name_kn": "",
                 "loc": [
@@ -13799,7 +13799,7 @@
                 "stop_id": 21031
             },
             {
-                "distance": 32.2180496171845,
+                "distance": 48.466387176325526,
                 "name": "Kadubisanahalli",
                 "name_kn": "",
                 "loc": [
@@ -13810,7 +13810,7 @@
                 "stop_id": 20894
             },
             {
-                "distance": 32.90018900782556,
+                "distance": 49.441775585696675,
                 "name": "New Horizon College",
                 "name_kn": "",
                 "loc": [
@@ -13821,7 +13821,7 @@
                 "stop_id": 21058
             },
             {
-                "distance": 33.394194649409926,
+                "distance": 50.05731196054254,
                 "name": "Devarabisanahalli Ring Road",
                 "name_kn": "",
                 "loc": [
@@ -13832,7 +13832,7 @@
                 "stop_id": 20753
             },
             {
-                "distance": 34.11152874840572,
+                "distance": 50.82436498150432,
                 "name": "Eco Space",
                 "name_kn": "",
                 "loc": [
@@ -13843,7 +13843,7 @@
                 "stop_id": 20770
             },
             {
-                "distance": 34.972183490788886,
+                "distance": 51.70505548705302,
                 "name": "Bellanduru City Light Appartment",
                 "name_kn": "Bellanduru City Light Appartment",
                 "loc": [
@@ -13854,7 +13854,7 @@
                 "stop_id": 20639
             },
             {
-                "distance": 35.8047843153863,
+                "distance": 52.57627620221948,
                 "name": "Sarjapura Road Ibbaluru Junction",
                 "name_kn": "Sarjapura Road Ibbaluru Junction",
                 "loc": [
@@ -13865,7 +13865,7 @@
                 "stop_id": 30401
             },
             {
-                "distance": 36.25943069607946,
+                "distance": 53.04029593094945,
                 "name": "Bellanduru Gate SJP Road",
                 "name_kn": "Bellanduru Gate SJP Road",
                 "loc": [
@@ -13876,7 +13876,7 @@
                 "stop_id": 23896
             },
             {
-                "distance": 37.07021100774962,
+                "distance": 53.93992601726264,
                 "name": "Kaikondrahalli",
                 "name_kn": "",
                 "loc": [
@@ -13887,7 +13887,7 @@
                 "stop_id": 23897
             },
             {
-                "distance": 37.88472579307553,
+                "distance": 54.77326757090013,
                 "name": "Junnasandra Gate Wipro Regional Office",
                 "name_kn": "",
                 "loc": [
@@ -13898,7 +13898,7 @@
                 "stop_id": 23898
             },
             {
-                "distance": 38.47606816943716,
+                "distance": 55.36039457459926,
                 "name": "Radhareddy Layout",
                 "name_kn": "",
                 "loc": [
@@ -13909,7 +13909,7 @@
                 "stop_id": 23390
             },
             {
-                "distance": 39.127621682394484,
+                "distance": 55.98540073982737,
                 "name": "Doddakannalli",
                 "name_kn": "",
                 "loc": [
@@ -13920,7 +13920,7 @@
                 "stop_id": 35104
             },
             {
-                "distance": 40.07503926924927,
+                "distance": 56.94184956843404,
                 "name": "Carmelram Gate",
                 "name_kn": "",
                 "loc": [
@@ -13931,7 +13931,7 @@
                 "stop_id": 23900
             },
             {
-                "distance": 41.13821125408229,
+                "distance": 58.03087546239212,
                 "name": "Wipro Campus Sarjapura Road",
                 "name_kn": "",
                 "loc": [
@@ -13942,7 +13942,7 @@
                 "stop_id": 34475
             },
             {
-                "distance": 41.89876609561788,
+                "distance": 58.778988902589404,
                 "name": "Kodathi Gate",
                 "name_kn": "",
                 "loc": [
@@ -13953,7 +13953,7 @@
                 "stop_id": 35072
             },
             {
-                "distance": 42.80604581690295,
+                "distance": 59.72596794081381,
                 "name": "Sulikunte",
                 "name_kn": "",
                 "loc": [
@@ -13964,7 +13964,7 @@
                 "stop_id": 35124
             },
             {
-                "distance": 43.9139981995669,
+                "distance": 60.900221948212085,
                 "name": "Muttanalluru Cross",
                 "name_kn": "",
                 "loc": [
@@ -13975,7 +13975,7 @@
                 "stop_id": 35131
             },
             {
-                "distance": 44.374835721135995,
+                "distance": 61.335832305795314,
                 "name": "Subramanya Swamy Temple",
                 "name_kn": "",
                 "loc": [
@@ -13986,7 +13986,7 @@
                 "stop_id": 39632
             },
             {
-                "distance": 45.482316105613194,
+                "distance": 62.424858199753395,
                 "name": "Dommasandra Circle",
                 "name_kn": "",
                 "loc": [
@@ -13997,7 +13997,7 @@
                 "stop_id": 35149
             },
             {
-                "distance": 45.65183148290784,
+                "distance": 62.83205918618989,
                 "name": "Dommasandra",
                 "name_kn": "",
                 "loc": [
@@ -14008,7 +14008,7 @@
                 "stop_id": 23906
             },
             {
-                "distance": 46.55312921024606,
+                "distance": 63.94002466091246,
                 "name": "Chambenahalli",
                 "name_kn": "",
                 "loc": [
@@ -14019,7 +14019,7 @@
                 "stop_id": 21813
             },
             {
-                "distance": 47.13446806833064,
+                "distance": 64.9154130702836,
                 "name": "Yamare",
                 "name_kn": "",
                 "loc": [
@@ -14030,7 +14030,7 @@
                 "stop_id": 22629
             },
             {
-                "distance": 47.29597070215218,
+                "distance": 65.41731196054255,
                 "name": "Crystal Apartment Sarjapura Road",
                 "name_kn": "",
                 "loc": [
@@ -14041,7 +14041,7 @@
                 "stop_id": 21866
             },
             {
-                "distance": 47.855598798648614,
+                "distance": 66.19383477188657,
                 "name": "Sompura Gate",
                 "name_kn": "",
                 "loc": [
@@ -14052,7 +14052,7 @@
                 "stop_id": 22497
             },
             {
-                "distance": 49.12629237023456,
+                "distance": 67.37755856966709,
                 "name": "Sarjapura Circle",
                 "name_kn": "",
                 "loc": [
@@ -14063,7 +14063,7 @@
                 "stop_id": 22391
             },
             {
-                "distance": 49.36108561261039,
+                "distance": 67.59536374845868,
                 "name": "Sarjapura",
                 "name_kn": "",
                 "loc": [
@@ -14074,7 +14074,7 @@
                 "stop_id": 23907
             },
             {
-                "distance": 49.584226163522416,
+                "distance": 67.82263871763256,
                 "name": "Sarjapura Circle",
                 "name_kn": "",
                 "loc": [
@@ -14085,7 +14085,7 @@
                 "stop_id": 23570
             },
             {
-                "distance": 49.800790590600194,
+                "distance": 68.58022194821208,
                 "name": "Bikkanahalli Junction",
                 "name_kn": "",
                 "loc": [
@@ -14096,7 +14096,7 @@
                 "stop_id": 22110
             },
             {
-                "distance": 50.02818650506015,
+                "distance": 69.46091245376078,
                 "name": "Garments Factory Borugunte",
                 "name_kn": "",
                 "loc": [
@@ -14107,7 +14107,7 @@
                 "stop_id": 21950
             },
             {
-                "distance": 50.15094234315951,
+                "distance": 69.80182490752158,
                 "name": "Boorugunte",
                 "name_kn": "",
                 "loc": [
@@ -14118,7 +14118,7 @@
                 "stop_id": 21779
             },
             {
-                "distance": 50.32391540119047,
+                "distance": 70.28478421701604,
                 "name": "Billapura",
                 "name_kn": "",
                 "loc": [
@@ -14129,7 +14129,7 @@
                 "stop_id": 21770
             },
             {
-                "distance": 50.39817589861642,
+                "distance": 70.55940813810112,
                 "name": "Exide Gate",
                 "name_kn": "",
                 "loc": [
@@ -14140,7 +14140,7 @@
                 "stop_id": 21937
             },
             {
-                "distance": 50.601914984387385,
+                "distance": 71.31699136868065,
                 "name": "Thyavakanahalli Gate",
                 "name_kn": "",
                 "loc": [
@@ -14151,7 +14151,7 @@
                 "stop_id": 35183
             },
             {
-                "distance": 50.72500523061602,
+                "distance": 71.77154130702837,
                 "name": "S Medahalli",
                 "name_kn": "",
                 "loc": [
@@ -14162,7 +14162,7 @@
                 "stop_id": 22435
             },
             {
-                "distance": 50.90940717099545,
+                "distance": 72.47230579531443,
                 "name": "Silk Farm",
                 "name_kn": "",
                 "loc": [
@@ -14173,7 +14173,7 @@
                 "stop_id": 21758
             },
             {
-                "distance": 51.08507996192555,
+                "distance": 73.14466091245376,
                 "name": "Sriram Properties",
                 "name_kn": "",
                 "loc": [
@@ -14184,7 +14184,7 @@
                 "stop_id": 22515
             },
             {
-                "distance": 51.247395879503976,
+                "distance": 73.65602959309496,
                 "name": "Bidaraguppe",
                 "name_kn": "",
                 "loc": [
@@ -14195,7 +14195,7 @@
                 "stop_id": 21765
             },
             {
-                "distance": 51.46198192382716,
+                "distance": 74.31891491985203,
                 "name": "Anjaneya Temple Bidaraguppe",
                 "name_kn": "",
                 "loc": [
@@ -14206,7 +14206,7 @@
                 "stop_id": 21645
             },
             {
-                "distance": 51.98098117967332,
+                "distance": 75.20907521578299,
                 "name": "Harvest International School",
                 "name_kn": "",
                 "loc": [
@@ -14217,7 +14217,7 @@
                 "stop_id": 40422
             },
             {
-                "distance": 52.16886244247423,
+                "distance": 75.47422934648583,
                 "name": "Indlubele",
                 "name_kn": "",
                 "loc": [
@@ -14228,7 +14228,7 @@
                 "stop_id": 22074
             },
             {
-                "distance": 52.69368202260758,
+                "distance": 76.50643649815045,
                 "name": "Jigala Cross",
                 "name_kn": "",
                 "loc": [
@@ -14239,7 +14239,7 @@
                 "stop_id": 22105
             },
             {
-                "distance": 52.85376187776823,
+                "distance": 76.8,
                 "name": "Attibele Bus Stand",
                 "name_kn": "",
                 "loc": [
@@ -14250,7 +14250,7 @@
                 "stop_id": 21671
             }
         ],
-        "totalDistance": 52.85376187776823
+        "totalDistance": 76.8
     },
     "KIA-8H DOWN": {
         "stops": [
@@ -15541,7 +15541,7 @@
                 "stop_id": 23485
             },
             {
-                "distance": 1.515373053762596,
+                "distance": 1.7930338213023724,
                 "name": "KIA Terminal 2",
                 "name_kn": "KIA Terminal 2",
                 "loc": [
@@ -15552,7 +15552,7 @@
                 "stop_id": 38417
             },
             {
-                "distance": 8.18760879878328,
+                "distance": 8.227410398788491,
                 "name": "Trumpet (KIA)",
                 "name_kn": "Trumpet (KIA)",
                 "loc": [
@@ -15563,7 +15563,7 @@
                 "stop_id": 35807
             },
             {
-                "distance": 8.687444873945648,
+                "distance": 8.797072185764765,
                 "name": "Navayuga Toll (KIA)",
                 "name_kn": "Navayuga Toll (KIA)",
                 "loc": [
@@ -15574,7 +15574,7 @@
                 "stop_id": 35745
             },
             {
-                "distance": 9.131805394965063,
+                "distance": 9.292024230186774,
                 "name": "Sadahalli Gate",
                 "name_kn": "Sadahalli Gate",
                 "loc": [
@@ -15585,7 +15585,7 @@
                 "stop_id": 28088
             },
             {
-                "distance": 17.02712456835271,
+                "distance": 26.475265017667844,
                 "name": "Hebbala",
                 "name_kn": "Hebbala",
                 "loc": [
@@ -15596,7 +15596,7 @@
                 "stop_id": 25816
             },
             {
-                "distance": 17.13128795944437,
+                "distance": 26.83947501261989,
                 "name": "Hebbala Canara Bank",
                 "name_kn": "Canara Bank Hebbala",
                 "loc": [
@@ -15607,7 +15607,7 @@
                 "stop_id": 20694
             },
             {
-                "distance": 17.400484909570526,
+                "distance": 27.455830388692576,
                 "name": "Veterinary Hospital",
                 "name_kn": "Veterinary Hospital",
                 "loc": [
@@ -15618,7 +15618,7 @@
                 "stop_id": 21253
             },
             {
-                "distance": 17.578030505363444,
+                "distance": 27.85739525492175,
                 "name": "CBI",
                 "name_kn": "CBI",
                 "loc": [
@@ -15629,7 +15629,7 @@
                 "stop_id": 20699
             },
             {
-                "distance": 17.885334533385382,
+                "distance": 28.819283190307925,
                 "name": "Mekhri Circle",
                 "name_kn": "",
                 "loc": [
@@ -15640,7 +15640,7 @@
                 "stop_id": 21018
             },
             {
-                "distance": 18.053727703070003,
+                "distance": 29.547703180212014,
                 "name": "Palace Ground",
                 "name_kn": "",
                 "loc": [
@@ -15651,7 +15651,7 @@
                 "stop_id": 21075
             },
             {
-                "distance": 18.311357668999722,
+                "distance": 30.64033316506815,
                 "name": "RM Guttahalli",
                 "name_kn": "RM Guttahalli",
                 "loc": [
@@ -15662,7 +15662,7 @@
                 "stop_id": 21129
             },
             {
-                "distance": 19.27728037579491,
+                "distance": 32.73220595658758,
                 "name": "Telephone Exchange AGO/VSD",
                 "name_kn": "",
                 "loc": [
@@ -15673,7 +15673,7 @@
                 "stop_id": 21217
             },
             {
-                "distance": 19.9254971913075,
+                "distance": 33.6660777385159,
                 "name": "Maharani College",
                 "name_kn": "",
                 "loc": [
@@ -15684,7 +15684,7 @@
                 "stop_id": 20981
             },
             {
-                "distance": 20.215179121967846,
+                "distance": 34.10499747602221,
                 "name": "KR Circle",
                 "name_kn": "",
                 "loc": [
@@ -15695,7 +15695,7 @@
                 "stop_id": 20939
             },
             {
-                "distance": 20.802461377917083,
+                "distance": 35.244321049974765,
                 "name": "Corporation",
                 "name_kn": "",
                 "loc": [
@@ -15706,7 +15706,7 @@
                 "stop_id": 20728
             },
             {
-                "distance": 21.195786238176293,
+                "distance": 35.79530540131247,
                 "name": "Jai Bheem Circle (Poornima Theatre)",
                 "name_kn": "",
                 "loc": [
@@ -15717,7 +15717,7 @@
                 "stop_id": 22676
             },
             {
-                "distance": 21.779995121486127,
+                "distance": 36.869257950530034,
                 "name": "Lalbagh Main Gate",
                 "name_kn": "",
                 "loc": [
@@ -15728,7 +15728,7 @@
                 "stop_id": 23675
             },
             {
-                "distance": 22.184361311473296,
+                "distance": 37.52296819787986,
                 "name": "Lalbagh West Gate (Lalbagh Metro Station)",
                 "name_kn": "",
                 "loc": [
@@ -15739,7 +15739,7 @@
                 "stop_id": 22224
             },
             {
-                "distance": 22.263423180358615,
+                "distance": 37.86850075719334,
                 "name": "R V Teachers College",
                 "name_kn": "",
                 "loc": [
@@ -15750,7 +15750,7 @@
                 "stop_id": 22433
             },
             {
-                "distance": 22.348989171974814,
+                "distance": 38.23271075214538,
                 "name": "Vijaya College",
                 "name_kn": "",
                 "loc": [
@@ -15761,7 +15761,7 @@
                 "stop_id": 27289
             },
             {
-                "distance": 22.408564340916104,
+                "distance": 38.49419485108531,
                 "name": "South End Circle Metro Station",
                 "name_kn": "",
                 "loc": [
@@ -15772,7 +15772,7 @@
                 "stop_id": 39976
             },
             {
-                "distance": 22.555387173462783,
+                "distance": 39.11988894497729,
                 "name": "Nanda Talkies",
                 "name_kn": "",
                 "loc": [
@@ -15783,7 +15783,7 @@
                 "stop_id": 22341
             },
             {
-                "distance": 23.031078288225594,
+                "distance": 39.68021201413428,
                 "name": "Yadiyuru",
                 "name_kn": "",
                 "loc": [
@@ -15794,7 +15794,7 @@
                 "stop_id": 24361
             },
             {
-                "distance": 23.180987291506824,
+                "distance": 40.18450277637557,
                 "name": "Deepak Nursing Home",
                 "name_kn": "",
                 "loc": [
@@ -15805,7 +15805,7 @@
                 "stop_id": 21878
             },
             {
-                "distance": 23.554014650946794,
+                "distance": 40.93160020191822,
                 "name": "Hunasemara",
                 "name_kn": "",
                 "loc": [
@@ -15816,7 +15816,7 @@
                 "stop_id": 22061
             },
             {
-                "distance": 23.674039210864738,
+                "distance": 41.29581019687027,
                 "name": "Banashankari",
                 "name_kn": "",
                 "loc": [
@@ -15827,7 +15827,7 @@
                 "stop_id": 21711
             },
             {
-                "distance": 23.864289282925498,
+                "distance": 41.98687531549722,
                 "name": "Sarakki",
                 "name_kn": "",
                 "loc": [
@@ -15838,7 +15838,7 @@
                 "stop_id": 22459
             },
             {
-                "distance": 24.094661990000112,
+                "distance": 42.85537607269056,
                 "name": "Jaraganahalli Cross",
                 "name_kn": "Jaraganahalli Cross",
                 "loc": [
@@ -15849,7 +15849,7 @@
                 "stop_id": 22101
             },
             {
-                "distance": 25.12314823565375,
+                "distance": 44.31221605249874,
                 "name": "Konanakunte Cross",
                 "name_kn": "Konanakunte Cross",
                 "loc": [
@@ -15860,7 +15860,7 @@
                 "stop_id": 22190
             },
             {
-                "distance": 25.296842309924397,
+                "distance": 44.52700656234225,
                 "name": "Konanakunte Cross Metro Station",
                 "name_kn": "",
                 "loc": [
@@ -15871,7 +15871,7 @@
                 "stop_id": 38358
             },
             {
-                "distance": 25.460552163482152,
+                "distance": 44.71378091872792,
                 "name": "Cura Hospital",
                 "name_kn": "",
                 "loc": [
@@ -15882,7 +15882,7 @@
                 "stop_id": 39689
             },
             {
-                "distance": 26.027054856932985,
+                "distance": 45.27410398788491,
                 "name": "Doddakallasandra",
                 "name_kn": "",
                 "loc": [
@@ -15893,7 +15893,7 @@
                 "stop_id": 21909
             },
             {
-                "distance": 26.40377053607715,
+                "distance": 45.63831398283695,
                 "name": "Doddakallasandra Metro Station",
                 "name_kn": "Doddakallasandra Metro Station",
                 "loc": [
@@ -15904,7 +15904,7 @@
                 "stop_id": 38362
             },
             {
-                "distance": 27.189016415338866,
+                "distance": 46.51615345784957,
                 "name": "Raghuvanahalli Cross",
                 "name_kn": "Raghuvanahalli Cross",
                 "loc": [
@@ -15915,7 +15915,7 @@
                 "stop_id": 22408
             },
             {
-                "distance": 27.343611774136356,
+                "distance": 46.85234729934377,
                 "name": "Vajarahalli Metro Station",
                 "name_kn": "Vajarahalli Metro Station",
                 "loc": [
@@ -15926,7 +15926,7 @@
                 "stop_id": 38360
             },
             {
-                "distance": 28.078550780586088,
+                "distance": 47.814235234729935,
                 "name": "Thalaghattapura Metro Station",
                 "name_kn": "Thalagattapura Metro Station",
                 "loc": [
@@ -15937,7 +15937,7 @@
                 "stop_id": 37739
             },
             {
-                "distance": 28.25039377442579,
+                "distance": 48.0570418980313,
                 "name": "Thalagattapura",
                 "name_kn": "Thalagattapura",
                 "loc": [
@@ -15948,7 +15948,7 @@
                 "stop_id": 22538
             },
             {
-                "distance": 28.54753942502802,
+                "distance": 48.48662291771833,
                 "name": "Jnana Sweekar Public School",
                 "name_kn": "",
                 "loc": [
@@ -15959,7 +15959,7 @@
                 "stop_id": 40640
             },
             {
-                "distance": 28.680199143239342,
+                "distance": 48.68273599192327,
                 "name": "Vajramuneshwara Gate",
                 "name_kn": "",
                 "loc": [
@@ -15970,7 +15970,7 @@
                 "stop_id": 22574
             },
             {
-                "distance": 29.065748815466044,
+                "distance": 49.168349318526,
                 "name": "Silk Institute Metro Station",
                 "name_kn": "Silk Institute Metro Station",
                 "loc": [
@@ -15981,7 +15981,7 @@
                 "stop_id": 35891
             },
             {
-                "distance": 29.81838746518744,
+                "distance": 50.24230186774356,
                 "name": "Chinnayyanapalya Silk Farm",
                 "name_kn": "Chinnayyanapalya Silk Farm",
                 "loc": [
@@ -15992,7 +15992,7 @@
                 "stop_id": 21844
             },
             {
-                "distance": 30.733309492885223,
+                "distance": 52.11938414941949,
                 "name": "Shanimahathma Temple",
                 "name_kn": "Shanimahathma Temple",
                 "loc": [
@@ -16003,7 +16003,7 @@
                 "stop_id": 22474
             },
             {
-                "distance": 32.637552363126616,
+                "distance": 55.5,
                 "name": "Art of Living Sri Ravishankar Ashram",
                 "name_kn": "",
                 "loc": [
@@ -16014,7 +16014,7 @@
                 "stop_id": 39585
             }
         ],
-        "totalDistance": 32.637552363126616
+        "totalDistance": 55.5
     },
     "KIA-7A D25G-KIA UP": {
         "stops": [
@@ -16354,7 +16354,7 @@
                 "stop_id": 23485
             },
             {
-                "distance": 1.9521790111393391,
+                "distance": 1.4388710862531322,
                 "name": "KIA Terminal 2",
                 "name_kn": "KIA Terminal 2",
                 "loc": [
@@ -16365,7 +16365,7 @@
                 "stop_id": 38417
             },
             {
-                "distance": 8.994332616767636,
+                "distance": 8.110793672030981,
                 "name": "Trumpet (KIA)",
                 "name_kn": "Trumpet (KIA)",
                 "loc": [
@@ -16376,7 +16376,7 @@
                 "stop_id": 35807
             },
             {
-                "distance": 9.617803400429938,
+                "distance": 8.610629747193348,
                 "name": "Navayuga Toll (KIA)",
                 "name_kn": "Navayuga Toll (KIA)",
                 "loc": [
@@ -16387,7 +16387,7 @@
                 "stop_id": 35745
             },
             {
-                "distance": 10.159507523939808,
+                "distance": 9.054990268212764,
                 "name": "Sadahalli Gate",
                 "name_kn": "Sadahalli Gate",
                 "loc": [
@@ -16398,7 +16398,7 @@
                 "stop_id": 28088
             },
             {
-                "distance": 28.965839358999407,
+                "distance": 16.950308723770274,
                 "name": "Hebbala",
                 "name_kn": "Hebbala",
                 "loc": [
@@ -16409,7 +16409,7 @@
                 "stop_id": 25816
             },
             {
-                "distance": 29.364451827242522,
+                "distance": 17.054472114861934,
                 "name": "Hebbala Canara Bank",
                 "name_kn": "Canara Bank Hebbala",
                 "loc": [
@@ -16420,7 +16420,7 @@
                 "stop_id": 20694
             },
             {
-                "distance": 30.039026773500098,
+                "distance": 17.32366906498809,
                 "name": "Veterinary Hospital",
                 "name_kn": "Veterinary Hospital",
                 "loc": [
@@ -16431,7 +16431,7 @@
                 "stop_id": 21253
             },
             {
-                "distance": 30.478522571819422,
+                "distance": 17.501214660781006,
                 "name": "CBI",
                 "name_kn": "CBI",
                 "loc": [
@@ -16442,7 +16442,7 @@
                 "stop_id": 20699
             },
             {
-                "distance": 31.531268321282003,
+                "distance": 17.808518688802945,
                 "name": "Mekhri Circle",
                 "name_kn": "",
                 "loc": [
@@ -16453,7 +16453,7 @@
                 "stop_id": 21018
             },
             {
-                "distance": 32.32849325776822,
+                "distance": 17.976911858487565,
                 "name": "Palace Ground",
                 "name_kn": "",
                 "loc": [
@@ -16464,7 +16464,7 @@
                 "stop_id": 21075
             },
             {
-                "distance": 33.524330662497555,
+                "distance": 18.23454182441728,
                 "name": "RM Guttahalli",
                 "name_kn": "RM Guttahalli",
                 "loc": [
@@ -16475,7 +16475,7 @@
                 "stop_id": 21129
             },
             {
-                "distance": 35.343638850889185,
+                "distance": 18.9964235916378,
                 "name": "Sophiya School (KIA)",
                 "name_kn": "Sophiya School (KIA)",
                 "loc": [
@@ -16486,7 +16486,7 @@
                 "stop_id": 36180
             },
             {
-                "distance": 35.78313464920852,
+                "distance": 19.288427962517513,
                 "name": "Raj Bhavan",
                 "name_kn": "",
                 "loc": [
@@ -16497,7 +16497,7 @@
                 "stop_id": 27855
             },
             {
-                "distance": 36.6110220832519,
+                "distance": 19.96665845226987,
                 "name": "Indian Express",
                 "name_kn": "",
                 "loc": [
@@ -16508,7 +16508,7 @@
                 "stop_id": 20855
             },
             {
-                "distance": 37.316259527066634,
+                "distance": 20.58714868261201,
                 "name": "Shivajinagara Bus Station",
                 "name_kn": "Shivajinagara Bus Station",
                 "loc": [
@@ -16519,7 +16519,7 @@
                 "stop_id": 35779
             },
             {
-                "distance": 39.09468438538206,
+                "distance": 22.01022167640868,
                 "name": "Manipal Centre MG Road",
                 "name_kn": "Manipal Centre MG Road",
                 "loc": [
@@ -16530,7 +16530,7 @@
                 "stop_id": 22256
             },
             {
-                "distance": 40.81178424858315,
+                "distance": 23.118731469769884,
                 "name": "Military Accounts Office",
                 "name_kn": "",
                 "loc": [
@@ -16541,7 +16541,7 @@
                 "stop_id": 22287
             },
             {
-                "distance": 41.62945085010748,
+                "distance": 23.74403016355125,
                 "name": "Commando Hospital",
                 "name_kn": "",
                 "loc": [
@@ -16552,7 +16552,7 @@
                 "stop_id": 21864
             },
             {
-                "distance": 42.99904240766074,
+                "distance": 25.04311994473607,
                 "name": "Domlur",
                 "name_kn": "",
                 "loc": [
@@ -16563,7 +16563,7 @@
                 "stop_id": 21914
             },
             {
-                "distance": 44.0313464920852,
+                "distance": 25.75542103917655,
                 "name": "Domlur Flyover",
                 "name_kn": "",
                 "loc": [
@@ -16574,7 +16574,7 @@
                 "stop_id": 21918
             },
             {
-                "distance": 45.54402970490522,
+                "distance": 26.399396081357306,
                 "name": "Military Bridge",
                 "name_kn": "Military Bridge",
                 "loc": [
@@ -16585,7 +16585,7 @@
                 "stop_id": 22289
             },
             {
-                "distance": 47.51665038108266,
+                "distance": 27.918795030254444,
                 "name": "Sony World 80ft Road Koramangala",
                 "name_kn": "Sony World 80ft Road Koramangala",
                 "loc": [
@@ -16596,7 +16596,7 @@
                 "stop_id": 35103
             },
             {
-                "distance": 49.23375024428376,
+                "distance": 28.821280814978536,
                 "name": "Koramangala 1st Block",
                 "name_kn": "",
                 "loc": [
@@ -16607,7 +16607,7 @@
                 "stop_id": 23894
             },
             {
-                "distance": 49.64258354504592,
+                "distance": 29.215643397162992,
                 "name": "Jakkasandra",
                 "name_kn": "Jakkasandra",
                 "loc": [
@@ -16618,7 +16618,7 @@
                 "stop_id": 23895
             },
             {
-                "distance": 51.16548759038499,
+                "distance": 29.814553490995614,
                 "name": "BDA Complex HSR Layout",
                 "name_kn": "BDA Complex HSR Layout",
                 "loc": [
@@ -16629,7 +16629,7 @@
                 "stop_id": 23925
             },
             {
-                "distance": 52.3,
+                "distance": 30.42833820024498,
                 "name": "Depot-25 Gate",
                 "name_kn": "Depot-25 Gate",
                 "loc": [
@@ -16640,6 +16640,6 @@
                 "stop_id": 20749
             }
         ],
-        "totalDistance": 52.3
+        "totalDistance": 30.42833820024498
     }
 }
