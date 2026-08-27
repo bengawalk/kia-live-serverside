@@ -7,7 +7,6 @@
     "KIA-4A DOWN": 2988,
     "KIA-6 UP": 2989,
     "KIA-6 DOWN": 2990,
-    "KIA-6W UP": 2991,
     "KIA-6A UP": 2993,
     "KIA-6A DOWN": 2994,
     "KIA-15 UP": 2995,
@@ -42,5 +41,6 @@
     "KIA-5D UP": 15792,
     "KIA-5D DOWN": 15793,
     "KIA-7A D25G-KIA DOWN": 16266,
-    "KIA-7A D25G-KIA UP": 16267
+    "KIA-7A D25G-KIA UP": 16267,
+    "KIA-6B UP": 18030
 }
